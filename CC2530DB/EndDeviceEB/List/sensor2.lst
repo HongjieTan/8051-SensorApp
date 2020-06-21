@@ -1,0 +1,268 @@
+###############################################################################
+#                                                                             #
+# IAR C/C++ Compiler V8.10.1.10194/W32 for 8051         05/Nov/2019  17:05:26 #
+# Copyright 2004-2011 IAR Systems AB.                                         #
+#                                                                             #
+#    Core               =  plain                                              #
+#    Code model         =  banked                                             #
+#    Data model         =  large                                              #
+#    Calling convention =  xdata reentrant                                    #
+#    Constant location  =  data_rom                                           #
+#    Dptr setup         =  1,16                                               #
+#    Source file        =  D:\Îäºº´´Î¬ÌØÎïÁªÍøÊµÑéÏä×ÊÁÏ\CVT-IOT-VS¹âÅÌ\Zigbe #
+#                          e²¿·Ö£¨ÎïÁªÍø£©\ZStack-CC2530-eV1.3\Projects\zstac #
+#                          k\Samples\SensorApp\Source\sensor2.c               #
+#    Command line       =  -f D:\Îäºº´´Î¬ÌØÎïÁªÍøÊµÑéÏä×ÊÁÏ\CVT-IOT-VS¹âÅÌ\Zi #
+#                          gbee²¿·Ö£¨ÎïÁªÍø£©\ZStack-CC2530-eV1.3\Projects\zs #
+#                          tack\Samples\SensorApp\CC2530DB\..\..\..\Tools\CC2 #
+#                          530DB\f8wEndev.cfg (-DCPU32MHZ -DROOT=__near_func  #
+#                          -DMAC_CFG_TX_DATA_MAX=3 -DMAC_CFG_TX_MAX=6         #
+#                          -DMAC_CFG_RX_MAX=3) -f D:\Îäºº´´Î¬ÌØÎïÁªÍøÊµÑéÏä×Ê #
+#                          ÁÏ\CVT-IOT-VS¹âÅÌ\Zigbee²¿·Ö£¨ÎïÁªÍø£©\ZStack-CC25 #
+#                          30-eV1.3\Projects\zstack\Samples\SensorApp\CC2530D #
+#                          B\..\..\..\Tools\CC2530DB\f8wConfig.cfg            #
+#                          (-DZIGBEEPRO -DSECURE=0 -DZG_SECURE_DYNAMIC=0      #
+#                          -DREFLECTOR -DDEFAULT_CHANLIST=0x00200000          #
+#                          -DZDAPP_CONFIG_PAN_ID=0x15 -DNWK_START_DELAY=100   #
+#                          -DEXTENDED_JOINING_RANDOM_MASK=0x007F              #
+#                          -DBEACON_REQUEST_DELAY=100                         #
+#                          -DBEACON_REQ_DELAY_MASK=0x00FF                     #
+#                          -DLINK_STATUS_JITTER_MASK=0x007F                   #
+#                          -DROUTE_EXPIRY_TIME=30 -DAPSC_ACK_WAIT_DURATION_PO #
+#                          LLED=3000 -DNWK_INDIRECT_MSG_TIMEOUT=7             #
+#                          -DMAX_RREQ_ENTRIES=8 -DAPSC_MAX_FRAME_RETRIES=3    #
+#                          -DNWK_MAX_DATA_RETRIES=2                           #
+#                          -DMAX_POLL_FAILURE_RETRIES=2 -DMAX_BCAST=9         #
+#                          -DAPS_MAX_GROUPS=16 -DMAX_RTG_ENTRIES=40           #
+#                          -DNWK_MAX_BINDING_ENTRIES=4                        #
+#                          -DMAX_BINDING_CLUSTER_IDS=4 "-DDEFAULT_KEY={0x01,  #
+#                          0x03, 0x05, 0x07, 0x09, 0x0B, 0x0D, 0x0F, 0x00,    #
+#                          0x02, 0x04, 0x06, 0x08, 0x0A, 0x0C, 0x0D}"         #
+#                          -DMAC_MAX_FRAME_SIZE=116                           #
+#                          -DZDNWKMGR_MIN_TRANSMISSIONS=20 "-DCONST=const     #
+#                          __code" -DGENERIC=__generic                        #
+#                          -DRFD_RCVC_ALWAYS_ON=FALSE -DPOLL_RATE=1000        #
+#                          -DQUEUED_POLL_RATE=100 -DRESPONSE_POLL_RATE=100)   #
+#                          -DREJOIN_POLL_RATE=440 D:\Îäºº´´Î¬ÌØÎïÁªÍøÊµÑéÏä×Ê #
+#                          ÁÏ\CVT-IOT-VS¹âÅÌ\Zigbee²¿·Ö£¨ÎïÁªÍø£©\ZStack-CC25 #
+#                          30-eV1.3\Projects\zstack\Samples\SensorApp\Source\ #
+#                          sensor2.c -D NWK_AUTO_POLL -D ZTOOL_P1 -D          #
+#                          xMT_TASK -D MT_SYS_FUNC -D MT_ZDO_FUNC -D          #
+#                          xLCD_SUPPORTED=DEBUG -D xPOWER_SAVING -lC          #
+#                          D:\Îäºº´´Î¬ÌØÎïÁªÍøÊµÑéÏä×ÊÁÏ\CVT-IOT-VS¹âÅÌ\Zigbe #
+#                          e²¿·Ö£¨ÎïÁªÍø£©\ZStack-CC2530-eV1.3\Projects\zstac #
+#                          k\Samples\SensorApp\CC2530DB\EndDeviceEB\List\     #
+#                          -lA D:\Îäºº´´Î¬ÌØÎïÁªÍøÊµÑéÏä×ÊÁÏ\CVT-IOT-VS¹âÅÌ\Z #
+#                          igbee²¿·Ö£¨ÎïÁªÍø£©\ZStack-CC2530-eV1.3\Projects\z #
+#                          stack\Samples\SensorApp\CC2530DB\EndDeviceEB\List\ #
+#                           --diag_suppress Pe001,Pa010 -o                    #
+#                          D:\Îäºº´´Î¬ÌØÎïÁªÍøÊµÑéÏä×ÊÁÏ\CVT-IOT-VS¹âÅÌ\Zigbe #
+#                          e²¿·Ö£¨ÎïÁªÍø£©\ZStack-CC2530-eV1.3\Projects\zstac #
+#                          k\Samples\SensorApp\CC2530DB\EndDeviceEB\Obj\ -e   #
+#                          --no_code_motion --debug --core=plain --dptr=16,1  #
+#                          --data_model=large --code_model=banked             #
+#                          --calling_convention=xdata_reentrant               #
+#                          --place_constants=data_rom --nr_virtual_regs 16    #
+#                          -I D:\Îäºº´´Î¬ÌØÎïÁªÍøÊµÑéÏä×ÊÁÏ\CVT-IOT-VS¹âÅÌ\Zi #
+#                          gbee²¿·Ö£¨ÎïÁªÍø£©\ZStack-CC2530-eV1.3\Projects\zs #
+#                          tack\Samples\SensorApp\CC2530DB\ -I                #
+#                          D:\Îäºº´´Î¬ÌØÎïÁªÍøÊµÑéÏä×ÊÁÏ\CVT-IOT-VS¹âÅÌ\Zigbe #
+#                          e²¿·Ö£¨ÎïÁªÍø£©\ZStack-CC2530-eV1.3\Projects\zstac #
+#                          k\Samples\SensorApp\CC2530DB\..\Source\ -I         #
+#                          D:\Îäºº´´Î¬ÌØÎïÁªÍøÊµÑéÏä×ÊÁÏ\CVT-IOT-VS¹âÅÌ\Zigbe #
+#                          e²¿·Ö£¨ÎïÁªÍø£©\ZStack-CC2530-eV1.3\Projects\zstac #
+#                          k\Samples\SensorApp\CC2530DB\..\..\..\ZMain\TI2530 #
+#                          DB\ -I D:\Îäºº´´Î¬ÌØÎïÁªÍøÊµÑéÏä×ÊÁÏ\CVT-IOT-VS¹âÅ #
+#                          Ì\Zigbee²¿·Ö£¨ÎïÁªÍø£©\ZStack-CC2530-eV1.3\Project #
+#                          s\zstack\Samples\SensorApp\CC2530DB\..\..\..\..\.. #
+#                          \Components\hal\include\ -I                        #
+#                          D:\Îäºº´´Î¬ÌØÎïÁªÍøÊµÑéÏä×ÊÁÏ\CVT-IOT-VS¹âÅÌ\Zigbe #
+#                          e²¿·Ö£¨ÎïÁªÍø£©\ZStack-CC2530-eV1.3\Projects\zstac #
+#                          k\Samples\SensorApp\CC2530DB\..\..\..\..\..\Compon #
+#                          ents\hal\target\CC2530EB\ -I                       #
+#                          D:\Îäºº´´Î¬ÌØÎïÁªÍøÊµÑéÏä×ÊÁÏ\CVT-IOT-VS¹âÅÌ\Zigbe #
+#                          e²¿·Ö£¨ÎïÁªÍø£©\ZStack-CC2530-eV1.3\Projects\zstac #
+#                          k\Samples\SensorApp\CC2530DB\..\..\..\..\..\Compon #
+#                          ents\mac\include\ -I D:\Îäºº´´Î¬ÌØÎïÁªÍøÊµÑéÏä×ÊÁÏ #
+#                          \CVT-IOT-VS¹âÅÌ\Zigbee²¿·Ö£¨ÎïÁªÍø£©\ZStack-CC2530 #
+#                          -eV1.3\Projects\zstack\Samples\SensorApp\CC2530DB\ #
+#                          ..\..\..\..\..\Components\mac\high_level\ -I       #
+#                          D:\Îäºº´´Î¬ÌØÎïÁªÍøÊµÑéÏä×ÊÁÏ\CVT-IOT-VS¹âÅÌ\Zigbe #
+#                          e²¿·Ö£¨ÎïÁªÍø£©\ZStack-CC2530-eV1.3\Projects\zstac #
+#                          k\Samples\SensorApp\CC2530DB\..\..\..\..\..\Compon #
+#                          ents\mac\low_level\srf04\ -I                       #
+#                          D:\Îäºº´´Î¬ÌØÎïÁªÍøÊµÑéÏä×ÊÁÏ\CVT-IOT-VS¹âÅÌ\Zigbe #
+#                          e²¿·Ö£¨ÎïÁªÍø£©\ZStack-CC2530-eV1.3\Projects\zstac #
+#                          k\Samples\SensorApp\CC2530DB\..\..\..\..\..\Compon #
+#                          ents\mac\low_level\srf04\single_chip\ -I           #
+#                          D:\Îäºº´´Î¬ÌØÎïÁªÍøÊµÑéÏä×ÊÁÏ\CVT-IOT-VS¹âÅÌ\Zigbe #
+#                          e²¿·Ö£¨ÎïÁªÍø£©\ZStack-CC2530-eV1.3\Projects\zstac #
+#                          k\Samples\SensorApp\CC2530DB\..\..\..\..\..\Compon #
+#                          ents\mt\ -I D:\Îäºº´´Î¬ÌØÎïÁªÍøÊµÑéÏä×ÊÁÏ\CVT-IOT- #
+#                          VS¹âÅÌ\Zigbee²¿·Ö£¨ÎïÁªÍø£©\ZStack-CC2530-eV1.3\Pr #
+#                          ojects\zstack\Samples\SensorApp\CC2530DB\..\..\..\ #
+#                          ..\..\Components\osal\include\ -I                  #
+#                          D:\Îäºº´´Î¬ÌØÎïÁªÍøÊµÑéÏä×ÊÁÏ\CVT-IOT-VS¹âÅÌ\Zigbe #
+#                          e²¿·Ö£¨ÎïÁªÍø£©\ZStack-CC2530-eV1.3\Projects\zstac #
+#                          k\Samples\SensorApp\CC2530DB\..\..\..\..\..\Compon #
+#                          ents\services\saddr\ -I D:\Îäºº´´Î¬ÌØÎïÁªÍøÊµÑéÏä× #
+#                          ÊÁÏ\CVT-IOT-VS¹âÅÌ\Zigbee²¿·Ö£¨ÎïÁªÍø£©\ZStack-CC2 #
+#                          530-eV1.3\Projects\zstack\Samples\SensorApp\CC2530 #
+#                          DB\..\..\..\..\..\Components\services\sdata\ -I    #
+#                          D:\Îäºº´´Î¬ÌØÎïÁªÍøÊµÑéÏä×ÊÁÏ\CVT-IOT-VS¹âÅÌ\Zigbe #
+#                          e²¿·Ö£¨ÎïÁªÍø£©\ZStack-CC2530-eV1.3\Projects\zstac #
+#                          k\Samples\SensorApp\CC2530DB\..\..\..\..\..\Compon #
+#                          ents\stack\af\ -I D:\Îäºº´´Î¬ÌØÎïÁªÍøÊµÑéÏä×ÊÁÏ\CV #
+#                          T-IOT-VS¹âÅÌ\Zigbee²¿·Ö£¨ÎïÁªÍø£©\ZStack-CC2530-eV #
+#                          1.3\Projects\zstack\Samples\SensorApp\CC2530DB\..\ #
+#                          ..\..\..\..\Components\stack\nwk\ -I               #
+#                          D:\Îäºº´´Î¬ÌØÎïÁªÍøÊµÑéÏä×ÊÁÏ\CVT-IOT-VS¹âÅÌ\Zigbe #
+#                          e²¿·Ö£¨ÎïÁªÍø£©\ZStack-CC2530-eV1.3\Projects\zstac #
+#                          k\Samples\SensorApp\CC2530DB\..\..\..\..\..\Compon #
+#                          ents\stack\sapi\ -I D:\Îäºº´´Î¬ÌØÎïÁªÍøÊµÑéÏä×ÊÁÏ\ #
+#                          CVT-IOT-VS¹âÅÌ\Zigbee²¿·Ö£¨ÎïÁªÍø£©\ZStack-CC2530- #
+#                          eV1.3\Projects\zstack\Samples\SensorApp\CC2530DB\. #
+#                          .\..\..\..\..\Components\stack\sec\ -I             #
+#                          D:\Îäºº´´Î¬ÌØÎïÁªÍøÊµÑéÏä×ÊÁÏ\CVT-IOT-VS¹âÅÌ\Zigbe #
+#                          e²¿·Ö£¨ÎïÁªÍø£©\ZStack-CC2530-eV1.3\Projects\zstac #
+#                          k\Samples\SensorApp\CC2530DB\..\..\..\..\..\Compon #
+#                          ents\stack\sys\ -I D:\Îäºº´´Î¬ÌØÎïÁªÍøÊµÑéÏä×ÊÁÏ\C #
+#                          VT-IOT-VS¹âÅÌ\Zigbee²¿·Ö£¨ÎïÁªÍø£©\ZStack-CC2530-e #
+#                          V1.3\Projects\zstack\Samples\SensorApp\CC2530DB\.. #
+#                          \..\..\..\..\Components\stack\zdo\ -I              #
+#                          D:\Îäºº´´Î¬ÌØÎïÁªÍøÊµÑéÏä×ÊÁÏ\CVT-IOT-VS¹âÅÌ\Zigbe #
+#                          e²¿·Ö£¨ÎïÁªÍø£©\ZStack-CC2530-eV1.3\Projects\zstac #
+#                          k\Samples\SensorApp\CC2530DB\..\..\..\..\..\Compon #
+#                          ents\zmac\ -I D:\Îäºº´´Î¬ÌØÎïÁªÍøÊµÑéÏä×ÊÁÏ\CVT-IO #
+#                          T-VS¹âÅÌ\Zigbee²¿·Ö£¨ÎïÁªÍø£©\ZStack-CC2530-eV1.3\ #
+#                          Projects\zstack\Samples\SensorApp\CC2530DB\..\..\. #
+#                          .\..\..\Components\zmac\f8w\ -Ohz                  #
+#                          --require_prototypes                               #
+#    List file          =  D:\Îäºº´´Î¬ÌØÎïÁªÍøÊµÑéÏä×ÊÁÏ\CVT-IOT-VS¹âÅÌ\Zigbe #
+#                          e²¿·Ö£¨ÎïÁªÍø£©\ZStack-CC2530-eV1.3\Projects\zstac #
+#                          k\Samples\SensorApp\CC2530DB\EndDeviceEB\List\sens #
+#                          or2.lst                                            #
+#    Object file        =  D:\Îäºº´´Î¬ÌØÎïÁªÍøÊµÑéÏä×ÊÁÏ\CVT-IOT-VS¹âÅÌ\Zigbe #
+#                          e²¿·Ö£¨ÎïÁªÍø£©\ZStack-CC2530-eV1.3\Projects\zstac #
+#                          k\Samples\SensorApp\CC2530DB\EndDeviceEB\Obj\senso #
+#                          r2.r51                                             #
+#                                                                             #
+#                                                                             #
+###############################################################################
+
+D:\Îäºº´´Î¬ÌØÎïÁªÍøÊµÑéÏä×ÊÁÏ\CVT-IOT-VS¹âÅÌ\Zigbee²¿·Ö£¨ÎïÁªÍø£©\ZStack-CC2530-eV1.3\Projects\zstack\Samples\SensorApp\Source\sensor2.c
+      1          #include "Sensor.h"
+      2          #include "iocc2530.h"
+      3          #include "hal_board.h"
+      4          #include "hal_defs.h"
+      5          #include "hal_mcu.h"
+      6          #include "hal_types.h"
+      7          #include "hal_adc.h"
+      8            
+      9          #define uint8 unsigned char 
+     10          #define uint16 unsigned int
+     11          #define uint32 unsigned long
+     12          
+     13          extern void Sensor_PIN_INT(void);
+     14          
+     15          char uart_buffer;
+     16          /*****************************************************************************
+     17           º¯ÊıÉùÃ÷
+     18          *****************************************************************************/
+     19          uint16 ReadAdcValue(uint8 ChannelNum,uint8 DecimationRate,uint8 RefVoltage);
+     20          uint8 ReadTemp(void);
+     21          
+     22          /*****************************************************************************
+     23          º¯Êı¹¦ÄÜ:¶Á³öAD¿ÚµÄÊı¾İ
+     24          ÊäÈë²ÎÊı:ChannelNum:²É¼¯µÄÍ¨µÀºÅ  0-0xF
+     25                              1000: AIN0¨CAIN1
+     26                              1001: AIN2¨CAIN3
+     27                              1010: AIN4¨CAIN5
+     28                              1011: AIN6¨CAIN7
+     29                              1100: GND
+     30                              1101: Reserved
+     31                              1110: Temperature sensor
+     32                              1111: VDD/3
+     33                   DecimationRate:·Ö±çÂÊ  00: 64 decimation rate (7 bits ENOB)
+     34                              01: 128 decimation rate (9 bits ENOB)
+     35                              10: 256 decimation rate (10 bits ENOB)
+     36                              11: 512 decimation rate (12 bits ENOB)
+     37          RefVoltage:²Î¿¼µçÑ¹:00: Internal reference
+     38                              01: External reference on AIN7 pin
+     39                              10: AVDD5 pin
+     40                              11: External reference on AIN6¨CAIN7 differential input
+     41          ·µ»ØÖµ:16bitµÄ²É¼¯Êı¾İ
+     42          */
+     43          
+     44          /*****************************************************************************
+     45            void Sensor_PIN_INT(void)
+     46            ´«¸ĞÆ÷¼°ADC I/O¿Ú³õÊ¼»¯.
+     47          *****************************************************************************/
+     48          void Sensor_PIN_INT(void)
+     49          {
+     50            
+     51            APCFG = (0x1<1)|(0x1<<4)|(0x1<<6);//P01,P04,P06ÎªADC¿Ú 
+     52            //ÓÃÓÚÎÂÊª¶È²âÁ¿
+     53            P1SEL &= ~((1<<6)|(1<<7));//P16,P17ÎªGPIO        
+     54            P1DIR |= (1<<6)|(1<<7);//P16,P17ÎªOUTPUT    
+     55          
+     56            P1SEL |= (1<<3);//P13ÎªÍâÉè¹¦ÄÜ       
+     57            PICTL &= ~(1<<1); //P10~P13ÉÏÉıÑØ´¥·¢
+     58            P1IEN |= (1<<3);//P13ÖĞ¶ÏÊ¹ÄÜ
+     59            IEN2 |= (1<<4);//P1¿ÚÖĞ¶ÏÊ¹ÄÜ
+     60          
+     61          }
+     62          
+     63          uint8 ReadTemp(void)
+     64          {
+     65             uint8 temp;
+     66             unsigned long lTemp;
+     67              float RHTValue;
+     68              unsigned char buf[8];
+     69              P0DIR |= 0x01;  //ÉèÖÃP0.0ÎªÊä³ö·½Ê½£»P0.4ºÍP0.5ÎªÊäÈë·½Ê½
+     70              P2DIR |= 0x01;  //ÉèÖÃP2.0ÎªÊä³ö·½Ê½
+     71              P0_0 = 1; 
+     72              P2_0 = 1;       //Ï¨ÃğLED
+     73              CLKCONCMD &= ~0x40;          //Ñ¡Ôñ32M¾§Õñ
+     74              while(!(SLEEPSTA & 0x40));   //µÈ´ıXSOCÎÈ¶¨
+     75              CLKCONCMD = 0xb8;            //TICHSPD 128·ÖÆµ£¬CLKSPD ²»·ÖÆµ
+     76              SLEEPCMD |= 0x04;            //¹Ø±Õ²»ÓÃµÄRC Õñµ´Æ÷
+     77              PERCFG = 0x00;               //Î»ÖÃ1 P0 ¿Ú
+     78              P0SEL = 0x3c;                //P0 ÓÃ×÷´®¿Ú
+     79              U0CSR |= 0x80;               //UART ·½Ê½
+     80              U0GCR |= 10;                 //baud_e = 10;
+     81              U0BAUD |= 216;               //²¨ÌØÂÊÉèÎª57600
+     82              UTX0IF = 1;
+     83              U0CSR |= 0X40;               //ÔÊĞí½ÓÊÕ
+     84              IEN0 |= 0x84;                //¿ª×ÜÖĞ¶Ï£¬½ÓÊÕÖĞ¶Ï  	
+     85              Sensor_PIN_INT();
+     86          
+     87              while(1){ 
+     88          	lTemp = ReadSHT1(3);//14bitÎÂ¶È
+                 	        ^
+Error[Pe223]: function "ReadSHT1" declared implicitly
+     89                  lTemp = lTemp >> 8;
+     90                  RHTValue = lTemp;
+     91                  RHTValue = 0.01 * RHTValue - 39.64;
+     92                  buf[0] = (uint8)RHTValue;//ÎÂÊª¶È´«¸ĞÆ÷ÎÂ¶È 
+     93          	buf[0] = ( ((buf[0]/10)<<4) + (buf[0]%10) );
+     94                  buf[1] = (buf[0]>>4)&0xf;
+     95          	if(buf[1] > 0x9)
+     96                      buf[1] = buf[1] - 0XA + 'A';
+     97          	else
+     98          	    buf[1] = buf[1] + '0';
+     99          	buf[2] = (buf[0])&0xf;
+    100          	if(buf[2] > 0x9)
+    101          	    buf[2] = buf[2] -0XA + 'A';
+    102          	else
+    103          	    buf[2] = buf[2] + '0';
+    104                  
+    105          
+    106                  temp = (uint8)RHTValue;
+    107              
+    108                  return temp;
+    109          }
+    110          }
+
+Errors: 1
+Warnings: none

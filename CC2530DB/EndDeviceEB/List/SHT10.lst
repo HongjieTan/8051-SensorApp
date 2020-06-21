@@ -1,0 +1,499 @@
+###############################################################################
+#                                                                             #
+# IAR C/C++ Compiler V8.10.1.10194/W32 for 8051         05/Nov/2019  17:24:06 #
+# Copyright 2004-2011 IAR Systems AB.                                         #
+#                                                                             #
+#    Core               =  plain                                              #
+#    Code model         =  banked                                             #
+#    Data model         =  large                                              #
+#    Calling convention =  xdata reentrant                                    #
+#    Constant location  =  data_rom                                           #
+#    Dptr setup         =  1,16                                               #
+#    Source file        =  D:\Îäºº´´Î¬ÌØÎïÁªÍøÊµÑéÏä×ÊÁÏ\CVT-IOT-VS¹âÅÌ\Zigbe #
+#                          e²¿·Ö£¨ÎïÁªÍø£©\ZStack-CC2530-eV1.3\Projects\zstac #
+#                          k\Samples\SensorApp\Source\SHT10.c                 #
+#    Command line       =  -f D:\Îäºº´´Î¬ÌØÎïÁªÍøÊµÑéÏä×ÊÁÏ\CVT-IOT-VS¹âÅÌ\Zi #
+#                          gbee²¿·Ö£¨ÎïÁªÍø£©\ZStack-CC2530-eV1.3\Projects\zs #
+#                          tack\Samples\SensorApp\CC2530DB\..\..\..\Tools\CC2 #
+#                          530DB\f8wEndev.cfg (-DCPU32MHZ -DROOT=__near_func  #
+#                          -DMAC_CFG_TX_DATA_MAX=3 -DMAC_CFG_TX_MAX=6         #
+#                          -DMAC_CFG_RX_MAX=3) -f D:\Îäºº´´Î¬ÌØÎïÁªÍøÊµÑéÏä×Ê #
+#                          ÁÏ\CVT-IOT-VS¹âÅÌ\Zigbee²¿·Ö£¨ÎïÁªÍø£©\ZStack-CC25 #
+#                          30-eV1.3\Projects\zstack\Samples\SensorApp\CC2530D #
+#                          B\..\..\..\Tools\CC2530DB\f8wConfig.cfg            #
+#                          (-DZIGBEEPRO -DSECURE=0 -DZG_SECURE_DYNAMIC=0      #
+#                          -DREFLECTOR -DDEFAULT_CHANLIST=0x00200000          #
+#                          -DZDAPP_CONFIG_PAN_ID=0x15 -DNWK_START_DELAY=100   #
+#                          -DEXTENDED_JOINING_RANDOM_MASK=0x007F              #
+#                          -DBEACON_REQUEST_DELAY=100                         #
+#                          -DBEACON_REQ_DELAY_MASK=0x00FF                     #
+#                          -DLINK_STATUS_JITTER_MASK=0x007F                   #
+#                          -DROUTE_EXPIRY_TIME=30 -DAPSC_ACK_WAIT_DURATION_PO #
+#                          LLED=3000 -DNWK_INDIRECT_MSG_TIMEOUT=7             #
+#                          -DMAX_RREQ_ENTRIES=8 -DAPSC_MAX_FRAME_RETRIES=3    #
+#                          -DNWK_MAX_DATA_RETRIES=2                           #
+#                          -DMAX_POLL_FAILURE_RETRIES=2 -DMAX_BCAST=9         #
+#                          -DAPS_MAX_GROUPS=16 -DMAX_RTG_ENTRIES=40           #
+#                          -DNWK_MAX_BINDING_ENTRIES=4                        #
+#                          -DMAX_BINDING_CLUSTER_IDS=4 "-DDEFAULT_KEY={0x01,  #
+#                          0x03, 0x05, 0x07, 0x09, 0x0B, 0x0D, 0x0F, 0x00,    #
+#                          0x02, 0x04, 0x06, 0x08, 0x0A, 0x0C, 0x0D}"         #
+#                          -DMAC_MAX_FRAME_SIZE=116                           #
+#                          -DZDNWKMGR_MIN_TRANSMISSIONS=20 "-DCONST=const     #
+#                          __code" -DGENERIC=__generic                        #
+#                          -DRFD_RCVC_ALWAYS_ON=FALSE -DPOLL_RATE=1000        #
+#                          -DQUEUED_POLL_RATE=100 -DRESPONSE_POLL_RATE=100)   #
+#                          -DREJOIN_POLL_RATE=440 D:\Îäºº´´Î¬ÌØÎïÁªÍøÊµÑéÏä×Ê #
+#                          ÁÏ\CVT-IOT-VS¹âÅÌ\Zigbee²¿·Ö£¨ÎïÁªÍø£©\ZStack-CC25 #
+#                          30-eV1.3\Projects\zstack\Samples\SensorApp\Source\ #
+#                          SHT10.c -D NWK_AUTO_POLL -D ZTOOL_P1 -D xMT_TASK   #
+#                          -D MT_SYS_FUNC -D MT_ZDO_FUNC -D                   #
+#                          xLCD_SUPPORTED=DEBUG -D xPOWER_SAVING -lC          #
+#                          D:\Îäºº´´Î¬ÌØÎïÁªÍøÊµÑéÏä×ÊÁÏ\CVT-IOT-VS¹âÅÌ\Zigbe #
+#                          e²¿·Ö£¨ÎïÁªÍø£©\ZStack-CC2530-eV1.3\Projects\zstac #
+#                          k\Samples\SensorApp\CC2530DB\EndDeviceEB\List\     #
+#                          -lA D:\Îäºº´´Î¬ÌØÎïÁªÍøÊµÑéÏä×ÊÁÏ\CVT-IOT-VS¹âÅÌ\Z #
+#                          igbee²¿·Ö£¨ÎïÁªÍø£©\ZStack-CC2530-eV1.3\Projects\z #
+#                          stack\Samples\SensorApp\CC2530DB\EndDeviceEB\List\ #
+#                           --diag_suppress Pe001,Pa010 -o                    #
+#                          D:\Îäºº´´Î¬ÌØÎïÁªÍøÊµÑéÏä×ÊÁÏ\CVT-IOT-VS¹âÅÌ\Zigbe #
+#                          e²¿·Ö£¨ÎïÁªÍø£©\ZStack-CC2530-eV1.3\Projects\zstac #
+#                          k\Samples\SensorApp\CC2530DB\EndDeviceEB\Obj\ -e   #
+#                          --no_code_motion --debug --core=plain --dptr=16,1  #
+#                          --data_model=large --code_model=banked             #
+#                          --calling_convention=xdata_reentrant               #
+#                          --place_constants=data_rom --nr_virtual_regs 16    #
+#                          -I D:\Îäºº´´Î¬ÌØÎïÁªÍøÊµÑéÏä×ÊÁÏ\CVT-IOT-VS¹âÅÌ\Zi #
+#                          gbee²¿·Ö£¨ÎïÁªÍø£©\ZStack-CC2530-eV1.3\Projects\zs #
+#                          tack\Samples\SensorApp\CC2530DB\ -I                #
+#                          D:\Îäºº´´Î¬ÌØÎïÁªÍøÊµÑéÏä×ÊÁÏ\CVT-IOT-VS¹âÅÌ\Zigbe #
+#                          e²¿·Ö£¨ÎïÁªÍø£©\ZStack-CC2530-eV1.3\Projects\zstac #
+#                          k\Samples\SensorApp\CC2530DB\..\Source\ -I         #
+#                          D:\Îäºº´´Î¬ÌØÎïÁªÍøÊµÑéÏä×ÊÁÏ\CVT-IOT-VS¹âÅÌ\Zigbe #
+#                          e²¿·Ö£¨ÎïÁªÍø£©\ZStack-CC2530-eV1.3\Projects\zstac #
+#                          k\Samples\SensorApp\CC2530DB\..\..\..\ZMain\TI2530 #
+#                          DB\ -I D:\Îäºº´´Î¬ÌØÎïÁªÍøÊµÑéÏä×ÊÁÏ\CVT-IOT-VS¹âÅ #
+#                          Ì\Zigbee²¿·Ö£¨ÎïÁªÍø£©\ZStack-CC2530-eV1.3\Project #
+#                          s\zstack\Samples\SensorApp\CC2530DB\..\..\..\..\.. #
+#                          \Components\hal\include\ -I                        #
+#                          D:\Îäºº´´Î¬ÌØÎïÁªÍøÊµÑéÏä×ÊÁÏ\CVT-IOT-VS¹âÅÌ\Zigbe #
+#                          e²¿·Ö£¨ÎïÁªÍø£©\ZStack-CC2530-eV1.3\Projects\zstac #
+#                          k\Samples\SensorApp\CC2530DB\..\..\..\..\..\Compon #
+#                          ents\hal\target\CC2530EB\ -I                       #
+#                          D:\Îäºº´´Î¬ÌØÎïÁªÍøÊµÑéÏä×ÊÁÏ\CVT-IOT-VS¹âÅÌ\Zigbe #
+#                          e²¿·Ö£¨ÎïÁªÍø£©\ZStack-CC2530-eV1.3\Projects\zstac #
+#                          k\Samples\SensorApp\CC2530DB\..\..\..\..\..\Compon #
+#                          ents\mac\include\ -I D:\Îäºº´´Î¬ÌØÎïÁªÍøÊµÑéÏä×ÊÁÏ #
+#                          \CVT-IOT-VS¹âÅÌ\Zigbee²¿·Ö£¨ÎïÁªÍø£©\ZStack-CC2530 #
+#                          -eV1.3\Projects\zstack\Samples\SensorApp\CC2530DB\ #
+#                          ..\..\..\..\..\Components\mac\high_level\ -I       #
+#                          D:\Îäºº´´Î¬ÌØÎïÁªÍøÊµÑéÏä×ÊÁÏ\CVT-IOT-VS¹âÅÌ\Zigbe #
+#                          e²¿·Ö£¨ÎïÁªÍø£©\ZStack-CC2530-eV1.3\Projects\zstac #
+#                          k\Samples\SensorApp\CC2530DB\..\..\..\..\..\Compon #
+#                          ents\mac\low_level\srf04\ -I                       #
+#                          D:\Îäºº´´Î¬ÌØÎïÁªÍøÊµÑéÏä×ÊÁÏ\CVT-IOT-VS¹âÅÌ\Zigbe #
+#                          e²¿·Ö£¨ÎïÁªÍø£©\ZStack-CC2530-eV1.3\Projects\zstac #
+#                          k\Samples\SensorApp\CC2530DB\..\..\..\..\..\Compon #
+#                          ents\mac\low_level\srf04\single_chip\ -I           #
+#                          D:\Îäºº´´Î¬ÌØÎïÁªÍøÊµÑéÏä×ÊÁÏ\CVT-IOT-VS¹âÅÌ\Zigbe #
+#                          e²¿·Ö£¨ÎïÁªÍø£©\ZStack-CC2530-eV1.3\Projects\zstac #
+#                          k\Samples\SensorApp\CC2530DB\..\..\..\..\..\Compon #
+#                          ents\mt\ -I D:\Îäºº´´Î¬ÌØÎïÁªÍøÊµÑéÏä×ÊÁÏ\CVT-IOT- #
+#                          VS¹âÅÌ\Zigbee²¿·Ö£¨ÎïÁªÍø£©\ZStack-CC2530-eV1.3\Pr #
+#                          ojects\zstack\Samples\SensorApp\CC2530DB\..\..\..\ #
+#                          ..\..\Components\osal\include\ -I                  #
+#                          D:\Îäºº´´Î¬ÌØÎïÁªÍøÊµÑéÏä×ÊÁÏ\CVT-IOT-VS¹âÅÌ\Zigbe #
+#                          e²¿·Ö£¨ÎïÁªÍø£©\ZStack-CC2530-eV1.3\Projects\zstac #
+#                          k\Samples\SensorApp\CC2530DB\..\..\..\..\..\Compon #
+#                          ents\services\saddr\ -I D:\Îäºº´´Î¬ÌØÎïÁªÍøÊµÑéÏä× #
+#                          ÊÁÏ\CVT-IOT-VS¹âÅÌ\Zigbee²¿·Ö£¨ÎïÁªÍø£©\ZStack-CC2 #
+#                          530-eV1.3\Projects\zstack\Samples\SensorApp\CC2530 #
+#                          DB\..\..\..\..\..\Components\services\sdata\ -I    #
+#                          D:\Îäºº´´Î¬ÌØÎïÁªÍøÊµÑéÏä×ÊÁÏ\CVT-IOT-VS¹âÅÌ\Zigbe #
+#                          e²¿·Ö£¨ÎïÁªÍø£©\ZStack-CC2530-eV1.3\Projects\zstac #
+#                          k\Samples\SensorApp\CC2530DB\..\..\..\..\..\Compon #
+#                          ents\stack\af\ -I D:\Îäºº´´Î¬ÌØÎïÁªÍøÊµÑéÏä×ÊÁÏ\CV #
+#                          T-IOT-VS¹âÅÌ\Zigbee²¿·Ö£¨ÎïÁªÍø£©\ZStack-CC2530-eV #
+#                          1.3\Projects\zstack\Samples\SensorApp\CC2530DB\..\ #
+#                          ..\..\..\..\Components\stack\nwk\ -I               #
+#                          D:\Îäºº´´Î¬ÌØÎïÁªÍøÊµÑéÏä×ÊÁÏ\CVT-IOT-VS¹âÅÌ\Zigbe #
+#                          e²¿·Ö£¨ÎïÁªÍø£©\ZStack-CC2530-eV1.3\Projects\zstac #
+#                          k\Samples\SensorApp\CC2530DB\..\..\..\..\..\Compon #
+#                          ents\stack\sapi\ -I D:\Îäºº´´Î¬ÌØÎïÁªÍøÊµÑéÏä×ÊÁÏ\ #
+#                          CVT-IOT-VS¹âÅÌ\Zigbee²¿·Ö£¨ÎïÁªÍø£©\ZStack-CC2530- #
+#                          eV1.3\Projects\zstack\Samples\SensorApp\CC2530DB\. #
+#                          .\..\..\..\..\Components\stack\sec\ -I             #
+#                          D:\Îäºº´´Î¬ÌØÎïÁªÍøÊµÑéÏä×ÊÁÏ\CVT-IOT-VS¹âÅÌ\Zigbe #
+#                          e²¿·Ö£¨ÎïÁªÍø£©\ZStack-CC2530-eV1.3\Projects\zstac #
+#                          k\Samples\SensorApp\CC2530DB\..\..\..\..\..\Compon #
+#                          ents\stack\sys\ -I D:\Îäºº´´Î¬ÌØÎïÁªÍøÊµÑéÏä×ÊÁÏ\C #
+#                          VT-IOT-VS¹âÅÌ\Zigbee²¿·Ö£¨ÎïÁªÍø£©\ZStack-CC2530-e #
+#                          V1.3\Projects\zstack\Samples\SensorApp\CC2530DB\.. #
+#                          \..\..\..\..\Components\stack\zdo\ -I              #
+#                          D:\Îäºº´´Î¬ÌØÎïÁªÍøÊµÑéÏä×ÊÁÏ\CVT-IOT-VS¹âÅÌ\Zigbe #
+#                          e²¿·Ö£¨ÎïÁªÍø£©\ZStack-CC2530-eV1.3\Projects\zstac #
+#                          k\Samples\SensorApp\CC2530DB\..\..\..\..\..\Compon #
+#                          ents\zmac\ -I D:\Îäºº´´Î¬ÌØÎïÁªÍøÊµÑéÏä×ÊÁÏ\CVT-IO #
+#                          T-VS¹âÅÌ\Zigbee²¿·Ö£¨ÎïÁªÍø£©\ZStack-CC2530-eV1.3\ #
+#                          Projects\zstack\Samples\SensorApp\CC2530DB\..\..\. #
+#                          .\..\..\Components\zmac\f8w\ -Ohz                  #
+#                          --require_prototypes                               #
+#    List file          =  D:\Îäºº´´Î¬ÌØÎïÁªÍøÊµÑéÏä×ÊÁÏ\CVT-IOT-VS¹âÅÌ\Zigbe #
+#                          e²¿·Ö£¨ÎïÁªÍø£©\ZStack-CC2530-eV1.3\Projects\zstac #
+#                          k\Samples\SensorApp\CC2530DB\EndDeviceEB\List\SHT1 #
+#                          0.lst                                              #
+#    Object file        =  D:\Îäºº´´Î¬ÌØÎïÁªÍøÊµÑéÏä×ÊÁÏ\CVT-IOT-VS¹âÅÌ\Zigbe #
+#                          e²¿·Ö£¨ÎïÁªÍø£©\ZStack-CC2530-eV1.3\Projects\zstac #
+#                          k\Samples\SensorApp\CC2530DB\EndDeviceEB\Obj\SHT10 #
+#                          .r51                                               #
+#                                                                             #
+#                                                                             #
+###############################################################################
+
+D:\Îäºº´´Î¬ÌØÎïÁªÍøÊµÑéÏä×ÊÁÏ\CVT-IOT-VS¹âÅÌ\Zigbee²¿·Ö£¨ÎïÁªÍø£©\ZStack-CC2530-eV1.3\Projects\zstack\Samples\SensorApp\Source\SHT10.c
+      1          #include "SENSOR.h"
+      2          #include <SENSOR.c>
+
+  uint8 GetADValue(void)
+        ^
+"D:\Îäºº´´Î¬ÌØÎïÁªÍøÊµÑéÏä×ÊÁÏ\CVT-IOT-VS¹âÅÌ\Zigbee²¿·Ö£¨ÎïÁªÍø£©\ZStack-CC2530-eV1.3\Components\hal\target\CC2530EB\SENSOR.c",2  Error[Pa045]: 
+          function "GetADValue" has no prototype
+
+      ADCCFG = 0x01;
+      ^
+"D:\Îäºº´´Î¬ÌØÎïÁªÍøÊµÑéÏä×ÊÁÏ\CVT-IOT-VS¹âÅÌ\Zigbee²¿·Ö£¨ÎïÁªÍø£©\ZStack-CC2530-eV1.3\Components\hal\target\CC2530EB\SENSOR.c",5  Error[Pe020]: 
+          identifier "ADCCFG" is undefined
+
+      ADCCON1 = 0x33;
+      ^
+"D:\Îäºº´´Î¬ÌØÎïÁªÍøÊµÑéÏä×ÊÁÏ\CVT-IOT-VS¹âÅÌ\Zigbee²¿·Ö£¨ÎïÁªÍø£©\ZStack-CC2530-eV1.3\Components\hal\target\CC2530EB\SENSOR.c",6  Error[Pe020]: 
+          identifier "ADCCON1" is undefined
+
+      ADCCON2 = 0xB0;
+      ^
+"D:\Îäºº´´Î¬ÌØÎïÁªÍøÊµÑéÏä×ÊÁÏ\CVT-IOT-VS¹âÅÌ\Zigbee²¿·Ö£¨ÎïÁªÍø£©\ZStack-CC2530-eV1.3\Components\hal\target\CC2530EB\SENSOR.c",7  Error[Pe020]: 
+          identifier "ADCCON2" is undefined
+
+      v = ADCL;
+          ^
+"D:\Îäºº´´Î¬ÌØÎïÁªÍøÊµÑéÏä×ÊÁÏ\CVT-IOT-VS¹âÅÌ\Zigbee²¿·Ö£¨ÎïÁªÍø£©\ZStack-CC2530-eV1.3\Components\hal\target\CC2530EB\SENSOR.c",10  Error[Pe020]: 
+          identifier "ADCL" is undefined
+
+      v = ADCH;
+          ^
+"D:\Îäºº´´Î¬ÌØÎïÁªÍøÊµÑéÏä×ÊÁÏ\CVT-IOT-VS¹âÅÌ\Zigbee²¿·Ö£¨ÎïÁªÍø£©\ZStack-CC2530-eV1.3\Components\hal\target\CC2530EB\SENSOR.c",11  Error[Pe020]: 
+          identifier "ADCH" is undefined
+
+  void SetIOInput(uint8 group, uint8 bit, uint8 pull)
+       ^
+"D:\Îäºº´´Î¬ÌØÎïÁªÍøÊµÑéÏä×ÊÁÏ\CVT-IOT-VS¹âÅÌ\Zigbee²¿·Ö£¨ÎïÁªÍø£©\ZStack-CC2530-eV1.3\Components\hal\target\CC2530EB\SENSOR.c",15  Error[Pa045]: 
+          function "SetIOInput" has no prototype
+
+     case 0: P0DIR &= ~(1 << bit); P0SEL &= ~(1 << bit); break;
+             ^
+"D:\Îäºº´´Î¬ÌØÎïÁªÍøÊµÑéÏä×ÊÁÏ\CVT-IOT-VS¹âÅÌ\Zigbee²¿·Ö£¨ÎïÁªÍø£©\ZStack-CC2530-eV1.3\Components\hal\target\CC2530EB\SENSOR.c",19  Error[Pe020]: 
+          identifier "P0DIR" is undefined
+
+     case 0: P0DIR &= ~(1 << bit); P0SEL &= ~(1 << bit); break;
+                                   ^
+"D:\Îäºº´´Î¬ÌØÎïÁªÍøÊµÑéÏä×ÊÁÏ\CVT-IOT-VS¹âÅÌ\Zigbee²¿·Ö£¨ÎïÁªÍø£©\ZStack-CC2530-eV1.3\Components\hal\target\CC2530EB\SENSOR.c",19  Error[Pe020]: 
+          identifier "P0SEL" is undefined
+
+     case 1: P1DIR &= ~(1 << bit); P1SEL &= ~(1 << bit); break;
+             ^
+"D:\Îäºº´´Î¬ÌØÎïÁªÍøÊµÑéÏä×ÊÁÏ\CVT-IOT-VS¹âÅÌ\Zigbee²¿·Ö£¨ÎïÁªÍø£©\ZStack-CC2530-eV1.3\Components\hal\target\CC2530EB\SENSOR.c",20  Error[Pe020]: 
+          identifier "P1DIR" is undefined
+
+     case 1: P1DIR &= ~(1 << bit); P1SEL &= ~(1 << bit); break;
+                                   ^
+"D:\Îäºº´´Î¬ÌØÎïÁªÍøÊµÑéÏä×ÊÁÏ\CVT-IOT-VS¹âÅÌ\Zigbee²¿·Ö£¨ÎïÁªÍø£©\ZStack-CC2530-eV1.3\Components\hal\target\CC2530EB\SENSOR.c",20  Error[Pe020]: 
+          identifier "P1SEL" is undefined
+
+     case 2: P2DIR &= ~(1 << bit); P2SEL &= ~(1 << bit); break;
+             ^
+"D:\Îäºº´´Î¬ÌØÎïÁªÍøÊµÑéÏä×ÊÁÏ\CVT-IOT-VS¹âÅÌ\Zigbee²¿·Ö£¨ÎïÁªÍø£©\ZStack-CC2530-eV1.3\Components\hal\target\CC2530EB\SENSOR.c",21  Error[Pe020]: 
+          identifier "P2DIR" is undefined
+
+     case 2: P2DIR &= ~(1 << bit); P2SEL &= ~(1 << bit); break;
+                                   ^
+"D:\Îäºº´´Î¬ÌØÎïÁªÍøÊµÑéÏä×ÊÁÏ\CVT-IOT-VS¹âÅÌ\Zigbee²¿·Ö£¨ÎïÁªÍø£©\ZStack-CC2530-eV1.3\Components\hal\target\CC2530EB\SENSOR.c",21  Error[Pe020]: 
+          identifier "P2SEL" is undefined
+
+  void SetIOOutput(uint8 group, uint8 bit)
+       ^
+"D:\Îäºº´´Î¬ÌØÎïÁªÍøÊµÑéÏä×ÊÁÏ\CVT-IOT-VS¹âÅÌ\Zigbee²¿·Ö£¨ÎïÁªÍø£©\ZStack-CC2530-eV1.3\Components\hal\target\CC2530EB\SENSOR.c",24  Error[Pa045]: 
+          function "SetIOOutput" has no prototype
+
+     case 0: P0DIR |= (1 << bit); P0SEL &= ~(1 << bit); break;
+             ^
+"D:\Îäºº´´Î¬ÌØÎïÁªÍøÊµÑéÏä×ÊÁÏ\CVT-IOT-VS¹âÅÌ\Zigbee²¿·Ö£¨ÎïÁªÍø£©\ZStack-CC2530-eV1.3\Components\hal\target\CC2530EB\SENSOR.c",28  Error[Pe020]: 
+          identifier "P0DIR" is undefined
+
+     case 0: P0DIR |= (1 << bit); P0SEL &= ~(1 << bit); break;
+                                  ^
+"D:\Îäºº´´Î¬ÌØÎïÁªÍøÊµÑéÏä×ÊÁÏ\CVT-IOT-VS¹âÅÌ\Zigbee²¿·Ö£¨ÎïÁªÍø£©\ZStack-CC2530-eV1.3\Components\hal\target\CC2530EB\SENSOR.c",28  Error[Pe020]: 
+          identifier "P0SEL" is undefined
+
+     case 1: P1DIR |= (1 << bit); P1SEL &= ~(1 << bit); break;
+             ^
+"D:\Îäºº´´Î¬ÌØÎïÁªÍøÊµÑéÏä×ÊÁÏ\CVT-IOT-VS¹âÅÌ\Zigbee²¿·Ö£¨ÎïÁªÍø£©\ZStack-CC2530-eV1.3\Components\hal\target\CC2530EB\SENSOR.c",29  Error[Pe020]: 
+          identifier "P1DIR" is undefined
+
+     case 1: P1DIR |= (1 << bit); P1SEL &= ~(1 << bit); break;
+                                  ^
+"D:\Îäºº´´Î¬ÌØÎïÁªÍøÊµÑéÏä×ÊÁÏ\CVT-IOT-VS¹âÅÌ\Zigbee²¿·Ö£¨ÎïÁªÍø£©\ZStack-CC2530-eV1.3\Components\hal\target\CC2530EB\SENSOR.c",29  Error[Pe020]: 
+          identifier "P1SEL" is undefined
+
+     case 2: P2DIR |= (1 << bit); P2SEL &= ~(1 << bit); break;
+             ^
+"D:\Îäºº´´Î¬ÌØÎïÁªÍøÊµÑéÏä×ÊÁÏ\CVT-IOT-VS¹âÅÌ\Zigbee²¿·Ö£¨ÎïÁªÍø£©\ZStack-CC2530-eV1.3\Components\hal\target\CC2530EB\SENSOR.c",30  Error[Pe020]: 
+          identifier "P2DIR" is undefined
+
+     case 2: P2DIR |= (1 << bit); P2SEL &= ~(1 << bit); break;
+                                  ^
+"D:\Îäºº´´Î¬ÌØÎïÁªÍøÊµÑéÏä×ÊÁÏ\CVT-IOT-VS¹âÅÌ\Zigbee²¿·Ö£¨ÎïÁªÍø£©\ZStack-CC2530-eV1.3\Components\hal\target\CC2530EB\SENSOR.c",30  Error[Pe020]: 
+          identifier "P2SEL" is undefined
+
+  uint8 GetIOLevel(uint8 group, uint8 bit)
+        ^
+"D:\Îäºº´´Î¬ÌØÎïÁªÍøÊµÑéÏä×ÊÁÏ\CVT-IOT-VS¹âÅÌ\Zigbee²¿·Ö£¨ÎïÁªÍø£©\ZStack-CC2530-eV1.3\Components\hal\target\CC2530EB\SENSOR.c",33  Error[Pa045]: 
+          function "GetIOLevel" has no prototype
+
+      case 0: return !!(P0 & (1 << bit));
+                        ^
+"D:\Îäºº´´Î¬ÌØÎïÁªÍøÊµÑéÏä×ÊÁÏ\CVT-IOT-VS¹âÅÌ\Zigbee²¿·Ö£¨ÎïÁªÍø£©\ZStack-CC2530-eV1.3\Components\hal\target\CC2530EB\SENSOR.c",37  Error[Pe020]: 
+          identifier "P0" is undefined
+
+      case 1: return !!(P1 & (1 << bit));
+                        ^
+"D:\Îäºº´´Î¬ÌØÎïÁªÍøÊµÑéÏä×ÊÁÏ\CVT-IOT-VS¹âÅÌ\Zigbee²¿·Ö£¨ÎïÁªÍø£©\ZStack-CC2530-eV1.3\Components\hal\target\CC2530EB\SENSOR.c",38  Error[Pe020]: 
+          identifier "P1" is undefined
+
+      case 2: return !!(P2 & (1 << bit));
+                        ^
+"D:\Îäºº´´Î¬ÌØÎïÁªÍøÊµÑéÏä×ÊÁÏ\CVT-IOT-VS¹âÅÌ\Zigbee²¿·Ö£¨ÎïÁªÍø£©\ZStack-CC2530-eV1.3\Components\hal\target\CC2530EB\SENSOR.c",39  Error[Pe020]: 
+          identifier "P2" is undefined
+
+  void SetIOLevel(uint8 group, uint8 bit, uint8 value)
+       ^
+"D:\Îäºº´´Î¬ÌØÎïÁªÍøÊµÑéÏä×ÊÁÏ\CVT-IOT-VS¹âÅÌ\Zigbee²¿·Ö£¨ÎïÁªÍø£©\ZStack-CC2530-eV1.3\Components\hal\target\CC2530EB\SENSOR.c",43  Error[Pa045]: 
+          function "SetIOLevel" has no prototype
+
+            P0 |= (1 << bit);
+            ^
+"D:\Îäºº´´Î¬ÌØÎïÁªÍøÊµÑéÏä×ÊÁÏ\CVT-IOT-VS¹âÅÌ\Zigbee²¿·Ö£¨ÎïÁªÍø£©\ZStack-CC2530-eV1.3\Components\hal\target\CC2530EB\SENSOR.c",49  Error[Pe020]: 
+          identifier "P0" is undefined
+
+            P0 &=~(1 << bit);
+            ^
+"D:\Îäºº´´Î¬ÌØÎïÁªÍøÊµÑéÏä×ÊÁÏ\CVT-IOT-VS¹âÅÌ\Zigbee²¿·Ö£¨ÎïÁªÍø£©\ZStack-CC2530-eV1.3\Components\hal\target\CC2530EB\SENSOR.c",51  Error[Pe020]: 
+          identifier "P0" is undefined
+
+            P1 |= (1 << bit);
+            ^
+"D:\Îäºº´´Î¬ÌØÎïÁªÍøÊµÑéÏä×ÊÁÏ\CVT-IOT-VS¹âÅÌ\Zigbee²¿·Ö£¨ÎïÁªÍø£©\ZStack-CC2530-eV1.3\Components\hal\target\CC2530EB\SENSOR.c",55  Error[Pe020]: 
+          identifier "P1" is undefined
+
+            P1 &=~(1 << bit);
+            ^
+"D:\Îäºº´´Î¬ÌØÎïÁªÍøÊµÑéÏä×ÊÁÏ\CVT-IOT-VS¹âÅÌ\Zigbee²¿·Ö£¨ÎïÁªÍø£©\ZStack-CC2530-eV1.3\Components\hal\target\CC2530EB\SENSOR.c",57  Error[Pe020]: 
+          identifier "P1" is undefined
+
+            P2 |= (1 << bit);
+            ^
+"D:\Îäºº´´Î¬ÌØÎïÁªÍøÊµÑéÏä×ÊÁÏ\CVT-IOT-VS¹âÅÌ\Zigbee²¿·Ö£¨ÎïÁªÍø£©\ZStack-CC2530-eV1.3\Components\hal\target\CC2530EB\SENSOR.c",61  Error[Pe020]: 
+          identifier "P2" is undefined
+
+            P2 &=~(1 << bit);
+            ^
+"D:\Îäºº´´Î¬ÌØÎïÁªÍøÊµÑéÏä×ÊÁÏ\CVT-IOT-VS¹âÅÌ\Zigbee²¿·Ö£¨ÎïÁªÍø£©\ZStack-CC2530-eV1.3\Components\hal\target\CC2530EB\SENSOR.c",63  Error[Pe020]: 
+          identifier "P2" is undefined
+
+  void initUART_1(void)
+       ^
+"D:\Îäºº´´Î¬ÌØÎïÁªÍøÊµÑéÏä×ÊÁÏ\CVT-IOT-VS¹âÅÌ\Zigbee²¿·Ö£¨ÎïÁªÍø£©\ZStack-CC2530-eV1.3\Components\hal\target\CC2530EB\SENSOR.c",73  Error[Pa045]: 
+          function "initUART_1" has no prototype
+
+      CLKCONCMD &= ~0x40;              //¾§Õñ
+      ^
+"D:\Îäºº´´Î¬ÌØÎïÁªÍøÊµÑéÏä×ÊÁÏ\CVT-IOT-VS¹âÅÌ\Zigbee²¿·Ö£¨ÎïÁªÍø£©\ZStack-CC2530-eV1.3\Components\hal\target\CC2530EB\SENSOR.c",75  Error[Pe020]: 
+          identifier "CLKCONCMD" is undefined
+
+      while(!(SLEEPSTA & 0x40));      //µÈ´ı¾§ÕñÎÈ¶¨
+              ^
+"D:\Îäºº´´Î¬ÌØÎïÁªÍøÊµÑéÏä×ÊÁÏ\CVT-IOT-VS¹âÅÌ\Zigbee²¿·Ö£¨ÎïÁªÍø£©\ZStack-CC2530-eV1.3\Components\hal\target\CC2530EB\SENSOR.c",76  Error[Pe020]: 
+          identifier "SLEEPSTA" is undefined
+
+      SLEEPCMD |= 0x04; 		 //¹Ø±Õ²»ÓÃµÄRCÕñµ´Æ÷
+      ^
+"D:\Îäºº´´Î¬ÌØÎïÁªÍøÊµÑéÏä×ÊÁÏ\CVT-IOT-VS¹âÅÌ\Zigbee²¿·Ö£¨ÎïÁªÍø£©\ZStack-CC2530-eV1.3\Components\hal\target\CC2530EB\SENSOR.c",78  Error[Pe020]: 
+          identifier "SLEEPCMD" is undefined
+
+      PERCFG |= 0x02;				//Î»ÖÃ1 P0¿Ú
+      ^
+"D:\Îäºº´´Î¬ÌØÎïÁªÍøÊµÑéÏä×ÊÁÏ\CVT-IOT-VS¹âÅÌ\Zigbee²¿·Ö£¨ÎïÁªÍø£©\ZStack-CC2530-eV1.3\Components\hal\target\CC2530EB\SENSOR.c",79  Error[Pe020]: 
+          identifier "PERCFG" is undefined
+
+      P1SEL |= 0xF0;				//P0ÓÃ×÷´®¿Ú
+      ^
+"D:\Îäºº´´Î¬ÌØÎïÁªÍøÊµÑéÏä×ÊÁÏ\CVT-IOT-VS¹âÅÌ\Zigbee²¿·Ö£¨ÎïÁªÍø£©\ZStack-CC2530-eV1.3\Components\hal\target\CC2530EB\SENSOR.c",80  Error[Pe020]: 
+          identifier "P1SEL" is undefined
+
+      P2DIR |= 0X80;                             //P0ÓÅÏÈ×÷Îª´®¿Ú1
+      ^
+"D:\Îäºº´´Î¬ÌØÎïÁªÍøÊµÑéÏä×ÊÁÏ\CVT-IOT-VS¹âÅÌ\Zigbee²¿·Ö£¨ÎïÁªÍø£©\ZStack-CC2530-eV1.3\Components\hal\target\CC2530EB\SENSOR.c",81  Error[Pe020]: 
+          identifier "P2DIR" is undefined
+
+      U1CSR |= 0x80;				//UART·½Ê½
+      ^
+"D:\Îäºº´´Î¬ÌØÎïÁªÍøÊµÑéÏä×ÊÁÏ\CVT-IOT-VS¹âÅÌ\Zigbee²¿·Ö£¨ÎïÁªÍø£©\ZStack-CC2530-eV1.3\Components\hal\target\CC2530EB\SENSOR.c",82  Error[Pe020]: 
+          identifier "U1CSR" is undefined
+
+      U1GCR |= 8;				//baud_e
+      ^
+"D:\Îäºº´´Î¬ÌØÎïÁªÍøÊµÑéÏä×ÊÁÏ\CVT-IOT-VS¹âÅÌ\Zigbee²¿·Ö£¨ÎïÁªÍø£©\ZStack-CC2530-eV1.3\Components\hal\target\CC2530EB\SENSOR.c",87  Error[Pe020]: 
+          identifier "U1GCR" is undefined
+
+      U1BAUD |= 59;				//²¨ÌØÂÊÉèÎª 9600
+      ^
+"D:\Îäºº´´Î¬ÌØÎïÁªÍøÊµÑéÏä×ÊÁÏ\CVT-IOT-VS¹âÅÌ\Zigbee²¿·Ö£¨ÎïÁªÍø£©\ZStack-CC2530-eV1.3\Components\hal\target\CC2530EB\SENSOR.c",88  Error[Pe020]: 
+          identifier "U1BAUD" is undefined
+
+      UTX1IF = 0;
+      ^
+"D:\Îäºº´´Î¬ÌØÎïÁªÍøÊµÑéÏä×ÊÁÏ\CVT-IOT-VS¹âÅÌ\Zigbee²¿·Ö£¨ÎïÁªÍø£©\ZStack-CC2530-eV1.3\Components\hal\target\CC2530EB\SENSOR.c",95  Error[Pe020]: 
+          identifier "UTX1IF" is undefined
+
+      IEN0 |= 0x88;				//¿ª×ÜÖĞ¶Ï£¬½ÓÊÕÖĞ¶Ï
+      ^
+"D:\Îäºº´´Î¬ÌØÎïÁªÍøÊµÑéÏä×ÊÁÏ\CVT-IOT-VS¹âÅÌ\Zigbee²¿·Ö£¨ÎïÁªÍø£©\ZStack-CC2530-eV1.3\Components\hal\target\CC2530EB\SENSOR.c",97  Error[Pe020]: 
+          identifier "IEN0" is undefined
+
+  void Uart1TxByte(unsigned char v)
+       ^
+"D:\Îäºº´´Î¬ÌØÎïÁªÍøÊµÑéÏä×ÊÁÏ\CVT-IOT-VS¹âÅÌ\Zigbee²¿·Ö£¨ÎïÁªÍø£©\ZStack-CC2530-eV1.3\Components\hal\target\CC2530EB\SENSOR.c",100  Error[Pa045]: 
+          function "Uart1TxByte" has no prototype
+
+      U1DBUF = v;
+      ^
+"D:\Îäºº´´Î¬ÌØÎïÁªÍøÊµÑéÏä×ÊÁÏ\CVT-IOT-VS¹âÅÌ\Zigbee²¿·Ö£¨ÎïÁªÍø£©\ZStack-CC2530-eV1.3\Components\hal\target\CC2530EB\SENSOR.c",102  Error[Pe020]: 
+          identifier "U1DBUF" is undefined
+
+      while(UTX1IF == 0);
+            ^
+"D:\Îäºº´´Î¬ÌØÎïÁªÍøÊµÑéÏä×ÊÁÏ\CVT-IOT-VS¹âÅÌ\Zigbee²¿·Ö£¨ÎïÁªÍø£©\ZStack-CC2530-eV1.3\Components\hal\target\CC2530EB\SENSOR.c",103  Error[Pe020]: 
+          identifier "UTX1IF" is undefined
+
+      UTX1IF = 0;
+      ^
+"D:\Îäºº´´Î¬ÌØÎïÁªÍøÊµÑéÏä×ÊÁÏ\CVT-IOT-VS¹âÅÌ\Zigbee²¿·Ö£¨ÎïÁªÍø£©\ZStack-CC2530-eV1.3\Components\hal\target\CC2530EB\SENSOR.c",104  Error[Pe020]: 
+          identifier "UTX1IF" is undefined
+
+  void Uart1TX(unsigned char *Data,unsigned int len)
+       ^
+"D:\Îäºº´´Î¬ÌØÎïÁªÍøÊµÑéÏä×ÊÁÏ\CVT-IOT-VS¹âÅÌ\Zigbee²¿·Ö£¨ÎïÁªÍø£©\ZStack-CC2530-eV1.3\Components\hal\target\CC2530EB\SENSOR.c",114  Error[Pa045]: 
+          function "Uart1TX" has no prototype
+
+      U1DBUF = *Data++;
+      ^
+"D:\Îäºº´´Î¬ÌØÎïÁªÍøÊµÑéÏä×ÊÁÏ\CVT-IOT-VS¹âÅÌ\Zigbee²¿·Ö£¨ÎïÁªÍø£©\ZStack-CC2530-eV1.3\Components\hal\target\CC2530EB\SENSOR.c",119  Error[Pe020]: 
+          identifier "U1DBUF" is undefined
+
+      while(UTX1IF == 0);
+            ^
+"D:\Îäºº´´Î¬ÌØÎïÁªÍøÊµÑéÏä×ÊÁÏ\CVT-IOT-VS¹âÅÌ\Zigbee²¿·Ö£¨ÎïÁªÍø£©\ZStack-CC2530-eV1.3\Components\hal\target\CC2530EB\SENSOR.c",120  Error[Pe020]: 
+          identifier "UTX1IF" is undefined
+
+      UTX1IF = 0;
+      ^
+"D:\Îäºº´´Î¬ÌØÎïÁªÍøÊµÑéÏä×ÊÁÏ\CVT-IOT-VS¹âÅÌ\Zigbee²¿·Ö£¨ÎïÁªÍø£©\ZStack-CC2530-eV1.3\Components\hal\target\CC2530EB\SENSOR.c",121  Error[Pe020]: 
+          identifier "UTX1IF" is undefined
+
+  char Uart1RX(void)
+       ^
+"D:\Îäºº´´Î¬ÌØÎïÁªÍøÊµÑéÏä×ÊÁÏ\CVT-IOT-VS¹âÅÌ\Zigbee²¿·Ö£¨ÎïÁªÍø£©\ZStack-CC2530-eV1.3\Components\hal\target\CC2530EB\SENSOR.c",125  Error[Pa045]: 
+          function "Uart1RX" has no prototype
+
+     status = U1CSR;
+              ^
+"D:\Îäºº´´Î¬ÌØÎïÁªÍøÊµÑéÏä×ÊÁÏ\CVT-IOT-VS¹âÅÌ\Zigbee²¿·Ö£¨ÎïÁªÍø£©\ZStack-CC2530-eV1.3\Components\hal\target\CC2530EB\SENSOR.c",129  Error[Pe020]: 
+          identifier "U1CSR" is undefined
+
+     while (!URX1IF);
+             ^
+"D:\Îäºº´´Î¬ÌØÎïÁªÍøÊµÑéÏä×ÊÁÏ\CVT-IOT-VS¹âÅÌ\Zigbee²¿·Ö£¨ÎïÁªÍø£©\ZStack-CC2530-eV1.3\Components\hal\target\CC2530EB\SENSOR.c",131  Error[Pe020]: 
+          identifier "URX1IF" is undefined
+
+     c = U1DBUF;
+         ^
+"D:\Îäºº´´Î¬ÌØÎïÁªÍøÊµÑéÏä×ÊÁÏ\CVT-IOT-VS¹âÅÌ\Zigbee²¿·Ö£¨ÎïÁªÍø£©\ZStack-CC2530-eV1.3\Components\hal\target\CC2530EB\SENSOR.c",132  Error[Pe020]: 
+          identifier "U1DBUF" is undefined
+
+     URX1IF = 0;
+     ^
+"D:\Îäºº´´Î¬ÌØÎïÁªÍøÊµÑéÏä×ÊÁÏ\CVT-IOT-VS¹âÅÌ\Zigbee²¿·Ö£¨ÎïÁªÍø£©\ZStack-CC2530-eV1.3\Components\hal\target\CC2530EB\SENSOR.c",133  Error[Pe020]: 
+          identifier "URX1IF" is undefined
+      3          #include "iocc2530.h"
+      4          
+      5            
+      6          #define uint8 unsigned char 
+      7          #define uint16 unsigned int
+      8          #define uint32 unsigned long
+      9          
+     10          extern void Sensor_PIN_INT(void);
+     11          
+     12          char uart_buffer;
+     13          
+     14          uint8 ReadTemp(void)
+     15          {
+     16             uint8 temp;
+     17             unsigned long lTemp;
+     18              float RHTValue;
+     19              unsigned char buf[8];
+     20              P0DIR |= 0x01;  //ÉèÖÃP0.0ÎªÊä³ö·½Ê½£»P0.4ºÍP0.5ÎªÊäÈë·½Ê½
+     21              P2DIR |= 0x01;  //ÉèÖÃP2.0ÎªÊä³ö·½Ê½
+     22              P0_0 = 1; 
+     23              P2_0 = 1;       //Ï¨ÃğLED
+     24              CLKCONCMD &= ~0x40;          //Ñ¡Ôñ32M¾§Õñ
+     25              while(!(SLEEPSTA & 0x40));   //µÈ´ıXSOCÎÈ¶¨
+     26              CLKCONCMD = 0xb8;            //TICHSPD 128·ÖÆµ£¬CLKSPD ²»·ÖÆµ
+     27              SLEEPCMD |= 0x04;            //¹Ø±Õ²»ÓÃµÄRC Õñµ´Æ÷
+     28              PERCFG = 0x00;               //Î»ÖÃ1 P0 ¿Ú
+     29              P0SEL = 0x3c;                //P0 ÓÃ×÷´®¿Ú
+     30              U0CSR |= 0x80;               //UART ·½Ê½
+     31              U0GCR |= 10;                 //baud_e = 10;
+     32              U0BAUD |= 216;               //²¨ÌØÂÊÉèÎª57600
+     33              UTX0IF = 1;
+     34              U0CSR |= 0X40;               //ÔÊĞí½ÓÊÕ
+     35              IEN0 |= 0x84;                //¿ª×ÜÖĞ¶Ï£¬½ÓÊÕÖĞ¶Ï  	
+     36              Sensor_PIN_INT();
+     37          
+     38              while(1){ 
+     39          	lTemp = ReadSHT1(3);//14bitÎÂ¶È
+                 	        ^
+Error[Pe223]: function "ReadSHT1" declared implicitly
+     40                  lTemp = lTemp >> 8;
+     41                  RHTValue = lTemp;
+     42                  RHTValue = 0.01 * RHTValue - 39.64;
+     43                  buf[0] = (uint8)RHTValue;//ÎÂÊª¶È´«¸ĞÆ÷ÎÂ¶È 
+     44          	buf[0] = ( ((buf[0]/10)<<4) + (buf[0]%10) );
+     45                  buf[1] = (buf[0]>>4)&0xf;
+     46          	if(buf[1] > 0x9)
+     47                      buf[1] = buf[1] - 0XA + 'A';
+     48          	else
+     49          	    buf[1] = buf[1] + '0';
+     50          	buf[2] = (buf[0])&0xf;
+     51          	if(buf[2] > 0x9)
+     52          	    buf[2] = buf[2] -0XA + 'A';
+     53          	else
+     54          	    buf[2] = buf[2] + '0';
+     55                  
+     56          
+     57                  temp = (uint8)RHTValue;
+     58              
+     59                  return temp;
+     60          }
+     61          }
+
+Errors: 57
+Warnings: none

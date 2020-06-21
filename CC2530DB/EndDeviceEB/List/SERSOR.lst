@@ -1,0 +1,1487 @@
+###############################################################################
+#                                                                             #
+# IAR C/C++ Compiler V8.10.1.10194/W32 for 8051         05/Nov/2019  17:48:09 #
+# Copyright 2004-2011 IAR Systems AB.                                         #
+#                                                                             #
+#    Core               =  plain                                              #
+#    Code model         =  banked                                             #
+#    Data model         =  large                                              #
+#    Calling convention =  xdata reentrant                                    #
+#    Constant location  =  data_rom                                           #
+#    Dptr setup         =  1,16                                               #
+#    Source file        =  D:\Œ‰∫∫¥¥Œ¨ÃÿŒÔ¡™Õ¯ µ—Èœ‰◊ ¡œ\CVT-IOT-VSπ‚≈Ã\Zigbe #
+#                          e≤ø∑÷£®ŒÔ¡™Õ¯£©\ZStack-CC2530-eV1.3\Projects\zstac #
+#                          k\Samples\SensorApp\Source\SERSOR.c                #
+#    Command line       =  -f D:\Œ‰∫∫¥¥Œ¨ÃÿŒÔ¡™Õ¯ µ—Èœ‰◊ ¡œ\CVT-IOT-VSπ‚≈Ã\Zi #
+#                          gbee≤ø∑÷£®ŒÔ¡™Õ¯£©\ZStack-CC2530-eV1.3\Projects\zs #
+#                          tack\Samples\SensorApp\CC2530DB\..\..\..\Tools\CC2 #
+#                          530DB\f8wEndev.cfg (-DCPU32MHZ -DROOT=__near_func  #
+#                          -DMAC_CFG_TX_DATA_MAX=3 -DMAC_CFG_TX_MAX=6         #
+#                          -DMAC_CFG_RX_MAX=3) -f D:\Œ‰∫∫¥¥Œ¨ÃÿŒÔ¡™Õ¯ µ—Èœ‰◊  #
+#                          ¡œ\CVT-IOT-VSπ‚≈Ã\Zigbee≤ø∑÷£®ŒÔ¡™Õ¯£©\ZStack-CC25 #
+#                          30-eV1.3\Projects\zstack\Samples\SensorApp\CC2530D #
+#                          B\..\..\..\Tools\CC2530DB\f8wConfig.cfg            #
+#                          (-DZIGBEEPRO -DSECURE=0 -DZG_SECURE_DYNAMIC=0      #
+#                          -DREFLECTOR -DDEFAULT_CHANLIST=0x00200000          #
+#                          -DZDAPP_CONFIG_PAN_ID=0x15 -DNWK_START_DELAY=100   #
+#                          -DEXTENDED_JOINING_RANDOM_MASK=0x007F              #
+#                          -DBEACON_REQUEST_DELAY=100                         #
+#                          -DBEACON_REQ_DELAY_MASK=0x00FF                     #
+#                          -DLINK_STATUS_JITTER_MASK=0x007F                   #
+#                          -DROUTE_EXPIRY_TIME=30 -DAPSC_ACK_WAIT_DURATION_PO #
+#                          LLED=3000 -DNWK_INDIRECT_MSG_TIMEOUT=7             #
+#                          -DMAX_RREQ_ENTRIES=8 -DAPSC_MAX_FRAME_RETRIES=3    #
+#                          -DNWK_MAX_DATA_RETRIES=2                           #
+#                          -DMAX_POLL_FAILURE_RETRIES=2 -DMAX_BCAST=9         #
+#                          -DAPS_MAX_GROUPS=16 -DMAX_RTG_ENTRIES=40           #
+#                          -DNWK_MAX_BINDING_ENTRIES=4                        #
+#                          -DMAX_BINDING_CLUSTER_IDS=4 "-DDEFAULT_KEY={0x01,  #
+#                          0x03, 0x05, 0x07, 0x09, 0x0B, 0x0D, 0x0F, 0x00,    #
+#                          0x02, 0x04, 0x06, 0x08, 0x0A, 0x0C, 0x0D}"         #
+#                          -DMAC_MAX_FRAME_SIZE=116                           #
+#                          -DZDNWKMGR_MIN_TRANSMISSIONS=20 "-DCONST=const     #
+#                          __code" -DGENERIC=__generic                        #
+#                          -DRFD_RCVC_ALWAYS_ON=FALSE -DPOLL_RATE=1000        #
+#                          -DQUEUED_POLL_RATE=100 -DRESPONSE_POLL_RATE=100)   #
+#                          -DREJOIN_POLL_RATE=440 D:\Œ‰∫∫¥¥Œ¨ÃÿŒÔ¡™Õ¯ µ—Èœ‰◊  #
+#                          ¡œ\CVT-IOT-VSπ‚≈Ã\Zigbee≤ø∑÷£®ŒÔ¡™Õ¯£©\ZStack-CC25 #
+#                          30-eV1.3\Projects\zstack\Samples\SensorApp\Source\ #
+#                          SERSOR.c -D NWK_AUTO_POLL -D ZTOOL_P1 -D xMT_TASK  #
+#                          -D MT_SYS_FUNC -D MT_ZDO_FUNC -D                   #
+#                          xLCD_SUPPORTED=DEBUG -D xPOWER_SAVING -lC          #
+#                          D:\Œ‰∫∫¥¥Œ¨ÃÿŒÔ¡™Õ¯ µ—Èœ‰◊ ¡œ\CVT-IOT-VSπ‚≈Ã\Zigbe #
+#                          e≤ø∑÷£®ŒÔ¡™Õ¯£©\ZStack-CC2530-eV1.3\Projects\zstac #
+#                          k\Samples\SensorApp\CC2530DB\EndDeviceEB\List\     #
+#                          -lA D:\Œ‰∫∫¥¥Œ¨ÃÿŒÔ¡™Õ¯ µ—Èœ‰◊ ¡œ\CVT-IOT-VSπ‚≈Ã\Z #
+#                          igbee≤ø∑÷£®ŒÔ¡™Õ¯£©\ZStack-CC2530-eV1.3\Projects\z #
+#                          stack\Samples\SensorApp\CC2530DB\EndDeviceEB\List\ #
+#                           --diag_suppress Pe001,Pa010 -o                    #
+#                          D:\Œ‰∫∫¥¥Œ¨ÃÿŒÔ¡™Õ¯ µ—Èœ‰◊ ¡œ\CVT-IOT-VSπ‚≈Ã\Zigbe #
+#                          e≤ø∑÷£®ŒÔ¡™Õ¯£©\ZStack-CC2530-eV1.3\Projects\zstac #
+#                          k\Samples\SensorApp\CC2530DB\EndDeviceEB\Obj\ -e   #
+#                          --no_code_motion --debug --core=plain --dptr=16,1  #
+#                          --data_model=large --code_model=banked             #
+#                          --calling_convention=xdata_reentrant               #
+#                          --place_constants=data_rom --nr_virtual_regs 16    #
+#                          -I D:\Œ‰∫∫¥¥Œ¨ÃÿŒÔ¡™Õ¯ µ—Èœ‰◊ ¡œ\CVT-IOT-VSπ‚≈Ã\Zi #
+#                          gbee≤ø∑÷£®ŒÔ¡™Õ¯£©\ZStack-CC2530-eV1.3\Projects\zs #
+#                          tack\Samples\SensorApp\CC2530DB\ -I                #
+#                          D:\Œ‰∫∫¥¥Œ¨ÃÿŒÔ¡™Õ¯ µ—Èœ‰◊ ¡œ\CVT-IOT-VSπ‚≈Ã\Zigbe #
+#                          e≤ø∑÷£®ŒÔ¡™Õ¯£©\ZStack-CC2530-eV1.3\Projects\zstac #
+#                          k\Samples\SensorApp\CC2530DB\..\Source\ -I         #
+#                          D:\Œ‰∫∫¥¥Œ¨ÃÿŒÔ¡™Õ¯ µ—Èœ‰◊ ¡œ\CVT-IOT-VSπ‚≈Ã\Zigbe #
+#                          e≤ø∑÷£®ŒÔ¡™Õ¯£©\ZStack-CC2530-eV1.3\Projects\zstac #
+#                          k\Samples\SensorApp\CC2530DB\..\..\..\ZMain\TI2530 #
+#                          DB\ -I D:\Œ‰∫∫¥¥Œ¨ÃÿŒÔ¡™Õ¯ µ—Èœ‰◊ ¡œ\CVT-IOT-VSπ‚≈ #
+#                          Ã\Zigbee≤ø∑÷£®ŒÔ¡™Õ¯£©\ZStack-CC2530-eV1.3\Project #
+#                          s\zstack\Samples\SensorApp\CC2530DB\..\..\..\..\.. #
+#                          \Components\hal\include\ -I                        #
+#                          D:\Œ‰∫∫¥¥Œ¨ÃÿŒÔ¡™Õ¯ µ—Èœ‰◊ ¡œ\CVT-IOT-VSπ‚≈Ã\Zigbe #
+#                          e≤ø∑÷£®ŒÔ¡™Õ¯£©\ZStack-CC2530-eV1.3\Projects\zstac #
+#                          k\Samples\SensorApp\CC2530DB\..\..\..\..\..\Compon #
+#                          ents\hal\target\CC2530EB\ -I                       #
+#                          D:\Œ‰∫∫¥¥Œ¨ÃÿŒÔ¡™Õ¯ µ—Èœ‰◊ ¡œ\CVT-IOT-VSπ‚≈Ã\Zigbe #
+#                          e≤ø∑÷£®ŒÔ¡™Õ¯£©\ZStack-CC2530-eV1.3\Projects\zstac #
+#                          k\Samples\SensorApp\CC2530DB\..\..\..\..\..\Compon #
+#                          ents\mac\include\ -I D:\Œ‰∫∫¥¥Œ¨ÃÿŒÔ¡™Õ¯ µ—Èœ‰◊ ¡œ #
+#                          \CVT-IOT-VSπ‚≈Ã\Zigbee≤ø∑÷£®ŒÔ¡™Õ¯£©\ZStack-CC2530 #
+#                          -eV1.3\Projects\zstack\Samples\SensorApp\CC2530DB\ #
+#                          ..\..\..\..\..\Components\mac\high_level\ -I       #
+#                          D:\Œ‰∫∫¥¥Œ¨ÃÿŒÔ¡™Õ¯ µ—Èœ‰◊ ¡œ\CVT-IOT-VSπ‚≈Ã\Zigbe #
+#                          e≤ø∑÷£®ŒÔ¡™Õ¯£©\ZStack-CC2530-eV1.3\Projects\zstac #
+#                          k\Samples\SensorApp\CC2530DB\..\..\..\..\..\Compon #
+#                          ents\mac\low_level\srf04\ -I                       #
+#                          D:\Œ‰∫∫¥¥Œ¨ÃÿŒÔ¡™Õ¯ µ—Èœ‰◊ ¡œ\CVT-IOT-VSπ‚≈Ã\Zigbe #
+#                          e≤ø∑÷£®ŒÔ¡™Õ¯£©\ZStack-CC2530-eV1.3\Projects\zstac #
+#                          k\Samples\SensorApp\CC2530DB\..\..\..\..\..\Compon #
+#                          ents\mac\low_level\srf04\single_chip\ -I           #
+#                          D:\Œ‰∫∫¥¥Œ¨ÃÿŒÔ¡™Õ¯ µ—Èœ‰◊ ¡œ\CVT-IOT-VSπ‚≈Ã\Zigbe #
+#                          e≤ø∑÷£®ŒÔ¡™Õ¯£©\ZStack-CC2530-eV1.3\Projects\zstac #
+#                          k\Samples\SensorApp\CC2530DB\..\..\..\..\..\Compon #
+#                          ents\mt\ -I D:\Œ‰∫∫¥¥Œ¨ÃÿŒÔ¡™Õ¯ µ—Èœ‰◊ ¡œ\CVT-IOT- #
+#                          VSπ‚≈Ã\Zigbee≤ø∑÷£®ŒÔ¡™Õ¯£©\ZStack-CC2530-eV1.3\Pr #
+#                          ojects\zstack\Samples\SensorApp\CC2530DB\..\..\..\ #
+#                          ..\..\Components\osal\include\ -I                  #
+#                          D:\Œ‰∫∫¥¥Œ¨ÃÿŒÔ¡™Õ¯ µ—Èœ‰◊ ¡œ\CVT-IOT-VSπ‚≈Ã\Zigbe #
+#                          e≤ø∑÷£®ŒÔ¡™Õ¯£©\ZStack-CC2530-eV1.3\Projects\zstac #
+#                          k\Samples\SensorApp\CC2530DB\..\..\..\..\..\Compon #
+#                          ents\services\saddr\ -I D:\Œ‰∫∫¥¥Œ¨ÃÿŒÔ¡™Õ¯ µ—Èœ‰◊ #
+#                           ¡œ\CVT-IOT-VSπ‚≈Ã\Zigbee≤ø∑÷£®ŒÔ¡™Õ¯£©\ZStack-CC2 #
+#                          530-eV1.3\Projects\zstack\Samples\SensorApp\CC2530 #
+#                          DB\..\..\..\..\..\Components\services\sdata\ -I    #
+#                          D:\Œ‰∫∫¥¥Œ¨ÃÿŒÔ¡™Õ¯ µ—Èœ‰◊ ¡œ\CVT-IOT-VSπ‚≈Ã\Zigbe #
+#                          e≤ø∑÷£®ŒÔ¡™Õ¯£©\ZStack-CC2530-eV1.3\Projects\zstac #
+#                          k\Samples\SensorApp\CC2530DB\..\..\..\..\..\Compon #
+#                          ents\stack\af\ -I D:\Œ‰∫∫¥¥Œ¨ÃÿŒÔ¡™Õ¯ µ—Èœ‰◊ ¡œ\CV #
+#                          T-IOT-VSπ‚≈Ã\Zigbee≤ø∑÷£®ŒÔ¡™Õ¯£©\ZStack-CC2530-eV #
+#                          1.3\Projects\zstack\Samples\SensorApp\CC2530DB\..\ #
+#                          ..\..\..\..\Components\stack\nwk\ -I               #
+#                          D:\Œ‰∫∫¥¥Œ¨ÃÿŒÔ¡™Õ¯ µ—Èœ‰◊ ¡œ\CVT-IOT-VSπ‚≈Ã\Zigbe #
+#                          e≤ø∑÷£®ŒÔ¡™Õ¯£©\ZStack-CC2530-eV1.3\Projects\zstac #
+#                          k\Samples\SensorApp\CC2530DB\..\..\..\..\..\Compon #
+#                          ents\stack\sapi\ -I D:\Œ‰∫∫¥¥Œ¨ÃÿŒÔ¡™Õ¯ µ—Èœ‰◊ ¡œ\ #
+#                          CVT-IOT-VSπ‚≈Ã\Zigbee≤ø∑÷£®ŒÔ¡™Õ¯£©\ZStack-CC2530- #
+#                          eV1.3\Projects\zstack\Samples\SensorApp\CC2530DB\. #
+#                          .\..\..\..\..\Components\stack\sec\ -I             #
+#                          D:\Œ‰∫∫¥¥Œ¨ÃÿŒÔ¡™Õ¯ µ—Èœ‰◊ ¡œ\CVT-IOT-VSπ‚≈Ã\Zigbe #
+#                          e≤ø∑÷£®ŒÔ¡™Õ¯£©\ZStack-CC2530-eV1.3\Projects\zstac #
+#                          k\Samples\SensorApp\CC2530DB\..\..\..\..\..\Compon #
+#                          ents\stack\sys\ -I D:\Œ‰∫∫¥¥Œ¨ÃÿŒÔ¡™Õ¯ µ—Èœ‰◊ ¡œ\C #
+#                          VT-IOT-VSπ‚≈Ã\Zigbee≤ø∑÷£®ŒÔ¡™Õ¯£©\ZStack-CC2530-e #
+#                          V1.3\Projects\zstack\Samples\SensorApp\CC2530DB\.. #
+#                          \..\..\..\..\Components\stack\zdo\ -I              #
+#                          D:\Œ‰∫∫¥¥Œ¨ÃÿŒÔ¡™Õ¯ µ—Èœ‰◊ ¡œ\CVT-IOT-VSπ‚≈Ã\Zigbe #
+#                          e≤ø∑÷£®ŒÔ¡™Õ¯£©\ZStack-CC2530-eV1.3\Projects\zstac #
+#                          k\Samples\SensorApp\CC2530DB\..\..\..\..\..\Compon #
+#                          ents\zmac\ -I D:\Œ‰∫∫¥¥Œ¨ÃÿŒÔ¡™Õ¯ µ—Èœ‰◊ ¡œ\CVT-IO #
+#                          T-VSπ‚≈Ã\Zigbee≤ø∑÷£®ŒÔ¡™Õ¯£©\ZStack-CC2530-eV1.3\ #
+#                          Projects\zstack\Samples\SensorApp\CC2530DB\..\..\. #
+#                          .\..\..\Components\zmac\f8w\ -Ohz                  #
+#                          --require_prototypes                               #
+#    List file          =  D:\Œ‰∫∫¥¥Œ¨ÃÿŒÔ¡™Õ¯ µ—Èœ‰◊ ¡œ\CVT-IOT-VSπ‚≈Ã\Zigbe #
+#                          e≤ø∑÷£®ŒÔ¡™Õ¯£©\ZStack-CC2530-eV1.3\Projects\zstac #
+#                          k\Samples\SensorApp\CC2530DB\EndDeviceEB\List\SERS #
+#                          OR.lst                                             #
+#    Object file        =  D:\Œ‰∫∫¥¥Œ¨ÃÿŒÔ¡™Õ¯ µ—Èœ‰◊ ¡œ\CVT-IOT-VSπ‚≈Ã\Zigbe #
+#                          e≤ø∑÷£®ŒÔ¡™Õ¯£©\ZStack-CC2530-eV1.3\Projects\zstac #
+#                          k\Samples\SensorApp\CC2530DB\EndDeviceEB\Obj\SERSO #
+#                          R.r51                                              #
+#                                                                             #
+#                                                                             #
+###############################################################################
+
+D:\Œ‰∫∫¥¥Œ¨ÃÿŒÔ¡™Õ¯ µ—Èœ‰◊ ¡œ\CVT-IOT-VSπ‚≈Ã\Zigbee≤ø∑÷£®ŒÔ¡™Õ¯£©\ZStack-CC2530-eV1.3\Projects\zstack\Samples\SensorApp\Source\SERSOR.c
+      1          #include "SENSOR.h"
+      2          #include "ioCC2530.h"  
+
+   \                                 In  segment SFR_AN, at 0x80
+   \   union <unnamed> volatile __sfr _A_P0
+   \                     _A_P0:
+   \   000000                DS 1
+
+   \                                 In  segment SFR_AN, at 0x86
+   \   unsigned char volatile __sfr U0CSR
+   \                     U0CSR:
+   \   000000                DS 1
+
+   \                                 In  segment SFR_AN, at 0x90
+   \   union <unnamed> volatile __sfr _A_P1
+   \                     _A_P1:
+   \   000000                DS 1
+
+   \                                 In  segment SFR_AN, at 0x9d
+   \   unsigned char volatile __sfr SLEEPSTA
+   \                     SLEEPSTA:
+   \   000000                DS 1
+
+   \                                 In  segment SFR_AN, at 0xa0
+   \   union <unnamed> volatile __sfr _A_P2
+   \                     _A_P2:
+   \   000000                DS 1
+
+   \                                 In  segment SFR_AN, at 0xa8
+   \   union <unnamed> volatile __sfr _A_IEN0
+   \                     _A_IEN0:
+   \   000000                DS 1
+
+   \                                 In  segment SFR_AN, at 0xb4
+   \   unsigned char volatile __sfr ADCCON1
+   \                     ADCCON1:
+   \   000000                DS 1
+
+   \                                 In  segment SFR_AN, at 0xb6
+   \   unsigned char volatile __sfr ADCCON3
+   \                     ADCCON3:
+   \   000000                DS 1
+
+   \                                 In  segment SFR_AN, at 0xba
+   \   unsigned char volatile __sfr ADCL
+   \                     ADCL:
+   \   000000                DS 1
+
+   \                                 In  segment SFR_AN, at 0xbb
+   \   unsigned char volatile __sfr ADCH
+   \                     ADCH:
+   \   000000                DS 1
+
+   \                                 In  segment SFR_AN, at 0xbe
+   \   unsigned char volatile __sfr SLEEPCMD
+   \                     SLEEPCMD:
+   \   000000                DS 1
+
+   \                                 In  segment SFR_AN, at 0xc2
+   \   unsigned char volatile __sfr U0BAUD
+   \                     U0BAUD:
+   \   000000                DS 1
+
+   \                                 In  segment SFR_AN, at 0xc5
+   \   unsigned char volatile __sfr U0GCR
+   \                     U0GCR:
+   \   000000                DS 1
+
+   \                                 In  segment SFR_AN, at 0xc6
+   \   unsigned char volatile __sfr CLKCONCMD
+   \                     CLKCONCMD:
+   \   000000                DS 1
+
+   \                                 In  segment SFR_AN, at 0xe8
+   \   union <unnamed> volatile __sfr _A_IRCON2
+   \                     _A_IRCON2:
+   \   000000                DS 1
+
+   \                                 In  segment SFR_AN, at 0xf1
+   \   unsigned char volatile __sfr PERCFG
+   \                     PERCFG:
+   \   000000                DS 1
+
+   \                                 In  segment SFR_AN, at 0xf3
+   \   unsigned char volatile __sfr P0SEL
+   \                     P0SEL:
+   \   000000                DS 1
+
+   \                                 In  segment SFR_AN, at 0xf4
+   \   unsigned char volatile __sfr P1SEL
+   \                     P1SEL:
+   \   000000                DS 1
+
+   \                                 In  segment SFR_AN, at 0xf6
+   \   unsigned char volatile __sfr P1INP
+   \                     P1INP:
+   \   000000                DS 1
+
+   \                                 In  segment SFR_AN, at 0xfd
+   \   unsigned char volatile __sfr P0DIR
+   \                     P0DIR:
+   \   000000                DS 1
+
+   \                                 In  segment SFR_AN, at 0xfe
+   \   unsigned char volatile __sfr P1DIR
+   \                     P1DIR:
+   \   000000                DS 1
+
+   \                                 In  segment SFR_AN, at 0xff
+   \   unsigned char volatile __sfr P2DIR
+   \                     P2DIR:
+   \   000000                DS 1
+      3          
+      4          #define	    SHT1DATA_HIGH   P1 |= 0x02
+      5          #define	    SHT1DATA_LOW    P1 &= 0xFD
+      6          
+      7          #define	    SHT1SCK_HIGH    P1 |= 0x04
+      8          #define	    SHT1SCK_LOW	    P1 &= 0xFB
+      9          
+     10          #define     SHT1READY       ((P1>>1)&0x1)
+     11          
+     12          extern void Sensor_PIN_INT(void);
+     13          
+
+   \                                 In  segment XDATA_Z, align 1, keep-with-next
+     14          char uart_buffer;
+   \                     uart_buffer:
+   \   000000                DS 1
+   \   000001                REQUIRE __INIT_XDATA_Z
+     15          /*****************************************************************************
+     16           ∫Ø ˝…˘√˜
+     17          *****************************************************************************/
+     18          void Sensor_PIN_INT(void);
+     19          uint16 ReadAdcValue(uint8 ChannelNum,uint8 DecimationRate,uint8 RefVoltage);
+     20          void SHT1_Reset(void);
+     21          void SHT1_Start(void);
+     22          void SHT1_SendAck(void);
+     23          void SHT1_WriteCommandData(uint8);
+     24          uint8 SHT1_ReadData(void);
+     25          uint8 SHT1_Ready(void);
+     26          void SHT1_WriteReg(uint8);
+     27          uint16 SHT1_ReadReg(void);
+     28          void SHT1_INT(void);
+     29          uint32 ReadSHT1(uint8 Addr);
+     30          uint8 ReadTc77(void);
+     31          void SET_ADC_IO_SLEEP_MODE(void);
+     32          void SET_ADC_IO_ADC_MODE(void);
+     33          extern void UartTX_Send_String(uint8 *Data,int len);
+     34          uint8 CRC8(uint8 crc, uint8 data);
+     35          void Delay(void);
+     36          void Delay10ms(uint8 Times);
+     37          /*∫Ø ˝π¶ƒ‹:∂¡≥ˆADø⁄µƒ ˝æ›
+     38           ‰»Î≤Œ ˝:ChannelNum:≤…ºØµƒÕ®µ¿∫≈  0-0xF
+     39                              1000: AIN0®CAIN1
+     40                              1001: AIN2®CAIN3
+     41                              1010: AIN4®CAIN5
+     42                              1011: AIN6®CAIN7
+     43                              1100: GND
+     44                              1101: Reserved
+     45                              1110: Temperature sensor
+     46                              1111: VDD/3
+     47                   DecimationRate:∑÷±Á¬   00: 64 decimation rate (7 bits ENOB)
+     48                              01: 128 decimation rate (9 bits ENOB)
+     49                              10: 256 decimation rate (10 bits ENOB)
+     50                              11: 512 decimation rate (12 bits ENOB)
+     51          RefVoltage:≤ŒøºµÁ—π:00: Internal reference
+     52                              01: External reference on AIN7 pin
+     53                              10: AVDD5 pin
+     54                              11: External reference on AIN6®CAIN7 differential input
+     55          ∑µªÿ÷µ:16bitµƒ≤…ºØ ˝æ›
+     56          */
+
+   \                                 In  segment BANKED_CODE, align 1, keep-with-next
+     57          uint16 ReadAdcValue(uint8 ChannelNum,uint8 DecimationRate,uint8 RefVoltage)
+   \                     ReadAdcValue:
+     58          { 
+   \   000000   74F6         MOV     A,#-0xa
+   \   000002   12....       LCALL   ?BANKED_ENTER_XDATA
+   \   000005                ; Saved register size: 10
+   \   000005                ; Auto size: 0
+   \   000005   EA           MOV     A,R2
+   \   000006   FC           MOV     R4,A
+   \   000007   EB           MOV     A,R3
+   \   000008   FD           MOV     R5,A
+     59            uint16 AdValue;
+     60            if(ChannelNum == 0xe){//∆¨ƒ⁄Œ¬∂»µΩADC_SOC
+   \   000009   740E         MOV     A,#0xe
+   \   00000B   69           XRL     A,R1
+   \   00000C   90624B       MOV     DPTR,#0x624b
+   \   00000F   7004         JNZ     ??ReadAdcValue_0
+     61              TR0 = 1;
+   \   000011   7401         MOV     A,#0x1
+   \   000013   8001         SJMP    ??ReadAdcValue_1
+     62              ATEST = 1;
+     63            }
+     64            else{
+     65              TR0 = 0;
+   \                     ??ReadAdcValue_0:
+   \   000015   E4           CLR     A
+   \                     ??ReadAdcValue_1:
+   \   000016   F0           MOVX    @DPTR,A
+     66              ATEST = 0;
+   \   000017   9061BD       MOV     DPTR,#0x61bd
+   \   00001A   F0           MOVX    @DPTR,A
+     67            } 
+     68           
+     69            ADCCON3 = ChannelNum&0xf;
+   \   00001B   740F         MOV     A,#0xf
+   \   00001D   59           ANL     A,R1
+   \   00001E   F5B6         MOV     0xb6,A
+     70            ADCCON3 = ADCCON3 | ((DecimationRate&0x3)<<4);
+   \   000020   7403         MOV     A,#0x3
+   \   000022   5C           ANL     A,R4
+   \   000023   C4           SWAP    A
+   \   000024   42B6         ORL     0xb6,A
+     71            ADCCON3 = ADCCON3 | ((RefVoltage&0x3)<<6);   
+   \   000026   ED           MOV     A,R5
+   \   000027   C4           SWAP    A
+   \   000028   33           RLC     A
+   \   000029   33           RLC     A
+   \   00002A   54C0         ANL     A,#0xc0
+   \   00002C   42B6         ORL     0xb6,A
+     72            ADCCON1 = ADCCON1 | (0x3<<4);//ADCCON1.ST = 1 ±∆Ù∂Ø
+   \   00002E   43B430       ORL     0xb4,#0x30
+     73            AdValue = ADCL; //«Â≥˝EOC 
+   \   000031   E5BA         MOV     A,0xba
+     74            AdValue = ADCH; 
+   \   000033   E5BB         MOV     A,0xbb
+     75            ADCCON1 = ADCCON1 | (0x1<<6);//∆Ù∂Ø◊™ªª
+   \   000035   43B440       ORL     0xb4,#0x40
+     76            while(!(ADCCON1&0x80));
+   \                     ??ReadAdcValue_2:
+   \   000038   E5B4         MOV     A,0xb4
+   \   00003A   A2E7         MOV     C,0xE0 /* A   */.7
+   \   00003C   50FA         JNC     ??ReadAdcValue_2
+     77            AdValue = ADCH;
+   \   00003E   E5BB         MOV     A,0xbb
+   \   000040   F5..         MOV     ?V0 + 0,A
+     78            AdValue = (AdValue<<6) + (ADCL>>2);
+   \   000042   E5BA         MOV     A,0xba
+   \   000044   FA           MOV     R2,A
+     79            ADCCON1 =  ADCCON1 & 0x7f;
+   \   000045   53B47F       ANL     0xb4,#0x7f
+     80            return AdValue;
+   \   000048   75..00       MOV     ?V0 + 1,#0x0
+   \   00004B   7406         MOV     A,#0x6
+   \   00004D   78..         MOV     R0,#?V0 + 0
+   \   00004F   12....       LCALL   ?S_SHL
+   \   000052   EA           MOV     A,R2
+   \   000053   13           RRC     A
+   \   000054   13           RRC     A
+   \   000055   543F         ANL     A,#0x3f
+   \   000057   FA           MOV     R2,A
+   \   000058   E5..         MOV     A,?V0 + 0
+   \   00005A   2A           ADD     A,R2
+   \   00005B   FA           MOV     R2,A
+   \   00005C   E5..         MOV     A,?V0 + 1
+   \   00005E   3400         ADDC    A,#0x0
+   \   000060                REQUIRE ?Subroutine0
+   \   000060                REQUIRE ADCCON3
+   \   000060                REQUIRE ADCCON1
+   \   000060                REQUIRE ADCL
+   \   000060                REQUIRE ADCH
+   \   000060                ; // Fall through to label ?Subroutine0
+     81          }
+
+   \                                 In  segment BANKED_CODE, align 1, keep-with-next
+   \                     ?Subroutine0:
+   \   000000   FB           MOV     R3,A
+   \   000001                REQUIRE ??Subroutine10_0
+   \   000001                ; // Fall through to label ??Subroutine10_0
+
+   \                                 In  segment BANKED_CODE, align 1, keep-with-next
+   \                     ??Subroutine10_0:
+   \   000000   7F02         MOV     R7,#0x2
+   \   000002   02....       LJMP    ?BANKED_LEAVE_XDATA
+     82          /*****************************************************************************
+     83            void Sensor_PIN_INT(void)
+     84          
+     85            ¥´∏–∆˜º∞ADC I/Oø⁄≥ı ºªØ.
+     86          *****************************************************************************/
+
+   \                                 In  segment BANKED_CODE, align 1, keep-with-next
+     87          void Sensor_PIN_INT(void)
+   \                     Sensor_PIN_INT:
+     88          {	  
+   \   000000                ; Saved register size: 0
+   \   000000                ; Auto size: 0
+     89              //”√”⁄Œ¬ ™∂»≤‚¡ø
+     90              P1INP &= (~(0x1 | (0x1<<1) | (0x1<<2) | (0x1<<6) | (0x1<<7)));//P1.0,P1.1,P1.2,P1.6,P1.7…œ¿≠            
+   \   000000   53F638       ANL     0xf6,#0x38
+     91              P1SEL &= ~((1<<1)|(1<<2));//P1.1,P1.2Œ™GPIO        
+   \   000003   53F4F9       ANL     0xf4,#0xf9
+     92              P1DIR |= (1<<1)|(1<<2);//P1.1,P1.2Œ™OUTPUT
+   \   000006   43FE06       ORL     0xfe,#0x6
+     93          }
+   \   000009   02....       LJMP    ?BRET
+   \   00000C                REQUIRE P1INP
+   \   00000C                REQUIRE P1SEL
+   \   00000C                REQUIRE P1DIR
+     94          
+     95          //µ±uC∫ÕSHT10Õ®–≈÷–∂œ ±,∏¥ŒªÕ®–≈ø⁄
+
+   \                                 In  segment BANKED_CODE, align 1, keep-with-next
+     96          void SHT1_Reset(void)
+   \                     SHT1_Reset:
+     97          {
+   \   000000   74F7         MOV     A,#-0x9
+   \   000002   12....       LCALL   ?BANKED_ENTER_XDATA
+   \   000005                ; Saved register size: 9
+   \   000005                ; Auto size: 0
+     98            uint8 i;
+     99            
+    100            SHT1DATA_HIGH;
+   \   000005   D291         SETB    0x90.1
+    101            for(i=0;i<11;i++){
+   \   000007   7E0B         MOV     R6,#0xb
+    102              Delay();
+   \                     ??SHT1_Reset_0:
+   \   000009                ; Setup parameters for call to function Delay
+   \   000009   12....       LCALL   ?Subroutine5 & 0xFFFF
+    103              SHT1SCK_LOW;
+    104              Delay();
+    105              SHT1SCK_HIGH;  
+    106              Delay();
+    107            }
+   \                     ??CrossCallReturnLabel_2:
+   \   00000C   1E           DEC     R6
+   \   00000D   EE           MOV     A,R6
+   \   00000E   70F9         JNZ     ??SHT1_Reset_0
+    108          }
+   \   000010                REQUIRE ?Subroutine2
+   \   000010                REQUIRE _A_P1
+   \   000010                ; // Fall through to label ?Subroutine2
+
+   \                                 In  segment BANKED_CODE, align 1, keep-with-next
+   \                     ?Subroutine2:
+   \   000000   7F01         MOV     R7,#0x1
+   \   000002   02....       LJMP    ?BANKED_LEAVE_XDATA
+
+   \                                 In  segment BANKED_CODE, align 1, keep-with-next
+   \                     ?Subroutine5:
+   \   000000   12....       LCALL   ??Delay?relay
+   \   000003   12....       LCALL   ?Subroutine8 & 0xFFFF
+   \                     ??CrossCallReturnLabel_9:
+   \   000006   22           RET
+
+   \                                 In  segment BANKED_CODE, align 1, keep-with-next
+   \                     ?Subroutine8:
+   \   000000   C292         CLR     0x90.2
+   \   000002                ; Setup parameters for call to function Delay
+   \   000002                ; Setup parameters for call to function Delay
+   \   000002                ; Setup parameters for call to function Delay
+   \   000002                REQUIRE ??Subroutine11_0
+   \   000002                ; // Fall through to label ??Subroutine11_0
+
+   \                                 In  segment BANKED_CODE, align 1, keep-with-next
+   \                     ??Subroutine11_0:
+   \   000000   12....       LCALL   ??Delay?relay
+   \   000003   D292         SETB    0x90.2
+   \   000005                ; Setup parameters for call to function Delay
+   \   000005                ; Setup parameters for call to function Delay
+   \   000005                ; Setup parameters for call to function Delay
+   \   000005                ; Setup parameters for call to function Delay
+   \   000005                ; Setup parameters for call to function Delay
+   \   000005   12....       LCALL   ??Delay?relay
+   \   000008   22           RET
+    109          
+    110          //¥´ ‰∆Ù º–≈∫≈
+
+   \                                 In  segment BANKED_CODE, align 1, keep-with-next
+    111          void SHT1_Start(void)
+   \                     SHT1_Start:
+    112          {
+   \   000000   C082         PUSH    DPL
+   \   000002   C083         PUSH    DPH
+   \   000004                ; Saved register size: 2
+   \   000004                ; Auto size: 0
+    113            SHT1DATA_HIGH;
+   \   000004   D291         SETB    0x90.1
+    114            SHT1SCK_LOW;
+   \   000006   12....       LCALL   ?Subroutine8 & 0xFFFF
+    115            Delay();
+    116            SHT1SCK_HIGH;
+    117            Delay();
+    118            SHT1DATA_LOW;
+   \                     ??CrossCallReturnLabel_8:
+   \   000009   C291         CLR     0x90.1
+    119            Delay();
+   \   00000B                ; Setup parameters for call to function Delay
+   \   00000B   12....       LCALL   ?Subroutine5 & 0xFFFF
+    120            SHT1SCK_LOW;
+    121            Delay();
+    122            SHT1SCK_HIGH;
+    123            Delay();
+    124            SHT1DATA_HIGH;  
+   \                     ??CrossCallReturnLabel_3:
+   \   00000E   D291         SETB    0x90.1
+    125            Delay();
+   \   000010                ; Setup parameters for call to function Delay
+   \   000010   12....       LCALL   ??Delay?relay
+    126            SHT1SCK_LOW;
+   \   000013   C292         CLR     0x90.2
+    127          }
+   \   000015   80..         SJMP    ?Subroutine1
+   \   000017                REQUIRE _A_P1
+
+   \                                 In  segment BANKED_CODE, align 1, keep-with-next
+   \                     ?Subroutine1:
+   \   000000   D083         POP     DPH
+   \   000002   D082         POP     DPL
+   \   000004   02....       LJMP    ?BRET
+    128          
+    129          //Œ™0 ±,–¥√¸¡Ó’˝»∑;Œ™1 ±¥ÌŒÛ
+
+   \                                 In  segment BANKED_CODE, align 1, keep-with-next
+    130          uint8 SHT1_Ready(void)
+   \                     SHT1_Ready:
+    131          {  
+   \   000000   C082         PUSH    DPL
+   \   000002   C083         PUSH    DPH
+   \   000004                ; Saved register size: 2
+   \   000004                ; Auto size: 0
+    132            //∂¡”¶¥–≈∫≈    
+    133            P1DIR &= ~(1<<1);   //P11Œ™INPUT 
+   \   000004   53FEFD       ANL     0xfe,#0xfd
+    134            Delay();  
+   \   000007                ; Setup parameters for call to function Delay
+   \   000007   12....       LCALL   ??Delay?relay
+    135            return(SHT1READY);
+   \   00000A   A291         MOV     C,0x90.1
+   \   00000C   E4           CLR     A
+   \   00000D   33           RLC     A
+   \   00000E   F9           MOV     R1,A
+   \   00000F   80..         SJMP    ?Subroutine1
+   \   000011                REQUIRE P1DIR
+   \   000011                REQUIRE _A_P1
+    136          }
+    137          
+
+   \                                 In  segment BANKED_CODE, align 1, keep-with-next
+    138          void SHT1_SendAck(void)
+   \                     SHT1_SendAck:
+    139          {  
+   \   000000   C082         PUSH    DPL
+   \   000002   C083         PUSH    DPH
+   \   000004                ; Saved register size: 2
+   \   000004                ; Auto size: 0
+    140            SHT1SCK_HIGH;    
+   \   000004   D292         SETB    0x90.2
+    141            Delay();
+   \   000006                ; Setup parameters for call to function Delay
+   \   000006   12....       LCALL   ?Subroutine7 & 0xFFFF
+    142            SHT1SCK_LOW;    
+    143            Delay();
+    144          }
+   \                     ??CrossCallReturnLabel_6:
+   \   000009                REQUIRE ?Subroutine1
+   \   000009                REQUIRE _A_P1
+   \   000009                ; // Fall through to label ?Subroutine1
+
+   \                                 In  segment BANKED_CODE, align 1, keep-with-next
+   \                     ?Subroutine7:
+   \   000000   12....       LCALL   ??Delay?relay
+   \   000003   C292         CLR     0x90.2
+   \   000005                ; Setup parameters for call to function Delay
+   \   000005                ; Setup parameters for call to function Delay
+   \   000005   12....       LCALL   ??Delay?relay
+   \   000008   22           RET
+    145          //Œ™0 ±,–¥√¸¡Ó’˝»∑;Œ™1 ±¥ÌŒÛ
+
+   \                                 In  segment BANKED_CODE, align 1, keep-with-next
+    146          void SHT1_WriteCommandData(uint8 bCommand)
+   \                     SHT1_WriteCommandData:
+    147          {
+   \   000000   74F6         MOV     A,#-0xa
+   \   000002   12....       LCALL   ?BANKED_ENTER_XDATA
+   \   000005                ; Saved register size: 10
+   \   000005                ; Auto size: 0
+   \   000005   E9           MOV     A,R1
+   \   000006   FF           MOV     R7,A
+    148            uint8 i;
+    149            Delay();  
+   \   000007                ; Setup parameters for call to function Delay
+   \   000007   12....       LCALL   ?Subroutine7 & 0xFFFF
+    150            SHT1SCK_LOW;
+    151            Delay();
+    152            for(i=0;i<8;i++){
+   \                     ??CrossCallReturnLabel_7:
+   \   00000A   7E00         MOV     R6,#0x0
+    153              if(bCommand&(0x1<<(7-i)))
+   \                     ??SHT1_WriteCommandData_0:
+   \   00000C   75..01       MOV     ?V0 + 0,#0x1
+   \   00000F   75..00       MOV     ?V0 + 1,#0x0
+   \   000012   7407         MOV     A,#0x7
+   \   000014   C3           CLR     C
+   \   000015   9E           SUBB    A,R6
+   \   000016   78..         MOV     R0,#?V0 + 0
+   \   000018   12....       LCALL   ?S_SHL
+   \   00001B   E5..         MOV     A,?V0 + 0
+   \   00001D   5F           ANL     A,R7
+   \   00001E   6004         JZ      ??SHT1_WriteCommandData_1
+    154                SHT1DATA_HIGH;
+   \   000020   D291         SETB    0x90.1
+   \   000022   8002         SJMP    ??SHT1_WriteCommandData_2
+    155              else
+    156                SHT1DATA_LOW;
+   \                     ??SHT1_WriteCommandData_1:
+   \   000024   C291         CLR     0x90.1
+    157              Delay();
+   \                     ??SHT1_WriteCommandData_2:
+   \   000026                ; Setup parameters for call to function Delay
+   \   000026   12....       LCALL   ?Subroutine3 & 0xFFFF
+    158              SHT1SCK_HIGH;
+    159              Delay();
+    160              SHT1SCK_LOW;    
+    161            }  
+   \                     ??CrossCallReturnLabel_0:
+   \   000029   40E1         JC      ??SHT1_WriteCommandData_0
+    162            P1DIR &= ~(1<<1);   //P11Œ™INPUT 
+   \   00002B   53FEFD       ANL     0xfe,#0xfd
+    163          }
+   \   00002E   02....       LJMP    ??Subroutine10_0 & 0xFFFF
+   \   000031                REQUIRE _A_P1
+   \   000031                REQUIRE P1DIR
+
+   \                                 In  segment BANKED_CODE, align 1, keep-with-next
+   \                     ?Subroutine3:
+   \   000000   12....       LCALL   ??Subroutine11_0 & 0xFFFF
+   \                     ??CrossCallReturnLabel_10:
+   \   000003   C292         CLR     0x90.2
+   \   000005   0E           INC     R6
+   \   000006   EE           MOV     A,R6
+   \   000007   C3           CLR     C
+   \   000008   9408         SUBB    A,#0x8
+   \   00000A   22           RET
+    164          
+    165          //∂¡“ª∏ˆ◊÷Ω⁄µƒ ˝æ›
+
+   \                                 In  segment BANKED_CODE, align 1, keep-with-next
+    166          uint8 SHT1_ReadData(void)
+   \                     SHT1_ReadData:
+    167          {
+   \   000000   74F4         MOV     A,#-0xc
+   \   000002   12....       LCALL   ?BANKED_ENTER_XDATA
+   \   000005                ; Saved register size: 12
+   \   000005                ; Auto size: 0
+    168            uint8 i,bResult;
+    169            bResult = 0;
+   \   000005   75..00       MOV     ?V0 + 0,#0x0
+    170            P1DIR &= ~(1<<1);   //P11Œ™INPUT   
+   \   000008   53FEFD       ANL     0xfe,#0xfd
+    171            Delay();
+   \   00000B                ; Setup parameters for call to function Delay
+   \   00000B   12....       LCALL   ??Delay?relay
+    172            for(i=0;i<8;i++){       
+   \   00000E   7E00         MOV     R6,#0x0
+    173              if(SHT1_Ready() != 0)
+   \                     ??SHT1_ReadData_0:
+   \   000010                ; Setup parameters for call to function SHT1_Ready
+   \   000010   12....       LCALL   ??SHT1_Ready?relay
+   \   000013   E9           MOV     A,R1
+   \   000014   6013         JZ      ??SHT1_ReadData_1
+    174                bResult |= (0x1<<(7-i)); 
+   \   000016   75..01       MOV     ?V0 + 2,#0x1
+   \   000019   75..00       MOV     ?V0 + 3,#0x0
+   \   00001C   7407         MOV     A,#0x7
+   \   00001E   C3           CLR     C
+   \   00001F   9E           SUBB    A,R6
+   \   000020   78..         MOV     R0,#?V0 + 2
+   \   000022   12....       LCALL   ?S_SHL
+   \   000025   E5..         MOV     A,?V0 + 2
+   \   000027   42..         ORL     ?V0 + 0,A
+    175              Delay();
+   \                     ??SHT1_ReadData_1:
+   \   000029                ; Setup parameters for call to function Delay
+   \   000029   12....       LCALL   ?Subroutine3 & 0xFFFF
+    176              SHT1SCK_HIGH;
+    177              Delay();
+    178              SHT1SCK_LOW;
+    179            }
+   \                     ??CrossCallReturnLabel_1:
+   \   00002C   40E2         JC      ??SHT1_ReadData_0
+    180            P1DIR |= (1<<1);    //P11Œ™OUTPUT   
+   \   00002E   43FE02       ORL     0xfe,#0x2
+    181            return bResult;
+   \   000031   A9..         MOV     R1,?V0 + 0
+   \   000033   7F04         MOV     R7,#0x4
+   \   000035   02....       LJMP    ?BANKED_LEAVE_XDATA
+   \   000038                REQUIRE P1DIR
+   \   000038                REQUIRE _A_P1
+    182          }
+    183          
+    184          //–¥◊¥Ã¨ºƒ¥Ê∆˜
+
+   \                                 In  segment BANKED_CODE, align 1, keep-with-next
+    185          void SHT1_WriteReg(uint8 Value)
+   \                     SHT1_WriteReg:
+    186          {
+   \   000000   74F7         MOV     A,#-0x9
+   \   000002   12....       LCALL   ?BANKED_ENTER_XDATA
+   \   000005                ; Saved register size: 9
+   \   000005                ; Auto size: 0
+   \   000005   E9           MOV     A,R1
+   \   000006   FE           MOV     R6,A
+   \   000007   8003         SJMP    ??SHT1_WriteReg_0
+    187            while(1){    
+    188              SHT1_Start();  
+    189              SHT1_WriteCommandData(6);
+    190              if(SHT1_Ready() != 0){  //Œﬁ”¶¥
+    191                SHT1_Reset();  
+   \                     ??SHT1_WriteReg_1:
+   \   000009                ; Setup parameters for call to function SHT1_Reset
+   \   000009   12....       LCALL   ??SHT1_Reset?relay
+    192                continue;
+    193              }
+   \                     ??SHT1_WriteReg_0:
+   \   00000C                ; Setup parameters for call to function SHT1_Start
+   \   00000C   12....       LCALL   ??SHT1_Start?relay
+   \   00000F                ; Setup parameters for call to function SHT1_WriteCommandData
+   \   00000F   7906         MOV     R1,#0x6
+   \   000011   12....       LCALL   ??Subroutine13_0 & 0xFFFF
+   \                     ??CrossCallReturnLabel_16:
+   \   000014   70F3         JNZ     ??SHT1_WriteReg_1
+    194              else{      
+    195                P1DIR |= (1<<1);    //P11Œ™OUTPUT  
+   \   000016   43FE02       ORL     0xfe,#0x2
+    196                SHT1DATA_LOW;
+   \   000019   C291         CLR     0x90.1
+    197                SHT1_SendAck();    
+   \   00001B                ; Setup parameters for call to function SHT1_SendAck
+   \   00001B   12....       LCALL   ??SHT1_SendAck?relay
+    198              }
+    199              SHT1_WriteCommandData(Value);
+   \   00001E                ; Setup parameters for call to function SHT1_WriteCommandData
+   \   00001E   12....       LCALL   ?Subroutine4 & 0xFFFF
+    200              if(SHT1_Ready() != 0){  //Œﬁ”¶¥
+   \                     ??CrossCallReturnLabel_14:
+   \   000021   70E6         JNZ     ??SHT1_WriteReg_1
+    201                SHT1_Reset(); 
+    202                continue;
+    203              }
+    204              else{      
+    205                SHT1DATA_LOW;
+   \   000023   C291         CLR     0x90.1
+    206                SHT1_SendAck();   
+   \   000025                ; Setup parameters for call to function SHT1_SendAck
+   \   000025   12....       LCALL   ??SHT1_SendAck?relay
+    207              }
+    208              break;
+    209            }   
+    210          }
+   \   000028   02....       LJMP    ?Subroutine2 & 0xFFFF
+   \   00002B                REQUIRE P1DIR
+   \   00002B                REQUIRE _A_P1
+
+   \                                 In  segment BANKED_CODE, align 1, keep-with-next
+   \                     ?Subroutine4:
+   \   000000   EE           MOV     A,R6
+   \   000001   F9           MOV     R1,A
+   \   000002                REQUIRE ??Subroutine13_0
+   \   000002                ; // Fall through to label ??Subroutine13_0
+
+   \                                 In  segment BANKED_CODE, align 1, keep-with-next
+   \                     ??Subroutine13_0:
+   \   000000   12....       LCALL   ??SHT1_WriteCommandData?relay
+   \   000003                ; Setup parameters for call to function SHT1_Ready
+   \   000003                ; Setup parameters for call to function SHT1_Ready
+   \   000003                ; Setup parameters for call to function SHT1_Ready
+   \   000003                ; Setup parameters for call to function SHT1_Ready
+   \   000003   12....       LCALL   ??SHT1_Ready?relay
+   \   000006   E9           MOV     A,R1
+   \   000007   22           RET
+    211          
+
+   \                                 In  segment BANKED_CODE, align 1, keep-with-next
+    212          uint16 SHT1_ReadReg(void)
+   \                     SHT1_ReadReg:
+    213          {
+   \   000000   74F6         MOV     A,#-0xa
+   \   000002   12....       LCALL   ?BANKED_ENTER_XDATA
+   \   000005                ; Saved register size: 10
+   \   000005                ; Auto size: 0
+   \   000005   8003         SJMP    ??SHT1_ReadReg_0
+    214            uint16 lResult;
+    215            while(1){     
+    216              SHT1_Start();  
+    217              SHT1_WriteCommandData(7);
+    218              if(SHT1_Ready() != 0){  //Œﬁ”¶¥
+    219                SHT1_Reset();        
+   \                     ??SHT1_ReadReg_1:
+   \   000007                ; Setup parameters for call to function SHT1_Reset
+   \   000007   12....       LCALL   ??SHT1_Reset?relay
+    220                continue;      
+    221              }
+   \                     ??SHT1_ReadReg_0:
+   \   00000A                ; Setup parameters for call to function SHT1_Start
+   \   00000A   12....       LCALL   ??SHT1_Start?relay
+   \   00000D                ; Setup parameters for call to function SHT1_WriteCommandData
+   \   00000D   7907         MOV     R1,#0x7
+   \   00000F   12....       LCALL   ??Subroutine13_0 & 0xFFFF
+   \                     ??CrossCallReturnLabel_17:
+   \   000012   70F3         JNZ     ??SHT1_ReadReg_1
+    222              else{      
+    223                SHT1DATA_LOW;
+   \   000014   12....       LCALL   ?Subroutine9 & 0xFFFF
+    224                SHT1_SendAck();   
+    225                break;
+    226              }    
+    227            } 
+    228            
+    229            lResult = (SHT1_ReadData()<<8);  
+   \                     ??CrossCallReturnLabel_11:
+   \   000017   FE           MOV     R6,A
+    230            SHT1DATA_LOW;
+   \   000018   12....       LCALL   ?Subroutine9 & 0xFFFF
+    231            SHT1_SendAck();
+    232                
+    233            lResult |= SHT1_ReadData(); 
+   \                     ??CrossCallReturnLabel_12:
+   \   00001B   F5..         MOV     ?V0 + 0,A
+    234            SHT1DATA_HIGH;
+   \   00001D   D291         SETB    0x90.1
+    235            SHT1_SendAck();
+   \   00001F                ; Setup parameters for call to function SHT1_SendAck
+   \   00001F   12....       LCALL   ??SHT1_SendAck?relay
+    236              
+    237            return lResult;
+   \   000022   EE           MOV     A,R6
+   \   000023   AA..         MOV     R2,?V0 + 0
+   \   000025   02....       LJMP    ?Subroutine0 & 0xFFFF
+   \   000028                REQUIRE _A_P1
+    238          }
+
+   \                                 In  segment BANKED_CODE, align 1, keep-with-next
+   \                     ?Subroutine9:
+   \   000000   C291         CLR     0x90.1
+   \   000002                ; Setup parameters for call to function SHT1_SendAck
+   \   000002                ; Setup parameters for call to function SHT1_SendAck
+   \   000002                REQUIRE ??Subroutine12_0
+   \   000002                ; // Fall through to label ??Subroutine12_0
+
+   \                                 In  segment BANKED_CODE, align 1, keep-with-next
+   \                     ??Subroutine12_0:
+   \   000000   12....       LCALL   ??SHT1_SendAck?relay
+   \   000003                ; Setup parameters for call to function SHT1_ReadData
+   \   000003                ; Setup parameters for call to function SHT1_ReadData
+   \   000003                ; Setup parameters for call to function SHT1_ReadData
+   \   000003                ; Setup parameters for call to function SHT1_ReadData
+   \   000003   12....       LCALL   ??SHT1_ReadData?relay
+   \   000006   E9           MOV     A,R1
+   \   000007   22           RET
+    239          
+
+   \                                 In  segment BANKED_CODE, align 1, keep-with-next
+    240          uint32 ReadSHT1(uint8 Addr)
+   \                     ReadSHT1:
+    241          {
+   \   000000   74F0         MOV     A,#-0x10
+   \   000002   12....       LCALL   ?BANKED_ENTER_XDATA
+   \   000005                ; Saved register size: 16
+   \   000005                ; Auto size: 0
+   \   000005   E9           MOV     A,R1
+   \   000006   FE           MOV     R6,A
+   \   000007   8003         SJMP    ??ReadSHT1_0
+    242            uint32 lResult;
+    243            while(1){        
+    244              SHT1_Start();              
+    245              SHT1_WriteCommandData(Addr);
+    246              
+    247              if(SHT1_Ready() != 0){  //Œﬁ”¶¥
+    248                SHT1_Reset();  
+   \                     ??ReadSHT1_1:
+   \   000009                ; Setup parameters for call to function SHT1_Reset
+   \   000009   12....       LCALL   ??SHT1_Reset?relay
+    249                continue;      
+    250              }
+   \                     ??ReadSHT1_0:
+   \   00000C                ; Setup parameters for call to function SHT1_Start
+   \   00000C   12....       LCALL   ??SHT1_Start?relay
+   \   00000F                ; Setup parameters for call to function SHT1_WriteCommandData
+   \   00000F   12....       LCALL   ?Subroutine4 & 0xFFFF
+   \                     ??CrossCallReturnLabel_15:
+   \   000012   70F5         JNZ     ??ReadSHT1_1
+    251              else{
+    252                SHT1_SendAck();
+   \   000014                ; Setup parameters for call to function SHT1_SendAck
+   \   000014   12....       LCALL   ??SHT1_SendAck?relay
+    253                break;
+    254              }    
+    255            }
+    256            Delay10ms(60);
+   \   000017                ; Setup parameters for call to function Delay10ms
+   \   000017   793C         MOV     R1,#0x3c
+   \   000019   12....       LCALL   ??Delay10ms?relay
+    257            lResult = SHT1_ReadData();  
+   \   00001C                ; Setup parameters for call to function SHT1_ReadData
+   \   00001C   12....       LCALL   ??SHT1_ReadData?relay
+   \   00001F   E9           MOV     A,R1
+   \   000020   F5..         MOV     ?V0 + 4,A
+    258            lResult = lResult<<16;
+    259            SHT1DATA_LOW;
+   \   000022   12....       LCALL   ?Subroutine6 & 0xFFFF
+    260            Delay();
+    261            SHT1_SendAck();
+    262            
+    263            lResult |= ((uint16)SHT1_ReadData()<<8); 
+   \                     ??CrossCallReturnLabel_4:
+   \   000025   F5..         MOV     ?V0 + 0,A
+    264            SHT1DATA_LOW;
+   \   000027   12....       LCALL   ?Subroutine6 & 0xFFFF
+    265            Delay();
+    266            SHT1_SendAck();
+    267              
+    268            lResult |= SHT1_ReadData(); 
+   \                     ??CrossCallReturnLabel_5:
+   \   00002A   FF           MOV     R7,A
+    269            SHT1DATA_HIGH;
+   \   00002B   D291         SETB    0x90.1
+    270            Delay();
+   \   00002D                ; Setup parameters for call to function Delay
+   \   00002D   12....       LCALL   ??Delay?relay
+    271            SHT1_SendAck();
+   \   000030                ; Setup parameters for call to function SHT1_SendAck
+   \   000030   12....       LCALL   ??SHT1_SendAck?relay
+    272            
+    273            return lResult;
+   \   000033   E4           CLR     A
+   \   000034   F5..         MOV     ?V0 + 5,A
+   \   000036   F5..         MOV     ?V0 + 6,A
+   \   000038   F5..         MOV     ?V0 + 7,A
+   \   00003A   7410         MOV     A,#0x10
+   \   00003C   78..         MOV     R0,#?V0 + 4
+   \   00003E   12....       LCALL   ?L_SHL
+   \   000041   C5..         XCH     A,?V0 + 0
+   \   000043   F5..         MOV     ?V0 + 1,A
+   \   000045   E4           CLR     A
+   \   000046   F5..         MOV     ?V0 + 2,A
+   \   000048   F5..         MOV     ?V0 + 3,A
+   \   00004A   78..         MOV     R0,#?V0 + 4
+   \   00004C   79..         MOV     R1,#?V0 + 0
+   \   00004E   12....       LCALL   ?L_IOR
+   \   000051   8F..         MOV     ?V0 + 0,R7
+   \   000053   E4           CLR     A
+   \   000054   F5..         MOV     ?V0 + 1,A
+   \   000056   78..         MOV     R0,#?V0 + 4
+   \   000058   79..         MOV     R1,#?V0 + 0
+   \   00005A   12....       LCALL   ?L_IOR
+   \   00005D   AA..         MOV     R2,?V0 + 4
+   \   00005F   AB..         MOV     R3,?V0 + 5
+   \   000061   AC..         MOV     R4,?V0 + 6
+   \   000063   7D00         MOV     R5,#0x0
+   \   000065   7F08         MOV     R7,#0x8
+   \   000067   02....       LJMP    ?BANKED_LEAVE_XDATA
+   \   00006A                REQUIRE _A_P1
+    274          }
+
+   \                                 In  segment BANKED_CODE, align 1, keep-with-next
+   \                     ?Subroutine6:
+   \   000000   C291         CLR     0x90.1
+   \   000002                ; Setup parameters for call to function Delay
+   \   000002                ; Setup parameters for call to function Delay
+   \   000002   12....       LCALL   ??Delay?relay
+   \   000005                ; Setup parameters for call to function SHT1_SendAck
+   \   000005                ; Setup parameters for call to function SHT1_SendAck
+   \   000005   12....       LCALL   ??Subroutine12_0 & 0xFFFF
+   \                     ??CrossCallReturnLabel_13:
+   \   000008   22           RET
+    275          
+
+   \                                 In  segment BANKED_CODE, align 1, keep-with-next
+    276          uint8 CRC8(uint8 crc, uint8 data)
+   \                     CRC8:
+    277          {
+   \   000000                ; Saved register size: 0
+   \   000000                ; Auto size: 0
+    278            uint8 i;
+    279            crc = crc ^data;
+   \   000000   EA           MOV     A,R2
+   \   000001   C9           XCH     A,R1
+   \   000002   69           XRL     A,R1
+   \   000003   F9           MOV     R1,A
+    280            for (i = 0; i < 8; i++)
+   \   000004   7808         MOV     R0,#0x8
+    281            {
+    282               if ((crc & 0x01) != 0) crc = (crc >> 1) ^ 0x8c;
+   \                     ??CRC8_0:
+   \   000006   E9           MOV     A,R1
+   \   000007   A2E0         MOV     C,0xE0 /* A   */.0
+   \   000009   5006         JNC     ??CRC8_1
+   \   00000B   C3           CLR     C
+   \   00000C   13           RRC     A
+   \   00000D   648C         XRL     A,#0x8c
+   \   00000F   8002         SJMP    ??CRC8_2
+    283               else crc = crc >> 1;
+   \                     ??CRC8_1:
+   \   000011   C3           CLR     C
+   \   000012   13           RRC     A
+   \                     ??CRC8_2:
+   \   000013   F9           MOV     R1,A
+    284            }
+   \   000014   18           DEC     R0
+   \   000015   E8           MOV     A,R0
+   \   000016   70EE         JNZ     ??CRC8_0
+    285            return crc;
+   \   000018   02....       LJMP    ?BRET
+    286          }
+    287          
+
+   \                                 In  segment BANKED_CODE, align 1, keep-with-next
+    288          void Delay(void)
+   \                     Delay:
+    289          {
+   \   000000                ; Saved register size: 0
+   \   000000                ; Auto size: 0
+    290              asm("NOP");
+   \   000000   00           NOP
+    291              asm("NOP");
+   \   000001   00           NOP
+    292              asm("NOP");
+   \   000002   00           NOP
+    293              asm("NOP");
+   \   000003   00           NOP
+    294              asm("NOP");
+   \   000004   00           NOP
+    295              asm("NOP");
+   \   000005   00           NOP
+    296              asm("NOP");
+   \   000006   00           NOP
+    297              asm("NOP");    
+   \   000007   00           NOP
+    298          }
+   \   000008   02....       LJMP    ?BRET
+    299          
+
+   \                                 In  segment BANKED_CODE, align 1, keep-with-next
+    300          void Delay10ms(uint8 Times){
+   \                     Delay10ms:
+   \   000000                ; Saved register size: 0
+   \   000000                ; Auto size: 0
+    301              uint8 i;
+    302              uint16 j;    
+    303              for(i=0;i<Times;i++){
+   \   000000   7800         MOV     R0,#0x0
+   \   000002   801B         SJMP    ??Delay10ms_0
+    304                for(j=0;j<5000;j++){        
+   \                     ??Delay10ms_1:
+   \   000004   7A88         MOV     R2,#-0x78
+   \   000006   7B13         MOV     R3,#0x13
+    305                  asm("NOP");
+   \                     ??Delay10ms_2:
+   \   000008   00           NOP
+    306                  asm("NOP");        
+   \   000009   00           NOP
+    307                  asm("NOP");
+   \   00000A   00           NOP
+    308                  asm("NOP");
+   \   00000B   00           NOP
+    309                  asm("NOP");
+   \   00000C   00           NOP
+    310                  asm("NOP");
+   \   00000D   00           NOP
+    311                  asm("NOP");
+   \   00000E   00           NOP
+    312                  asm("NOP");
+   \   00000F   00           NOP
+    313                  asm("NOP");
+   \   000010   00           NOP
+    314                  asm("NOP");
+   \   000011   00           NOP
+    315                }
+   \   000012   EA           MOV     A,R2
+   \   000013   24FF         ADD     A,#-0x1
+   \   000015   1A           DEC     R2
+   \   000016   EB           MOV     A,R3
+   \   000017   34FF         ADDC    A,#-0x1
+   \   000019   FB           MOV     R3,A
+   \   00001A   EA           MOV     A,R2
+   \   00001B   4B           ORL     A,R3
+   \   00001C   70EA         JNZ     ??Delay10ms_2
+    316             }
+   \   00001E   08           INC     R0
+   \                     ??Delay10ms_0:
+   \   00001F   E8           MOV     A,R0
+   \   000020   C3           CLR     C
+   \   000021   99           SUBB    A,R1
+   \   000022   40E0         JC      ??Delay10ms_1
+    317          }
+   \   000024   02....       LJMP    ?BRET
+    318          
+
+   \                                 In  segment BANKED_CODE, align 1, keep-with-next
+    319          char* ReadTemp(void)
+   \                     ReadTemp:
+    320          {
+   \   000000   C082         PUSH    DPL
+   \   000002   C083         PUSH    DPH
+   \   000004                ; Saved register size: 2
+   \   000004                ; Auto size: 3
+   \   000004   74FD         MOV     A,#-0x3
+   \   000006   12....       LCALL   ?ALLOC_XSTACK8
+    321             unsigned long lTemp;
+    322              float RHTValue;
+    323              unsigned char buf[3];
+    324              P0DIR |= 0x01;  //…Ë÷√P0.0Œ™ ‰≥ˆ∑Ω Ω£ªP0.4∫ÕP0.5Œ™ ‰»Î∑Ω Ω
+   \   000009   43FD01       ORL     0xfd,#0x1
+    325              P2DIR |= 0x01;  //…Ë÷√P2.0Œ™ ‰≥ˆ∑Ω Ω
+   \   00000C   43FF01       ORL     0xff,#0x1
+    326              P0_0 = 1; 
+   \   00000F   D280         SETB    0x80.0
+    327              P2_0 = 1;       //œ®√LED
+   \   000011   D2A0         SETB    0xa0.0
+    328              CLKCONCMD &= ~0x40;          //—°‘Ò32Mæß’Ò
+   \   000013   53C6BF       ANL     0xc6,#0xbf
+    329              while(!(SLEEPSTA & 0x40));   //µ»¥˝XSOCŒ»∂®
+   \                     ??ReadTemp_0:
+   \   000016   E59D         MOV     A,0x9d
+   \   000018   A2E6         MOV     C,0xE0 /* A   */.6
+   \   00001A   50FA         JNC     ??ReadTemp_0
+    330              CLKCONCMD = 0xb8;            //TICHSPD 128∑÷∆µ£¨CLKSPD ≤ª∑÷∆µ
+   \   00001C   75C6B8       MOV     0xc6,#-0x48
+    331              SLEEPCMD |= 0x04;            //πÿ±’≤ª”√µƒRC ’Òµ¥∆˜
+   \   00001F   43BE04       ORL     0xbe,#0x4
+    332              PERCFG = 0x00;               //Œª÷√1 P0 ø⁄
+   \   000022   75F100       MOV     0xf1,#0x0
+    333              P0SEL = 0x3c;                //P0 ”√◊˜¥Æø⁄
+   \   000025   75F33C       MOV     0xf3,#0x3c
+    334              U0CSR |= 0x80;               //UART ∑Ω Ω
+   \   000028   438680       ORL     0x86,#0x80
+    335              U0GCR |= 10;                 //baud_e = 10;
+   \   00002B   43C50A       ORL     0xc5,#0xa
+    336              U0BAUD |= 216;               //≤®Ãÿ¬ …ËŒ™57600
+   \   00002E   43C2D8       ORL     0xc2,#0xd8
+    337              UTX0IF = 1;
+   \   000031   D2E9         SETB    0xe8.1
+    338              U0CSR |= 0X40;               //‘ –ÌΩ” ’
+   \   000033   438640       ORL     0x86,#0x40
+    339              IEN0 |= 0x84;                //ø™◊‹÷–∂œ£¨Ω” ’÷–∂œ  	
+   \   000036   43A884       ORL     0xa8,#0x84
+    340              Sensor_PIN_INT();
+   \   000039                ; Setup parameters for call to function Sensor_PIN_INT
+   \   000039   12....       LCALL   ??Sensor_PIN_INT?relay
+    341          
+    342              while(1){ 
+    343          	lTemp = ReadSHT1(3);//14bitŒ¬∂»
+   \   00003C                ; Setup parameters for call to function ReadSHT1
+   \   00003C   7903         MOV     R1,#0x3
+   \   00003E   12....       LCALL   ??ReadSHT1?relay
+    344                  lTemp = lTemp >> 8;
+    345                  RHTValue = lTemp;
+    346                  RHTValue = 0.01 * RHTValue - 39.64;
+    347                  buf[0] = (uint8)RHTValue;//Œ¬ ™∂»¥´∏–∆˜Œ¬∂» 
+    348          	buf[0] = ( ((buf[0]/10)<<4) + (buf[0]%10) );
+    349                  buf[1] = (buf[0]>>4)&0xf;
+    350          	if(buf[1] > 0x9)
+    351                      buf[1] = buf[1] - 0XA + 'A';
+    352          	else
+    353          	    buf[1] = buf[1] + '0';
+    354          	buf[2] = (buf[0])&0xf;
+    355          	if(buf[2] > 0x9)
+    356          	    buf[2] = buf[2] -0XA + 'A';
+    357          	else
+    358          	    buf[2] = buf[2] + '0';
+    359                  
+    360          
+    361                  //temp = (uint8)RHTValue;
+    362              
+    363                  return buf;
+                                ^
+Warning[Pe120]: return value type ("unsigned char *") does not match the
+          function type ("char *")
+
+          return buf;
+                 ^
+"D:\Œ‰∫∫¥¥Œ¨ÃÿŒÔ¡™Õ¯ µ—Èœ‰◊ ¡œ\CVT-IOT-VSπ‚≈Ã\Zigbee≤ø∑÷£®ŒÔ¡™Õ¯£©\ZStack-CC2530-eV1.3\Projects\zstack\Samples\SensorApp\Source\SERSOR.c",363  Warning[Pe1056]: 
+          returning pointer to local variable
+   \   000041   85..82       MOV     DPL,?XSP + 0
+   \   000044   85..83       MOV     DPH,?XSP + 1
+   \   000047   AA82         MOV     R2,DPL
+   \   000049   AB83         MOV     R3,DPH
+   \   00004B   7403         MOV     A,#0x3
+   \   00004D   12....       LCALL   ?DEALLOC_XSTACK8
+   \   000050   02....       LJMP    ?Subroutine1 & 0xFFFF
+   \   000053                REQUIRE P0DIR
+   \   000053                REQUIRE P2DIR
+   \   000053                REQUIRE _A_P0
+   \   000053                REQUIRE _A_P2
+   \   000053                REQUIRE CLKCONCMD
+   \   000053                REQUIRE SLEEPSTA
+   \   000053                REQUIRE SLEEPCMD
+   \   000053                REQUIRE PERCFG
+   \   000053                REQUIRE P0SEL
+   \   000053                REQUIRE U0CSR
+   \   000053                REQUIRE U0GCR
+   \   000053                REQUIRE U0BAUD
+   \   000053                REQUIRE _A_IRCON2
+   \   000053                REQUIRE _A_IEN0
+    364          }
+    365          }
+
+   \                                 In  segment BANK_RELAYS, align 1
+   \                     ??ReadAdcValue?relay:
+   \   000000   12....       LCALL   ?BDISPATCH
+   \   000003   ......       DC24    ReadAdcValue
+
+   \                                 In  segment BANK_RELAYS, align 1
+   \                     ??Sensor_PIN_INT?relay:
+   \   000000   12....       LCALL   ?BDISPATCH
+   \   000003   ......       DC24    Sensor_PIN_INT
+
+   \                                 In  segment BANK_RELAYS, align 1
+   \                     ??SHT1_Reset?relay:
+   \   000000   12....       LCALL   ?BDISPATCH
+   \   000003   ......       DC24    SHT1_Reset
+
+   \                                 In  segment BANK_RELAYS, align 1
+   \                     ??SHT1_Start?relay:
+   \   000000   12....       LCALL   ?BDISPATCH
+   \   000003   ......       DC24    SHT1_Start
+
+   \                                 In  segment BANK_RELAYS, align 1
+   \                     ??SHT1_Ready?relay:
+   \   000000   12....       LCALL   ?BDISPATCH
+   \   000003   ......       DC24    SHT1_Ready
+
+   \                                 In  segment BANK_RELAYS, align 1
+   \                     ??SHT1_SendAck?relay:
+   \   000000   12....       LCALL   ?BDISPATCH
+   \   000003   ......       DC24    SHT1_SendAck
+
+   \                                 In  segment BANK_RELAYS, align 1
+   \                     ??SHT1_WriteCommandData?relay:
+   \   000000   12....       LCALL   ?BDISPATCH
+   \   000003   ......       DC24    SHT1_WriteCommandData
+
+   \                                 In  segment BANK_RELAYS, align 1
+   \                     ??SHT1_ReadData?relay:
+   \   000000   12....       LCALL   ?BDISPATCH
+   \   000003   ......       DC24    SHT1_ReadData
+
+   \                                 In  segment BANK_RELAYS, align 1
+   \                     ??SHT1_WriteReg?relay:
+   \   000000   12....       LCALL   ?BDISPATCH
+   \   000003   ......       DC24    SHT1_WriteReg
+
+   \                                 In  segment BANK_RELAYS, align 1
+   \                     ??SHT1_ReadReg?relay:
+   \   000000   12....       LCALL   ?BDISPATCH
+   \   000003   ......       DC24    SHT1_ReadReg
+
+   \                                 In  segment BANK_RELAYS, align 1
+   \                     ??ReadSHT1?relay:
+   \   000000   12....       LCALL   ?BDISPATCH
+   \   000003   ......       DC24    ReadSHT1
+
+   \                                 In  segment BANK_RELAYS, align 1
+   \                     ??CRC8?relay:
+   \   000000   12....       LCALL   ?BDISPATCH
+   \   000003   ......       DC24    CRC8
+
+   \                                 In  segment BANK_RELAYS, align 1
+   \                     ??Delay?relay:
+   \   000000   12....       LCALL   ?BDISPATCH
+   \   000003   ......       DC24    Delay
+
+   \                                 In  segment BANK_RELAYS, align 1
+   \                     ??Delay10ms?relay:
+   \   000000   12....       LCALL   ?BDISPATCH
+   \   000003   ......       DC24    Delay10ms
+
+   \                                 In  segment BANK_RELAYS, align 1
+   \                     ??ReadTemp?relay:
+   \   000000   12....       LCALL   ?BDISPATCH
+   \   000003   ......       DC24    ReadTemp
+
+   Maximum stack usage in bytes:
+
+     Function                   ISTACK PSTACK XSTACK
+     --------                   ------ ------ ------
+     CRC8                           0      0      0
+     Delay                          0      0     16
+     Delay10ms                      0      0     16
+     ReadAdcValue                   0      0     10
+     ReadSHT1                       0      0     19
+       -> SHT1_Reset                0      0     32
+       -> SHT1_Start                0      0     32
+       -> SHT1_WriteCommandData     0      0     32
+       -> SHT1_Ready                0      0     32
+       -> SHT1_SendAck              0      0     32
+       -> Delay10ms                 0      0     32
+       -> SHT1_ReadData             0      0     32
+       -> Delay                     0      0     32
+       -> SHT1_SendAck              0      0     32
+       -> SHT1_ReadData             0      0     32
+       -> Delay                     0      0     32
+       -> SHT1_SendAck              0      0     32
+       -> SHT1_ReadData             0      0     32
+       -> Delay                     0      0     32
+       -> SHT1_SendAck              0      0     32
+     ReadTemp                       2      0      3
+       -> Sensor_PIN_INT            4      0      6
+       -> ReadSHT1                  4      0      6
+     SHT1_ReadData                  0      0     28
+       -> Delay                     0      0     24
+       -> SHT1_Ready                0      0     24
+       -> Delay                     0      0     24
+       -> Delay                     0      0     24
+     SHT1_ReadReg                   0      0     10
+       -> SHT1_Reset                0      0     20
+       -> SHT1_Start                0      0     20
+       -> SHT1_WriteCommandData     0      0     20
+       -> SHT1_Ready                0      0     20
+       -> SHT1_SendAck              0      0     20
+       -> SHT1_ReadData             0      0     20
+       -> SHT1_SendAck              0      0     20
+       -> SHT1_ReadData             0      0     20
+       -> SHT1_SendAck              0      0     20
+     SHT1_Ready                     2      0     16
+       -> Delay                     4      0      0
+     SHT1_Reset                     0      0     25
+       -> Delay                     0      0     18
+       -> Delay                     0      0     18
+       -> Delay                     0      0     18
+     SHT1_SendAck                   2      0     16
+       -> Delay                     4      0      0
+       -> Delay                     4      0      0
+     SHT1_Start                     2      0     16
+       -> Delay                     4      0      0
+       -> Delay                     4      0      0
+       -> Delay                     4      0      0
+       -> Delay                     4      0      0
+       -> Delay                     4      0      0
+       -> Delay                     4      0      0
+     SHT1_WriteCommandData          0      0     26
+       -> Delay                     0      0     20
+       -> Delay                     0      0     20
+       -> Delay                     0      0     20
+       -> Delay                     0      0     20
+     SHT1_WriteReg                  0      0      9
+       -> SHT1_Reset                0      0     18
+       -> SHT1_Start                0      0     18
+       -> SHT1_WriteCommandData     0      0     18
+       -> SHT1_Ready                0      0     18
+       -> SHT1_SendAck              0      0     18
+       -> SHT1_WriteCommandData     0      0     18
+       -> SHT1_Ready                0      0     18
+       -> SHT1_SendAck              0      0     18
+     Sensor_PIN_INT                 0      0      3
+
+
+   Segment part sizes:
+
+     Function/Label                Bytes
+     --------------                -----
+     _A_P0                            1
+     U0CSR                            1
+     _A_P1                            1
+     SLEEPSTA                         1
+     _A_P2                            1
+     _A_IEN0                          1
+     ADCCON1                          1
+     ADCCON3                          1
+     ADCL                             1
+     ADCH                             1
+     SLEEPCMD                         1
+     U0BAUD                           1
+     U0GCR                            1
+     CLKCONCMD                        1
+     _A_IRCON2                        1
+     PERCFG                           1
+     P0SEL                            1
+     P1SEL                            1
+     P1INP                            1
+     P0DIR                            1
+     P1DIR                            1
+     P2DIR                            1
+     uart_buffer                      1
+     ReadAdcValue                    96
+     ?Subroutine0                     1
+     ??Subroutine10_0                 5
+     Sensor_PIN_INT                  12
+     SHT1_Reset                      16
+     ?Subroutine2                     5
+     ?Subroutine5                     7
+     ?Subroutine8                     2
+     ??Subroutine11_0                 9
+     SHT1_Start                      23
+     ?Subroutine1                     7
+     SHT1_Ready                      17
+     SHT1_SendAck                     9
+     ?Subroutine7                     9
+     SHT1_WriteCommandData           49
+     ?Subroutine3                    11
+     SHT1_ReadData                   56
+     SHT1_WriteReg                   43
+     ?Subroutine4                     2
+     ??Subroutine13_0                 8
+     SHT1_ReadReg                    40
+     ?Subroutine9                     2
+     ??Subroutine12_0                 8
+     ReadSHT1                       106
+     ?Subroutine6                     9
+     CRC8                            27
+     Delay                           11
+     Delay10ms                       39
+     ReadTemp                        83
+     ??ReadAdcValue?relay             6
+     ??Sensor_PIN_INT?relay           6
+     ??SHT1_Reset?relay               6
+     ??SHT1_Start?relay               6
+     ??SHT1_Ready?relay               6
+     ??SHT1_SendAck?relay             6
+     ??SHT1_WriteCommandData?relay    6
+     ??SHT1_ReadData?relay            6
+     ??SHT1_WriteReg?relay            6
+     ??SHT1_ReadReg?relay             6
+     ??ReadSHT1?relay                 6
+     ??CRC8?relay                     6
+     ??Delay?relay                    6
+     ??Delay10ms?relay                6
+     ??ReadTemp?relay                 6
+
+ 
+ 712 bytes in segment BANKED_CODE
+  90 bytes in segment BANK_RELAYS
+  22 bytes in segment SFR_AN
+   1 byte  in segment XDATA_Z
+ 
+ 802 bytes of CODE  memory
+   0 bytes of DATA  memory (+ 22 bytes shared)
+   1 byte  of XDATA memory
+
+Errors: none
+Warnings: 2

@@ -1,0 +1,1030 @@
+###############################################################################
+#                                                                             #
+# IAR C/C++ Compiler V8.10.1.10194/W32 for 8051         05/Nov/2019  17:47:41 #
+# Copyright 2004-2011 IAR Systems AB.                                         #
+#                                                                             #
+#    Core               =  plain                                              #
+#    Code model         =  banked                                             #
+#    Data model         =  large                                              #
+#    Calling convention =  xdata reentrant                                    #
+#    Constant location  =  data_rom                                           #
+#    Dptr setup         =  1,16                                               #
+#    Source file        =  D:\Îäºº´´Î¬ÌØÎïÁªÍøÊµÑéÏä×ÊÁÏ\CVT-IOT-VS¹âÅÌ\Zigbe #
+#                          e²¿·Ö£¨ÎïÁªÍø£©\ZStack-CC2530-eV1.3\Projects\zstac #
+#                          k\Samples\SensorApp\Source\SensorApp.c             #
+#    Command line       =  -f D:\Îäºº´´Î¬ÌØÎïÁªÍøÊµÑéÏä×ÊÁÏ\CVT-IOT-VS¹âÅÌ\Zi #
+#                          gbee²¿·Ö£¨ÎïÁªÍø£©\ZStack-CC2530-eV1.3\Projects\zs #
+#                          tack\Samples\SensorApp\CC2530DB\..\..\..\Tools\CC2 #
+#                          530DB\f8wCoord.cfg (-DCPU32MHZ -DROOT=__near_func  #
+#                          -DMAC_CFG_APP_PENDING_QUEUE=TRUE                   #
+#                          -DMAC_CFG_TX_DATA_MAX=5 -DMAC_CFG_TX_MAX=8         #
+#                          -DMAC_CFG_RX_MAX=5 -DZDO_COORDINATOR -DRTR_NWK)    #
+#                          -f D:\Îäºº´´Î¬ÌØÎïÁªÍøÊµÑéÏä×ÊÁÏ\CVT-IOT-VS¹âÅÌ\Zi #
+#                          gbee²¿·Ö£¨ÎïÁªÍø£©\ZStack-CC2530-eV1.3\Projects\zs #
+#                          tack\Samples\SensorApp\CC2530DB\..\..\..\Tools\CC2 #
+#                          530DB\f8wConfig.cfg (-DZIGBEEPRO -DSECURE=0        #
+#                          -DZG_SECURE_DYNAMIC=0 -DREFLECTOR                  #
+#                          -DDEFAULT_CHANLIST=0x00200000                      #
+#                          -DZDAPP_CONFIG_PAN_ID=0x15 -DNWK_START_DELAY=100   #
+#                          -DEXTENDED_JOINING_RANDOM_MASK=0x007F              #
+#                          -DBEACON_REQUEST_DELAY=100                         #
+#                          -DBEACON_REQ_DELAY_MASK=0x00FF                     #
+#                          -DLINK_STATUS_JITTER_MASK=0x007F                   #
+#                          -DROUTE_EXPIRY_TIME=30 -DAPSC_ACK_WAIT_DURATION_PO #
+#                          LLED=3000 -DNWK_INDIRECT_MSG_TIMEOUT=7             #
+#                          -DMAX_RREQ_ENTRIES=8 -DAPSC_MAX_FRAME_RETRIES=3    #
+#                          -DNWK_MAX_DATA_RETRIES=2                           #
+#                          -DMAX_POLL_FAILURE_RETRIES=2 -DMAX_BCAST=9         #
+#                          -DAPS_MAX_GROUPS=16 -DMAX_RTG_ENTRIES=40           #
+#                          -DNWK_MAX_BINDING_ENTRIES=4                        #
+#                          -DMAX_BINDING_CLUSTER_IDS=4 "-DDEFAULT_KEY={0x01,  #
+#                          0x03, 0x05, 0x07, 0x09, 0x0B, 0x0D, 0x0F, 0x00,    #
+#                          0x02, 0x04, 0x06, 0x08, 0x0A, 0x0C, 0x0D}"         #
+#                          -DMAC_MAX_FRAME_SIZE=116                           #
+#                          -DZDNWKMGR_MIN_TRANSMISSIONS=20 "-DCONST=const     #
+#                          __code" -DGENERIC=__generic                        #
+#                          -DRFD_RCVC_ALWAYS_ON=FALSE -DPOLL_RATE=1000        #
+#                          -DQUEUED_POLL_RATE=100 -DRESPONSE_POLL_RATE=100)   #
+#                          -DREJOIN_POLL_RATE=440 D:\Îäºº´´Î¬ÌØÎïÁªÍøÊµÑéÏä×Ê #
+#                          ÁÏ\CVT-IOT-VS¹âÅÌ\Zigbee²¿·Ö£¨ÎïÁªÍø£©\ZStack-CC25 #
+#                          30-eV1.3\Projects\zstack\Samples\SensorApp\Source\ #
+#                          SensorApp.c -D ZTOOL_P1 -D xMT_TASK -D             #
+#                          MT_SYS_FUNC -D MT_ZDO_FUNC -D                      #
+#                          xLCD_SUPPORTED=DEBUG -lC                           #
+#                          D:\Îäºº´´Î¬ÌØÎïÁªÍøÊµÑéÏä×ÊÁÏ\CVT-IOT-VS¹âÅÌ\Zigbe #
+#                          e²¿·Ö£¨ÎïÁªÍø£©\ZStack-CC2530-eV1.3\Projects\zstac #
+#                          k\Samples\SensorApp\CC2530DB\CoordinatorEB\List\   #
+#                          -lA D:\Îäºº´´Î¬ÌØÎïÁªÍøÊµÑéÏä×ÊÁÏ\CVT-IOT-VS¹âÅÌ\Z #
+#                          igbee²¿·Ö£¨ÎïÁªÍø£©\ZStack-CC2530-eV1.3\Projects\z #
+#                          stack\Samples\SensorApp\CC2530DB\CoordinatorEB\Lis #
+#                          t\ --diag_suppress Pe001,Pa010 -o                  #
+#                          D:\Îäºº´´Î¬ÌØÎïÁªÍøÊµÑéÏä×ÊÁÏ\CVT-IOT-VS¹âÅÌ\Zigbe #
+#                          e²¿·Ö£¨ÎïÁªÍø£©\ZStack-CC2530-eV1.3\Projects\zstac #
+#                          k\Samples\SensorApp\CC2530DB\CoordinatorEB\Obj\    #
+#                          -e --no_code_motion --debug --core=plain           #
+#                          --dptr=16,1 --data_model=large                     #
+#                          --code_model=banked --calling_convention=xdata_ree #
+#                          ntrant --place_constants=data_rom                  #
+#                          --nr_virtual_regs 16 -I D:\Îäºº´´Î¬ÌØÎïÁªÍøÊµÑéÏä× #
+#                          ÊÁÏ\CVT-IOT-VS¹âÅÌ\Zigbee²¿·Ö£¨ÎïÁªÍø£©\ZStack-CC2 #
+#                          530-eV1.3\Projects\zstack\Samples\SensorApp\CC2530 #
+#                          DB\ -I D:\Îäºº´´Î¬ÌØÎïÁªÍøÊµÑéÏä×ÊÁÏ\CVT-IOT-VS¹âÅ #
+#                          Ì\Zigbee²¿·Ö£¨ÎïÁªÍø£©\ZStack-CC2530-eV1.3\Project #
+#                          s\zstack\Samples\SensorApp\CC2530DB\..\Source\ -I  #
+#                          D:\Îäºº´´Î¬ÌØÎïÁªÍøÊµÑéÏä×ÊÁÏ\CVT-IOT-VS¹âÅÌ\Zigbe #
+#                          e²¿·Ö£¨ÎïÁªÍø£©\ZStack-CC2530-eV1.3\Projects\zstac #
+#                          k\Samples\SensorApp\CC2530DB\..\..\..\ZMain\TI2530 #
+#                          DB\ -I D:\Îäºº´´Î¬ÌØÎïÁªÍøÊµÑéÏä×ÊÁÏ\CVT-IOT-VS¹âÅ #
+#                          Ì\Zigbee²¿·Ö£¨ÎïÁªÍø£©\ZStack-CC2530-eV1.3\Project #
+#                          s\zstack\Samples\SensorApp\CC2530DB\..\..\..\..\.. #
+#                          \Components\hal\include\ -I                        #
+#                          D:\Îäºº´´Î¬ÌØÎïÁªÍøÊµÑéÏä×ÊÁÏ\CVT-IOT-VS¹âÅÌ\Zigbe #
+#                          e²¿·Ö£¨ÎïÁªÍø£©\ZStack-CC2530-eV1.3\Projects\zstac #
+#                          k\Samples\SensorApp\CC2530DB\..\..\..\..\..\Compon #
+#                          ents\hal\target\CC2530EB\ -I                       #
+#                          D:\Îäºº´´Î¬ÌØÎïÁªÍøÊµÑéÏä×ÊÁÏ\CVT-IOT-VS¹âÅÌ\Zigbe #
+#                          e²¿·Ö£¨ÎïÁªÍø£©\ZStack-CC2530-eV1.3\Projects\zstac #
+#                          k\Samples\SensorApp\CC2530DB\..\..\..\..\..\Compon #
+#                          ents\mac\include\ -I D:\Îäºº´´Î¬ÌØÎïÁªÍøÊµÑéÏä×ÊÁÏ #
+#                          \CVT-IOT-VS¹âÅÌ\Zigbee²¿·Ö£¨ÎïÁªÍø£©\ZStack-CC2530 #
+#                          -eV1.3\Projects\zstack\Samples\SensorApp\CC2530DB\ #
+#                          ..\..\..\..\..\Components\mac\high_level\ -I       #
+#                          D:\Îäºº´´Î¬ÌØÎïÁªÍøÊµÑéÏä×ÊÁÏ\CVT-IOT-VS¹âÅÌ\Zigbe #
+#                          e²¿·Ö£¨ÎïÁªÍø£©\ZStack-CC2530-eV1.3\Projects\zstac #
+#                          k\Samples\SensorApp\CC2530DB\..\..\..\..\..\Compon #
+#                          ents\mac\low_level\srf04\ -I                       #
+#                          D:\Îäºº´´Î¬ÌØÎïÁªÍøÊµÑéÏä×ÊÁÏ\CVT-IOT-VS¹âÅÌ\Zigbe #
+#                          e²¿·Ö£¨ÎïÁªÍø£©\ZStack-CC2530-eV1.3\Projects\zstac #
+#                          k\Samples\SensorApp\CC2530DB\..\..\..\..\..\Compon #
+#                          ents\mac\low_level\srf04\single_chip\ -I           #
+#                          D:\Îäºº´´Î¬ÌØÎïÁªÍøÊµÑéÏä×ÊÁÏ\CVT-IOT-VS¹âÅÌ\Zigbe #
+#                          e²¿·Ö£¨ÎïÁªÍø£©\ZStack-CC2530-eV1.3\Projects\zstac #
+#                          k\Samples\SensorApp\CC2530DB\..\..\..\..\..\Compon #
+#                          ents\mt\ -I D:\Îäºº´´Î¬ÌØÎïÁªÍøÊµÑéÏä×ÊÁÏ\CVT-IOT- #
+#                          VS¹âÅÌ\Zigbee²¿·Ö£¨ÎïÁªÍø£©\ZStack-CC2530-eV1.3\Pr #
+#                          ojects\zstack\Samples\SensorApp\CC2530DB\..\..\..\ #
+#                          ..\..\Components\osal\include\ -I                  #
+#                          D:\Îäºº´´Î¬ÌØÎïÁªÍøÊµÑéÏä×ÊÁÏ\CVT-IOT-VS¹âÅÌ\Zigbe #
+#                          e²¿·Ö£¨ÎïÁªÍø£©\ZStack-CC2530-eV1.3\Projects\zstac #
+#                          k\Samples\SensorApp\CC2530DB\..\..\..\..\..\Compon #
+#                          ents\services\saddr\ -I D:\Îäºº´´Î¬ÌØÎïÁªÍøÊµÑéÏä× #
+#                          ÊÁÏ\CVT-IOT-VS¹âÅÌ\Zigbee²¿·Ö£¨ÎïÁªÍø£©\ZStack-CC2 #
+#                          530-eV1.3\Projects\zstack\Samples\SensorApp\CC2530 #
+#                          DB\..\..\..\..\..\Components\services\sdata\ -I    #
+#                          D:\Îäºº´´Î¬ÌØÎïÁªÍøÊµÑéÏä×ÊÁÏ\CVT-IOT-VS¹âÅÌ\Zigbe #
+#                          e²¿·Ö£¨ÎïÁªÍø£©\ZStack-CC2530-eV1.3\Projects\zstac #
+#                          k\Samples\SensorApp\CC2530DB\..\..\..\..\..\Compon #
+#                          ents\stack\af\ -I D:\Îäºº´´Î¬ÌØÎïÁªÍøÊµÑéÏä×ÊÁÏ\CV #
+#                          T-IOT-VS¹âÅÌ\Zigbee²¿·Ö£¨ÎïÁªÍø£©\ZStack-CC2530-eV #
+#                          1.3\Projects\zstack\Samples\SensorApp\CC2530DB\..\ #
+#                          ..\..\..\..\Components\stack\nwk\ -I               #
+#                          D:\Îäºº´´Î¬ÌØÎïÁªÍøÊµÑéÏä×ÊÁÏ\CVT-IOT-VS¹âÅÌ\Zigbe #
+#                          e²¿·Ö£¨ÎïÁªÍø£©\ZStack-CC2530-eV1.3\Projects\zstac #
+#                          k\Samples\SensorApp\CC2530DB\..\..\..\..\..\Compon #
+#                          ents\stack\sapi\ -I D:\Îäºº´´Î¬ÌØÎïÁªÍøÊµÑéÏä×ÊÁÏ\ #
+#                          CVT-IOT-VS¹âÅÌ\Zigbee²¿·Ö£¨ÎïÁªÍø£©\ZStack-CC2530- #
+#                          eV1.3\Projects\zstack\Samples\SensorApp\CC2530DB\. #
+#                          .\..\..\..\..\Components\stack\sec\ -I             #
+#                          D:\Îäºº´´Î¬ÌØÎïÁªÍøÊµÑéÏä×ÊÁÏ\CVT-IOT-VS¹âÅÌ\Zigbe #
+#                          e²¿·Ö£¨ÎïÁªÍø£©\ZStack-CC2530-eV1.3\Projects\zstac #
+#                          k\Samples\SensorApp\CC2530DB\..\..\..\..\..\Compon #
+#                          ents\stack\sys\ -I D:\Îäºº´´Î¬ÌØÎïÁªÍøÊµÑéÏä×ÊÁÏ\C #
+#                          VT-IOT-VS¹âÅÌ\Zigbee²¿·Ö£¨ÎïÁªÍø£©\ZStack-CC2530-e #
+#                          V1.3\Projects\zstack\Samples\SensorApp\CC2530DB\.. #
+#                          \..\..\..\..\Components\stack\zdo\ -I              #
+#                          D:\Îäºº´´Î¬ÌØÎïÁªÍøÊµÑéÏä×ÊÁÏ\CVT-IOT-VS¹âÅÌ\Zigbe #
+#                          e²¿·Ö£¨ÎïÁªÍø£©\ZStack-CC2530-eV1.3\Projects\zstac #
+#                          k\Samples\SensorApp\CC2530DB\..\..\..\..\..\Compon #
+#                          ents\zmac\ -I D:\Îäºº´´Î¬ÌØÎïÁªÍøÊµÑéÏä×ÊÁÏ\CVT-IO #
+#                          T-VS¹âÅÌ\Zigbee²¿·Ö£¨ÎïÁªÍø£©\ZStack-CC2530-eV1.3\ #
+#                          Projects\zstack\Samples\SensorApp\CC2530DB\..\..\. #
+#                          .\..\..\Components\zmac\f8w\ -Ohz                  #
+#                          --require_prototypes                               #
+#    List file          =  D:\Îäºº´´Î¬ÌØÎïÁªÍøÊµÑéÏä×ÊÁÏ\CVT-IOT-VS¹âÅÌ\Zigbe #
+#                          e²¿·Ö£¨ÎïÁªÍø£©\ZStack-CC2530-eV1.3\Projects\zstac #
+#                          k\Samples\SensorApp\CC2530DB\CoordinatorEB\List\Se #
+#                          nsorApp.lst                                        #
+#    Object file        =  D:\Îäºº´´Î¬ÌØÎïÁªÍøÊµÑéÏä×ÊÁÏ\CVT-IOT-VS¹âÅÌ\Zigbe #
+#                          e²¿·Ö£¨ÎïÁªÍø£©\ZStack-CC2530-eV1.3\Projects\zstac #
+#                          k\Samples\SensorApp\CC2530DB\CoordinatorEB\Obj\Sen #
+#                          sorApp.r51                                         #
+#                                                                             #
+#                                                                             #
+###############################################################################
+
+D:\Îäºº´´Î¬ÌØÎïÁªÍøÊµÑéÏä×ÊÁÏ\CVT-IOT-VS¹âÅÌ\Zigbee²¿·Ö£¨ÎïÁªÍø£©\ZStack-CC2530-eV1.3\Projects\zstack\Samples\SensorApp\Source\SensorApp.c
+      1          #include "OSAL.h"
+      2          #include "AF.h"
+      3          #include "ZDApp.h"
+      4          #include "ZDObject.h"
+      5          #include "ZDProfile.h"
+      6          
+      7          #include "SensorApp.h"
+      8          #include "DebugTrace.h"
+      9          #include "Sensor.h"   //Ìí¼ÓÍ·ÎÄ¼þ
+     10          
+     11          #if !defined( WIN32 )
+     12            #include "OnBoard.h"
+     13          #endif
+     14          
+     15          /* HAL */
+     16          #include "hal_lcd.h"
+     17          #include "hal_led.h"
+     18          #include "hal_key.h"
+     19          #include "hal_uart.h"
+
+   \                                 In  segment XDATA_ROM_C, align 1
+     20          const cId_t SensorApp_ClusterList[SensorApp_MAX_CLUSTERS] =
+   \                     SensorApp_ClusterList:
+   \   000000   0100         DW 1
+     21          {
+     22            SensorApp_CLUSTERID
+     23          };
+     24          
+
+   \                                 In  segment XDATA_ROM_C, align 1
+     25          const SimpleDescriptionFormat_t SensorApp_SimpleDesc =
+   \                     SensorApp_SimpleDesc:
+   \   000000   0A           DB 10
+   \   000001   040F         DW 3844
+   \   000003   0100         DW 1
+   \   000005   00           DB 0
+   \   000006   01           DB 1
+   \   000007   ....         DW SensorApp_ClusterList
+   \   000009   01           DB 1
+   \   00000A   ....         DW SensorApp_ClusterList
+     26          {
+     27            SensorApp_ENDPOINT,              //  int Endpoint;
+     28            SensorApp_PROFID,                //  uint16 AppProfId[2];
+     29            SensorApp_DEVICEID,              //  uint16 AppDeviceId[2];
+     30            SensorApp_DEVICE_VERSION,        //  int   AppDevVer:4;
+     31            SensorApp_FLAGS,                 //  int   AppFlags:4;
+     32            SensorApp_MAX_CLUSTERS,          //  byte  AppNumInClusters;
+     33            (cId_t *)SensorApp_ClusterList,  //  byte *pAppInClusterList;
+     34            SensorApp_MAX_CLUSTERS,          //  byte  AppNumInClusters;
+     35            (cId_t *)SensorApp_ClusterList   //  byte *pAppInClusterList;
+     36          };
+     37          
+
+   \                                 In  segment XDATA_Z, align 1, keep-with-next
+     38          endPointDesc_t SensorApp_epDesc;
+   \                     SensorApp_epDesc:
+   \   000000                DS 6
+   \   000006                REQUIRE __INIT_XDATA_Z
+     39          
+
+   \                                 In  segment XDATA_Z, align 1, keep-with-next
+     40          byte SensorApp_TaskID;   // Task ID for internal task/event processing
+   \                     SensorApp_TaskID:
+   \   000000                DS 1
+   \   000001                REQUIRE __INIT_XDATA_Z
+     41                                    // This variable will be received when
+     42                                    // SensorApp_Init() is called.
+
+   \                                 In  segment XDATA_Z, align 1, keep-with-next
+     43          devStates_t SensorApp_NwkState;
+   \                     SensorApp_NwkState:
+   \   000000                DS 1
+   \   000001                REQUIRE __INIT_XDATA_Z
+     44          
+
+   \                                 In  segment XDATA_Z, align 1, keep-with-next
+     45          byte SensorApp_TransID;  // This is the unique message ID (counter)
+   \                     SensorApp_TransID:
+   \   000000                DS 1
+   \   000001                REQUIRE __INIT_XDATA_Z
+     46          
+
+   \                                 In  segment XDATA_Z, align 1, keep-with-next
+     47          afAddrType_t SensorApp_DstAddr;
+   \                     SensorApp_DstAddr:
+   \   000000                DS 12
+   \   00000C                REQUIRE __INIT_XDATA_Z
+     48          
+
+   \                                 In  segment XDATA_Z, align 1, keep-with-next
+     49          uint16 RxLen;        //´®¿Ú½ÓÊÕÊý¾Ý³¤¶È
+   \                     RxLen:
+   \   000000                DS 2
+   \   000002                REQUIRE __INIT_XDATA_Z
+
+   \                                 In  segment XDATA_Z, align 1, keep-with-next
+     50          uint8 UartDataBuf[128]; //´®¿ÚÊý¾Ý»º´æÇøÖ¸Õë
+   \                     UartDataBuf:
+   \   000000                DS 128
+   \   000080                REQUIRE __INIT_XDATA_Z
+     51          
+     52          void SensorApp_MessageMSGCB( afIncomingMSGPacket_t *pckt );
+     53          void SensorApp_SendTheMessage( uint8 *buf, uint16 len );
+     54          void SerialApp_SendTemp(void);
+     55          static void SensorApp_rxCB(uint8 port,uint8 event);
+     56          void ChangeAddrFormat(uint8 *dest,uint8 *src, uint8 length);
+     57          
+
+   \                                 In  segment BANKED_CODE, align 1, keep-with-next
+     58          void SensorApp_Init( byte task_id )
+   \                     SensorApp_Init:
+     59          {
+   \   000000   74F7         MOV     A,#-0x9
+   \   000002   12....       LCALL   ?BANKED_ENTER_XDATA
+   \   000005                ; Saved register size: 9
+   \   000005                ; Auto size: 29
+   \   000005   74E3         MOV     A,#-0x1d
+   \   000007   12....       LCALL   ?ALLOC_XSTACK8
+   \   00000A   E9           MOV     A,R1
+     60            halUARTCfg_t uartConfig;
+     61            
+     62            SensorApp_TaskID = task_id;
+   \   00000B   90....       MOV     DPTR,#SensorApp_TaskID
+   \   00000E   F0           MOVX    @DPTR,A
+     63            SensorApp_NwkState = DEV_INIT;
+   \   00000F   90....       MOV     DPTR,#SensorApp_NwkState
+   \   000012   7401         MOV     A,#0x1
+   \   000014   F0           MOVX    @DPTR,A
+     64            SensorApp_TransID = 0;
+   \   000015   90....       MOV     DPTR,#SensorApp_TransID
+   \   000018   E4           CLR     A
+   \   000019   F0           MOVX    @DPTR,A
+     65          
+     66            SensorApp_DstAddr.addrMode = (afAddrMode_t)AddrNotPresent;
+   \   00001A   90....       MOV     DPTR,#SensorApp_DstAddr + 8
+   \   00001D   F0           MOVX    @DPTR,A
+     67            SensorApp_DstAddr.endPoint = 0;
+   \   00001E   A3           INC     DPTR
+   \   00001F   F0           MOVX    @DPTR,A
+     68            SensorApp_DstAddr.addr.shortAddr = 0;
+   \   000020   90....       MOV     DPTR,#SensorApp_DstAddr
+   \   000023   F0           MOVX    @DPTR,A
+   \   000024   A3           INC     DPTR
+   \   000025   F0           MOVX    @DPTR,A
+     69          
+     70            SensorApp_epDesc.endPoint = SensorApp_ENDPOINT;
+   \   000026   90....       MOV     DPTR,#SensorApp_epDesc
+   \   000029   740A         MOV     A,#0xa
+   \   00002B   F0           MOVX    @DPTR,A
+     71            SensorApp_epDesc.task_id = &SensorApp_TaskID;
+   \   00002C   A3           INC     DPTR
+   \   00002D   74..         MOV     A,#SensorApp_TaskID & 0xff
+   \   00002F   F0           MOVX    @DPTR,A
+   \   000030   A3           INC     DPTR
+   \   000031   74..         MOV     A,#(SensorApp_TaskID >> 8) & 0xff
+   \   000033   F0           MOVX    @DPTR,A
+     72            SensorApp_epDesc.simpleDesc
+     73                      = (SimpleDescriptionFormat_t *)&SensorApp_SimpleDesc;
+   \   000034   A3           INC     DPTR
+   \   000035   74..         MOV     A,#SensorApp_SimpleDesc & 0xff
+   \   000037   F0           MOVX    @DPTR,A
+   \   000038   A3           INC     DPTR
+   \   000039   74..         MOV     A,#(SensorApp_SimpleDesc >> 8) & 0xff
+   \   00003B   F0           MOVX    @DPTR,A
+     74            SensorApp_epDesc.latencyReq = noLatencyReqs;
+   \   00003C   A3           INC     DPTR
+   \   00003D   E4           CLR     A
+   \   00003E   F0           MOVX    @DPTR,A
+     75          
+     76            
+     77            afRegister( &SensorApp_epDesc );
+   \   00003F                ; Setup parameters for call to function afRegister
+   \   00003F   7A..         MOV     R2,#SensorApp_epDesc & 0xff
+   \   000041   7B..         MOV     R3,#(SensorApp_epDesc >> 8) & 0xff
+   \   000043   12....       LCALL   ??afRegister?relay
+     78          
+     79            //ÅäÖÃ´®¿Ú²¢´ò¿ª
+     80            uartConfig.configured = TRUE;               //Ê¹ÄÜ´®¿Ú
+   \   000046   85..82       MOV     DPL,?XSP + 0
+   \   000049   85..83       MOV     DPH,?XSP + 1
+   \   00004C   7401         MOV     A,#0x1
+   \   00004E   F0           MOVX    @DPTR,A
+     81            uartConfig.baudRate   = HAL_UART_BR_115200; //²¨ÌØÂÊ115200
+   \   00004F   12....       LCALL   ?XSTACK_DISP0_8
+   \   000052   7404         MOV     A,#0x4
+   \   000054   F0           MOVX    @DPTR,A
+     82            uartConfig.flowControl = FALSE;             //¹Ø±ÕÁ÷¿Ø
+   \   000055   7402         MOV     A,#0x2
+   \   000057   12....       LCALL   ?XSTACK_DISP0_8
+   \   00005A   E4           CLR     A
+   \   00005B   F0           MOVX    @DPTR,A
+     83            uartConfig.callBackFunc = SensorApp_rxCB;     //»Øµ÷º¯Êý
+   \   00005C   741B         MOV     A,#0x1b
+   \   00005E   12....       LCALL   ?XSTACK_DISP0_8
+   \   000061   74..         MOV     A,#??SensorApp_rxCB?relay & 0xff
+   \   000063   F0           MOVX    @DPTR,A
+   \   000064   A3           INC     DPTR
+   \   000065   74..         MOV     A,#(??SensorApp_rxCB?relay >> 8) & 0xff
+   \   000067   F0           MOVX    @DPTR,A
+     84            HalUARTOpen(HAL_UART_PORT_0, &uartConfig);  //´ò¿ª´®¿Ú
+   \   000068                ; Setup parameters for call to function HalUARTOpen
+   \   000068   85..82       MOV     DPL,?XSP + 0
+   \   00006B   85..83       MOV     DPH,?XSP + 1
+   \   00006E   AA82         MOV     R2,DPL
+   \   000070   AB83         MOV     R3,DPH
+   \   000072   7900         MOV     R1,#0x0
+   \   000074   12....       LCALL   ??HalUARTOpen?relay
+     85           
+     86          #if defined ( LCD_SUPPORTED )
+     87              HalLcdWriteString( "SensorApp", HAL_LCD_LINE_1 );
+     88          #endif
+     89          }
+   \   000077   741D         MOV     A,#0x1d
+   \   000079                REQUIRE ?Subroutine0
+   \   000079                ; // Fall through to label ?Subroutine0
+
+   \                                 In  segment BANKED_CODE, align 1, keep-with-next
+   \                     ?Subroutine0:
+   \   000000   12....       LCALL   ?DEALLOC_XSTACK8
+   \   000003                REQUIRE ??Subroutine3_0
+   \   000003                ; // Fall through to label ??Subroutine3_0
+
+   \                                 In  segment BANKED_CODE, align 1, keep-with-next
+   \                     ??Subroutine3_0:
+   \   000000   7F01         MOV     R7,#0x1
+   \   000002   02....       LJMP    ?BANKED_LEAVE_XDATA
+     90          
+
+   \                                 In  segment BANKED_CODE, align 1, keep-with-next
+     91          UINT16 SensorApp_ProcessEvent( byte task_id, UINT16 events )
+   \                     SensorApp_ProcessEvent:
+     92          {
+   \   000000   74F4         MOV     A,#-0xc
+   \   000002   12....       LCALL   ?BANKED_ENTER_XDATA
+   \   000005                ; Saved register size: 12
+   \   000005                ; Auto size: 0
+   \   000005   EA           MOV     A,R2
+   \   000006   FE           MOV     R6,A
+   \   000007   EB           MOV     A,R3
+   \   000008   FF           MOV     R7,A
+     93            afIncomingMSGPacket_t *MSGpkt;
+     94            afDataConfirm_t *afDataConfirm;
+     95          
+     96            byte sentEP;
+     97            ZStatus_t sentStatus;
+     98            byte sentTransID;       // This should match the value sent
+     99            (void)task_id;        // Intentionally unreferenced parameter
+    100          
+    101            if ( events & SYS_EVENT_MSG )
+   \   000009   5480         ANL     A,#0x80
+   \   00000B   6058         JZ      ??SensorApp_ProcessEvent_0
+    102            {
+    103              MSGpkt = (afIncomingMSGPacket_t *)osal_msg_receive( SensorApp_TaskID );
+   \   00000D                ; Setup parameters for call to function osal_msg_receive
+   \   00000D   8022         SJMP    ??SensorApp_ProcessEvent_1
+    104              while ( MSGpkt )
+    105              {
+    106                switch ( MSGpkt->hdr.event )
+    107                {
+    108                  case ZDO_CB_MSG:
+    109                    //do nothing
+    110                    
+    111                    break;
+    112          
+    113                  case KEY_CHANGE:
+    114                    // do nothing
+    115                    
+    116                    break;
+    117          
+    118                  case AF_DATA_CONFIRM_CMD:
+    119                    afDataConfirm = (afDataConfirm_t *)MSGpkt;
+    120                    sentEP = afDataConfirm->endpoint;
+    121                    sentStatus = afDataConfirm->hdr.status;
+    122                    sentTransID = afDataConfirm->transID;
+    123                    (void)sentEP;
+    124                    (void)sentTransID;
+    125          
+    126                    if ( sentStatus != ZSuccess )
+    127                    {
+    128                      // The data wasn't delivered -- Do something
+    129                    }
+    130                    break;
+    131          
+    132                  case AF_INCOMING_MSG_CMD:
+    133                    //Íø¹Ø½ÓÊÕµ½ÏûÏ¢Ê±´¦Àí
+    134                    SensorApp_MessageMSGCB(MSGpkt);
+    135          
+    136                    break;
+    137          
+    138                  case ZDO_STATE_CHANGE:
+    139                    SensorApp_NwkState = (devStates_t)(MSGpkt->hdr.status);
+   \                     ??SensorApp_ProcessEvent_2:
+   \   00000F   A3           INC     DPTR
+   \   000010   E0           MOVX    A,@DPTR
+   \   000011   90....       MOV     DPTR,#SensorApp_NwkState
+   \   000014   F0           MOVX    @DPTR,A
+    140                    
+    141                    if ( (SensorApp_NwkState == DEV_ZB_COORD)
+    142                        || (SensorApp_NwkState == DEV_ROUTER)
+    143                        || (SensorApp_NwkState == DEV_END_DEVICE) )
+   \   000015   6409         XRL     A,#0x9
+   \   000017   600A         JZ      ??SensorApp_ProcessEvent_3
+   \   000019   E0           MOVX    A,@DPTR
+   \   00001A   6407         XRL     A,#0x7
+   \   00001C   6005         JZ      ??SensorApp_ProcessEvent_3
+   \   00001E   E0           MOVX    A,@DPTR
+   \   00001F   6406         XRL     A,#0x6
+   \   000021   7007         JNZ     ??SensorApp_ProcessEvent_4
+    144                    {
+    145                      // ¼ÓÈëÍøÂç³É¹¦£¬µãÁÁLED2
+    146                      HalLedSet( HAL_LED_2, HAL_LED_MODE_ON );
+   \                     ??SensorApp_ProcessEvent_3:
+   \   000023                ; Setup parameters for call to function HalLedSet
+   \   000023   7A01         MOV     R2,#0x1
+   \   000025   7902         MOV     R1,#0x2
+   \   000027   12....       LCALL   ??HalLedSet?relay
+    147          #if !defined(ZDO_COORDINATOR) 
+    148                      if (SensorApp_NwkState == DEV_END_DEVICE)//ÖÕ¶Ë
+    149                      { 
+    150                        // Èç¹ûÊÇÖÕ¶Ë½Úµã£¬Æô¶¯¶¨Ê±Æ÷·¢ËÍÏûÏ¢"Hello"
+    151                        osal_start_timerEx( SensorApp_TaskID,
+    152                                          SensorApp_SEND_MSG_EVT,
+    153                                          SensorApp_SEND_MSG_TIMEOUT );
+    154                      }
+    155          #endif
+    156                    }
+    157                    break;
+    158          
+    159                  default:
+    160                    break;
+    161                }
+    162          
+    163                osal_msg_deallocate( (uint8 *)MSGpkt );
+   \                     ??SensorApp_ProcessEvent_4:
+   \   00002A                ; Setup parameters for call to function osal_msg_deallocate
+   \   00002A   AA..         MOV     R2,?V0 + 0
+   \   00002C   AB..         MOV     R3,?V0 + 1
+   \   00002E   12....       LCALL   ??osal_msg_deallocate?relay
+    164          
+    165                MSGpkt = (afIncomingMSGPacket_t *)osal_msg_receive( SensorApp_TaskID );
+   \   000031                ; Setup parameters for call to function osal_msg_receive
+   \                     ??SensorApp_ProcessEvent_1:
+   \   000031   90....       MOV     DPTR,#SensorApp_TaskID
+   \   000034   E0           MOVX    A,@DPTR
+   \   000035   F9           MOV     R1,A
+   \   000036   12....       LCALL   ??osal_msg_receive?relay
+   \   000039   8A..         MOV     ?V0 + 0,R2
+   \   00003B   8B..         MOV     ?V0 + 1,R3
+   \   00003D   E5..         MOV     A,?V0 + 0
+   \   00003F   45..         ORL     A,?V0 + 1
+   \   000041   601A         JZ      ??SensorApp_ProcessEvent_5
+   \   000043   85..82       MOV     DPL,?V0 + 0
+   \   000046   85..83       MOV     DPH,?V0 + 1
+   \   000049   E0           MOVX    A,@DPTR
+   \   00004A   24E6         ADD     A,#-0x1a
+   \   00004C   6006         JZ      ??SensorApp_ProcessEvent_6
+   \   00004E   2449         ADD     A,#0x49
+   \   000050   60BD         JZ      ??SensorApp_ProcessEvent_2
+   \   000052   80D6         SJMP    ??SensorApp_ProcessEvent_4
+   \                     ??SensorApp_ProcessEvent_6:
+   \   000054                ; Setup parameters for call to function SensorApp_MessageMSGCB
+   \   000054   AA..         MOV     R2,?V0 + 0
+   \   000056   AB..         MOV     R3,?V0 + 1
+   \   000058   12....       LCALL   ??SensorApp_MessageMSGCB?relay
+   \   00005B   80CD         SJMP    ??SensorApp_ProcessEvent_4
+    166              }
+    167          
+    168              return (events ^ SYS_EVENT_MSG);
+   \                     ??SensorApp_ProcessEvent_5:
+   \   00005D   EE           MOV     A,R6
+   \   00005E   FA           MOV     R2,A
+   \   00005F   EF           MOV     A,R7
+   \   000060   6480         XRL     A,#0x80
+   \                     ??SensorApp_ProcessEvent_7:
+   \   000062   FB           MOV     R3,A
+   \   000063   8035         SJMP    ??SensorApp_ProcessEvent_8
+    169            }
+    170            
+    171            if ( events & SensorApp_SEND_MSG_EVT )//ÏûÏ¢·¢ËÍÊÂ¼þ
+   \                     ??SensorApp_ProcessEvent_0:
+   \   000065   EE           MOV     A,R6
+   \   000066   A2E0         MOV     C,0xE0 /* A   */.0
+   \   000068   5017         JNC     ??SensorApp_ProcessEvent_9
+    172            {
+    173          #if !defined(ZDO_COORDINATOR)
+    174              // ¶¨Ê±Æ÷µ½Ê±£¬µ÷ÓÃÏûÏ¢·¢ËÍº¯Êý
+    175              SerialApp_SendTemp();
+    176          #endif
+    177              // ÖØÖÃ¶¨Ê±Æ÷
+    178              osal_start_timerEx( SensorApp_TaskID,
+    179                                  SensorApp_SEND_MSG_EVT,
+    180                                  SensorApp_SEND_MSG_TIMEOUT );
+   \   00006A                ; Setup parameters for call to function osal_start_timerEx
+   \   00006A   7C88         MOV     R4,#-0x78
+   \   00006C   7D13         MOV     R5,#0x13
+   \   00006E   7A01         MOV     R2,#0x1
+   \   000070   7B00         MOV     R3,#0x0
+   \   000072   90....       MOV     DPTR,#SensorApp_TaskID
+   \   000075   E0           MOVX    A,@DPTR
+   \   000076   F9           MOV     R1,A
+   \   000077   12....       LCALL   ??osal_start_timerEx?relay
+    181          
+    182              return (events ^ SensorApp_SEND_MSG_EVT);
+   \   00007A   EE           MOV     A,R6
+   \   00007B   6401         XRL     A,#0x1
+   \                     ??SensorApp_ProcessEvent_10:
+   \   00007D   FA           MOV     R2,A
+   \   00007E   EF           MOV     A,R7
+   \   00007F   80E1         SJMP    ??SensorApp_ProcessEvent_7
+    183            }
+    184            if ( events & SensorApp_UART_RX_CB_EVT )//´®¿Ú·¢ËÍÊÂ¼þ
+   \                     ??SensorApp_ProcessEvent_9:
+   \   000081   5402         ANL     A,#0x2
+   \   000083   6011         JZ      ??SensorApp_ProcessEvent_11
+    185            {
+    186              HalUARTWrite(HAL_UART_PORT_0, &UartDataBuf[0], RxLen); //´®¿ÚÏÔÊ¾·¢ËÍÄÚÈÝ
+   \   000085                ; Setup parameters for call to function HalUARTWrite
+   \   000085   12....       LCALL   ?Subroutine1 & 0xFFFF
+   \                     ??CrossCallReturnLabel_0:
+   \   000088   12....       LCALL   ??HalUARTWrite?relay
+    187              SensorApp_SendTheMessage(&UartDataBuf[0], RxLen);       //ÎÞÏß·¢ËÍÏûÏ¢
+   \   00008B                ; Setup parameters for call to function SensorApp_SendTheMessage
+   \   00008B   12....       LCALL   ?Subroutine2 & 0xFFFF
+   \                     ??CrossCallReturnLabel_2:
+   \   00008E   12....       LCALL   ??SensorApp_SendTheMessage?relay
+    188              return (events ^ SensorApp_UART_RX_CB_EVT);
+   \   000091   EE           MOV     A,R6
+   \   000092   6402         XRL     A,#0x2
+   \   000094   80E7         SJMP    ??SensorApp_ProcessEvent_10
+    189            }
+    190            return 0;
+   \                     ??SensorApp_ProcessEvent_11:
+   \   000096   7A00         MOV     R2,#0x0
+   \   000098   7B00         MOV     R3,#0x0
+   \                     ??SensorApp_ProcessEvent_8:
+   \   00009A   7F04         MOV     R7,#0x4
+   \   00009C   02....       LJMP    ?BANKED_LEAVE_XDATA
+    191          }
+
+   \                                 In  segment BANKED_CODE, align 1, keep-with-next
+   \                     ?Subroutine1:
+   \   000000   12....       LCALL   ?Subroutine2 & 0xFFFF
+   \                     ??CrossCallReturnLabel_3:
+   \   000003   7900         MOV     R1,#0x0
+   \   000005   22           RET
+
+   \                                 In  segment BANKED_CODE, align 1, keep-with-next
+   \                     ?Subroutine2:
+   \   000000   90....       MOV     DPTR,#RxLen
+   \   000003   E0           MOVX    A,@DPTR
+   \   000004   FC           MOV     R4,A
+   \   000005   A3           INC     DPTR
+   \   000006   E0           MOVX    A,@DPTR
+   \   000007   FD           MOV     R5,A
+   \   000008   7A..         MOV     R2,#UartDataBuf & 0xff
+   \   00000A   7B..         MOV     R3,#(UartDataBuf >> 8) & 0xff
+   \   00000C   22           RET
+    192          
+
+   \                                 In  segment BANKED_CODE, align 1, keep-with-next
+    193          void SensorApp_SendTheMessage( uint8 *buf, uint16 len )
+   \                     SensorApp_SendTheMessage:
+    194          {
+   \   000000   74F2         MOV     A,#-0xe
+   \   000002   12....       LCALL   ?BANKED_ENTER_XDATA
+   \   000005                ; Saved register size: 14
+   \   000005                ; Auto size: 0
+   \   000005   8A..         MOV     ?V0 + 2,R2
+   \   000007   8B..         MOV     ?V0 + 3,R3
+   \   000009   8C..         MOV     ?V0 + 0,R4
+   \   00000B   8D..         MOV     ?V0 + 1,R5
+    195            SensorApp_DstAddr.addrMode = (afAddrMode_t)AddrBroadcast;  //ÏûÏ¢·¢ËÍ·½Ê½£¬¹ã²¥
+   \   00000D   90....       MOV     DPTR,#SensorApp_DstAddr + 8
+   \   000010   740F         MOV     A,#0xf
+   \   000012   F0           MOVX    @DPTR,A
+    196            SensorApp_DstAddr.endPoint = SensorApp_ENDPOINT;            //Ä¿±êÖÕ¶Ë±àºÅ£¬ÓÉÄÄ¸öÖÕ¶Ë´¦ÀíÏûÏ¢
+   \   000013   A3           INC     DPTR
+   \   000014   740A         MOV     A,#0xa
+   \   000016   F0           MOVX    @DPTR,A
+    197            SensorApp_DstAddr.addr.shortAddr = NWK_BROADCAST_SHORTADDR;//Ä¬ÈÏµÄ¹ã²¥µØÖ·£¬0XFFFF
+   \   000017   90....       MOV     DPTR,#SensorApp_DstAddr
+   \   00001A   74FF         MOV     A,#-0x1
+   \   00001C   F0           MOVX    @DPTR,A
+   \   00001D   A3           INC     DPTR
+   \   00001E   F0           MOVX    @DPTR,A
+    198            
+    199            if( AF_DataRequest( &SensorApp_DstAddr, &SensorApp_epDesc,
+    200                                 SensorApp_CLUSTERID,
+    201                                 len,
+    202                                 buf,
+    203                                 &SensorApp_TransID,
+    204                                 AF_DISCV_ROUTE, AF_DEFAULT_RADIUS ) == afStatus_SUCCESS )
+   \   00001F                ; Setup parameters for call to function AF_DataRequest
+   \   00001F   75..1E       MOV     ?V0 + 4,#0x1e
+   \   000022   78..         MOV     R0,#?V0 + 4
+   \   000024   12....       LCALL   ?PUSH_XSTACK_I_ONE
+   \   000027   75....       MOV     ?V0 + 4,#SensorApp_TransID & 0xff
+   \   00002A   75....       MOV     ?V0 + 5,#(SensorApp_TransID >> 8) & 0xff
+   \   00002D   78..         MOV     R0,#?V0 + 4
+   \   00002F   12....       LCALL   ?PUSH_XSTACK_I_TWO
+   \   000032   78..         MOV     R0,#?V0 + 2
+   \   000034   12....       LCALL   ?PUSH_XSTACK_I_TWO
+   \   000037   78..         MOV     R0,#?V0 + 0
+   \   000039   12....       LCALL   ?PUSH_XSTACK_I_TWO
+   \   00003C   75..01       MOV     ?V0 + 4,#0x1
+   \   00003F   75..00       MOV     ?V0 + 5,#0x0
+   \   000042   78..         MOV     R0,#?V0 + 4
+   \   000044   12....       LCALL   ?PUSH_XSTACK_I_TWO
+   \   000047   7920         MOV     R1,#0x20
+   \   000049   7C..         MOV     R4,#SensorApp_epDesc & 0xff
+   \   00004B   7D..         MOV     R5,#(SensorApp_epDesc >> 8) & 0xff
+   \   00004D   7A..         MOV     R2,#SensorApp_DstAddr & 0xff
+   \   00004F   7B..         MOV     R3,#(SensorApp_DstAddr >> 8) & 0xff
+   \   000051   12....       LCALL   ??AF_DataRequest?relay
+   \   000054   7409         MOV     A,#0x9
+   \   000056   12....       LCALL   ?DEALLOC_XSTACK8
+   \   000059   E9           MOV     A,R1
+   \   00005A   701A         JNZ     ??SensorApp_SendTheMessage_0
+    205            {
+    206              // ·¢ËÍ³É¹¦ºóÉÁË¸ LED1
+    207               HalLedBlink( HAL_LED_1, 1, 50, 250 );
+   \   00005C                ; Setup parameters for call to function HalLedBlink
+   \   00005C   7CFA         MOV     R4,#-0x6
+   \   00005E   7D00         MOV     R5,#0x0
+   \   000060   7B32         MOV     R3,#0x32
+   \   000062   7A01         MOV     R2,#0x1
+   \   000064   7901         MOV     R1,#0x1
+   \   000066   12....       LCALL   ??HalLedBlink?relay
+    208               osal_memset(buf, 0, len);  //Çå»º³åÇø
+   \   000069                ; Setup parameters for call to function osal_memset
+   \   000069   AC..         MOV     R4,?V0 + 0
+   \   00006B   AD..         MOV     R5,?V0 + 1
+   \   00006D   7900         MOV     R1,#0x0
+   \   00006F   AA..         MOV     R2,?V0 + 2
+   \   000071   AB..         MOV     R3,?V0 + 3
+   \   000073   12....       LCALL   ??osal_memset?relay
+    209            }
+    210            else
+    211            {
+    212              // Error occurred in request to send.
+    213            }
+    214          }
+   \                     ??SensorApp_SendTheMessage_0:
+   \   000076   7F06         MOV     R7,#0x6
+   \   000078   02....       LJMP    ?BANKED_LEAVE_XDATA
+    215          
+
+   \                                 In  segment BANKED_CODE, align 1, keep-with-next
+    216          void SerialApp_SendTemp(void)
+   \                     SerialApp_SendTemp:
+    217          {
+   \   000000   74F6         MOV     A,#-0xa
+   \   000002   12....       LCALL   ?BANKED_ENTER_XDATA
+   \   000005                ; Saved register size: 10
+   \   000005                ; Auto size: 4
+   \   000005   74FC         MOV     A,#-0x4
+   \   000007   12....       LCALL   ?ALLOC_XSTACK8
+    218            char* tvalue;
+    219            TEMPERATURE temperature;
+    220            
+    221            temperature.BUF.Head = '&';
+   \   00000A   85..82       MOV     DPL,?XSP + 0
+   \   00000D   85..83       MOV     DPH,?XSP + 1
+   \   000010   7426         MOV     A,#0x26
+   \   000012   F0           MOVX    @DPTR,A
+    222            tvalue = ReadTemp();
+   \   000013                ; Setup parameters for call to function ReadTemp
+   \   000013   12....       LCALL   ??ReadTemp?relay
+   \   000016   8A..         MOV     ?V0 + 0,R2
+   \   000018   8B..         MOV     ?V0 + 1,R3
+   \   00001A   A8..         MOV     R0,?V0 + 0
+   \   00001C   A9..         MOV     R1,?V0 + 1
+    223            uint8  value = tvalue[1]*10+tvalue[2]-15;
+   \   00001E   8882         MOV     DPL,R0
+   \   000020   8983         MOV     DPH,R1
+   \   000022   A3           INC     DPTR
+   \   000023   A3           INC     DPTR
+   \   000024   C082         PUSH    DPL
+   \   000026   C083         PUSH    DPH
+   \   000028   75F00A       MOV     B,#0xa
+   \   00002B   8882         MOV     DPL,R0
+   \   00002D   8983         MOV     DPH,R1
+   \   00002F   A3           INC     DPTR
+   \   000030   E0           MOVX    A,@DPTR
+   \   000031   A4           MUL     AB
+   \   000032   D083         POP     DPH
+   \   000034   D082         POP     DPL
+   \   000036   F8           MOV     R0,A
+   \   000037   E0           MOVX    A,@DPTR
+   \   000038   28           ADD     A,R0
+   \   000039   24F1         ADD     A,#-0xf
+   \   00003B   F8           MOV     R0,A
+    224            temperature.BUF.value[0]=value/10+'0';
+   \   00003C   75F00A       MOV     B,#0xa
+   \   00003F   84           DIV     AB
+   \   000040   2430         ADD     A,#0x30
+   \   000042   C0E0         PUSH    A
+   \   000044   7401         MOV     A,#0x1
+   \   000046   12....       LCALL   ?XSTACK_DISP0_8
+   \   000049   D0E0         POP     A
+   \   00004B   F0           MOVX    @DPTR,A
+    225            temperature.BUF.value[1]=value%10+ '0';
+   \   00004C   E8           MOV     A,R0
+   \   00004D   75F00A       MOV     B,#0xa
+   \   000050   84           DIV     AB
+   \   000051   E5F0         MOV     A,B
+   \   000053   2430         ADD     A,#0x30
+   \   000055   C0E0         PUSH    A
+   \   000057   7402         MOV     A,#0x2
+   \   000059   12....       LCALL   ?XSTACK_DISP0_8
+   \   00005C   D0E0         POP     A
+   \   00005E   F0           MOVX    @DPTR,A
+    226            temperature.BUF.Tail = 'C';
+   \   00005F   7403         MOV     A,#0x3
+   \   000061   12....       LCALL   ?XSTACK_DISP0_8
+   \   000064   7443         MOV     A,#0x43
+   \   000066   F0           MOVX    @DPTR,A
+    227            
+    228            SensorApp_SendTheMessage((uint8 *)&temperature, sizeof(temperature));
+   \   000067                ; Setup parameters for call to function SensorApp_SendTheMessage
+   \   000067   7C04         MOV     R4,#0x4
+   \   000069   7D00         MOV     R5,#0x0
+   \   00006B   85..82       MOV     DPL,?XSP + 0
+   \   00006E   85..83       MOV     DPH,?XSP + 1
+   \   000071   AA82         MOV     R2,DPL
+   \   000073   AB83         MOV     R3,DPH
+   \   000075   12....       LCALL   ??SensorApp_SendTheMessage?relay
+    229          }
+   \   000078   7404         MOV     A,#0x4
+   \   00007A   12....       LCALL   ?DEALLOC_XSTACK8
+   \   00007D   7F02         MOV     R7,#0x2
+   \   00007F   02....       LJMP    ?BANKED_LEAVE_XDATA
+    230          
+
+   \                                 In  segment BANKED_CODE, align 1, keep-with-next
+    231          void SensorApp_MessageMSGCB(afIncomingMSGPacket_t *pkt)
+   \                     SensorApp_MessageMSGCB:
+    232          {
+   \   000000   74F7         MOV     A,#-0x9
+   \   000002   12....       LCALL   ?BANKED_ENTER_XDATA
+   \   000005                ; Saved register size: 9
+   \   000005                ; Auto size: 1
+   \   000005   74FF         MOV     A,#-0x1
+   \   000007   12....       LCALL   ?ALLOC_XSTACK8
+   \   00000A   EA           MOV     A,R2
+   \   00000B   FE           MOV     R6,A
+   \   00000C   EB           MOV     A,R3
+   \   00000D   FF           MOV     R7,A
+    233            uint8 vt = ' ';
+   \   00000E   85..82       MOV     DPL,?XSP + 0
+   \   000011   85..83       MOV     DPH,?XSP + 1
+   \   000014   7420         MOV     A,#0x20
+   \   000016   F0           MOVX    @DPTR,A
+    234            
+    235            switch(pkt->clusterId)
+   \   000017   8E82         MOV     DPL,R6
+   \   000019   8F83         MOV     DPH,R7
+   \   00001B   A3           INC     DPTR
+   \   00001C   A3           INC     DPTR
+   \   00001D   A3           INC     DPTR
+   \   00001E   A3           INC     DPTR
+   \   00001F   E0           MOVX    A,@DPTR
+   \   000020   6401         XRL     A,#0x1
+   \   000022   7002         JNZ     ??SensorApp_MessageMSGCB_0
+   \   000024   A3           INC     DPTR
+   \   000025   E0           MOVX    A,@DPTR
+   \                     ??SensorApp_MessageMSGCB_0:
+   \   000026   7043         JNZ     ??SensorApp_MessageMSGCB_1
+    236            {
+    237              case SensorApp_CLUSTERID:
+    238                // ½ÓÊÕ³É¹¦ºóÉÁË¸ LED1
+    239                HalLedBlink( HAL_LED_1, 1, 50, 250 );
+   \   000028                ; Setup parameters for call to function HalLedBlink
+   \   000028   7CFA         MOV     R4,#-0x6
+   \   00002A   7D00         MOV     R5,#0x0
+   \   00002C   7B32         MOV     R3,#0x32
+   \   00002E   7A01         MOV     R2,#0x1
+   \   000030   7901         MOV     R1,#0x1
+   \   000032   12....       LCALL   ??HalLedBlink?relay
+    240                
+    241                HalUARTWrite(HAL_UART_PORT_0, &(pkt->cmd.Data[0]), pkt->cmd.DataLength ); //½«ÊÕµ½µÄÊý¾ÝÍ¨¹ý´®¿Ú´òÓ¡³öÀ´
+   \   000035                ; Setup parameters for call to function HalUARTWrite
+   \   000035   EE           MOV     A,R6
+   \   000036   2420         ADD     A,#0x20
+   \   000038   F582         MOV     DPL,A
+   \   00003A   EF           MOV     A,R7
+   \   00003B   3400         ADDC    A,#0x0
+   \   00003D   F583         MOV     DPH,A
+   \   00003F   E0           MOVX    A,@DPTR
+   \   000040   FC           MOV     R4,A
+   \   000041   A3           INC     DPTR
+   \   000042   E0           MOVX    A,@DPTR
+   \   000043   FD           MOV     R5,A
+   \   000044   EE           MOV     A,R6
+   \   000045   2422         ADD     A,#0x22
+   \   000047   F582         MOV     DPL,A
+   \   000049   EF           MOV     A,R7
+   \   00004A   3400         ADDC    A,#0x0
+   \   00004C   F583         MOV     DPH,A
+   \   00004E   E0           MOVX    A,@DPTR
+   \   00004F   FA           MOV     R2,A
+   \   000050   A3           INC     DPTR
+   \   000051   E0           MOVX    A,@DPTR
+   \   000052   FB           MOV     R3,A
+   \   000053   7900         MOV     R1,#0x0
+   \   000055   12....       LCALL   ??HalUARTWrite?relay
+    242                HalUARTWrite(HAL_UART_PORT_0, &vt, 1);  //¿Õ¸ñ
+   \   000058                ; Setup parameters for call to function HalUARTWrite
+   \   000058   7C01         MOV     R4,#0x1
+   \   00005A   7D00         MOV     R5,#0x0
+   \   00005C   85..82       MOV     DPL,?XSP + 0
+   \   00005F   85..83       MOV     DPH,?XSP + 1
+   \   000062   AA82         MOV     R2,DPL
+   \   000064   AB83         MOV     R3,DPH
+   \   000066   7900         MOV     R1,#0x0
+   \   000068   12....       LCALL   ??HalUARTWrite?relay
+    243                
+    244              break;
+    245            }
+    246          }
+   \                     ??SensorApp_MessageMSGCB_1:
+   \   00006B   7401         MOV     A,#0x1
+   \   00006D   02....       LJMP    ?Subroutine0 & 0xFFFF
+    247          
+
+   \                                 In  segment BANKED_CODE, align 1, keep-with-next
+    248          static void SensorApp_rxCB(uint8 port, uint8 event)
+   \                     SensorApp_rxCB:
+    249          {
+   \   000000   74F7         MOV     A,#-0x9
+   \   000002   12....       LCALL   ?BANKED_ENTER_XDATA
+   \   000005                ; Saved register size: 9
+   \   000005                ; Auto size: 0
+   \   000005   EA           MOV     A,R2
+   \   000006   FE           MOV     R6,A
+    250            if ((event & (HAL_UART_RX_FULL | HAL_UART_RX_ABOUT_FULL | HAL_UART_RX_TIMEOUT)))
+   \   000007   7407         MOV     A,#0x7
+   \   000009   5E           ANL     A,R6
+   \   00000A   601F         JZ      ??SensorApp_rxCB_0
+    251            {
+    252              RxLen = Hal_UART_RxBufLen(HAL_UART_PORT_0);  //½ÓÊÕ»º³åÇøÊý¾Ý³¤¶È,×Ö½ÚÎªµ¥Î»
+   \   00000C                ; Setup parameters for call to function Hal_UART_RxBufLen
+   \   00000C   7900         MOV     R1,#0x0
+   \   00000E   12....       LCALL   ??Hal_UART_RxBufLen?relay
+   \   000011   90....       MOV     DPTR,#RxLen
+   \   000014   EA           MOV     A,R2
+   \   000015   F0           MOVX    @DPTR,A
+   \   000016   A3           INC     DPTR
+   \   000017   EB           MOV     A,R3
+   \   000018   F0           MOVX    @DPTR,A
+    253              HalUARTRead( HAL_UART_PORT_0, &UartDataBuf[0], RxLen); //¶Á½ÓÊÕ»º³åÇøÊý¾Ýµ½ÄÚ´ædatabuf[3]~[len+3]
+   \   000019                ; Setup parameters for call to function HalUARTRead
+   \   000019   12....       LCALL   ?Subroutine1 & 0xFFFF
+   \                     ??CrossCallReturnLabel_1:
+   \   00001C   12....       LCALL   ??HalUARTRead?relay
+    254            
+    255              osal_set_event(SensorApp_TaskID,SensorApp_UART_RX_CB_EVT);  //ÓÐ´®¿ÚÊý¾ÝÊ±²úÉúÏàÓ¦ÊÂ¼þ
+   \   00001F                ; Setup parameters for call to function osal_set_event
+   \   00001F   7A02         MOV     R2,#0x2
+   \   000021   7B00         MOV     R3,#0x0
+   \   000023   90....       MOV     DPTR,#SensorApp_TaskID
+   \   000026   E0           MOVX    A,@DPTR
+   \   000027   F9           MOV     R1,A
+   \   000028   12....       LCALL   ??osal_set_event?relay
+    256            }
+    257          }
+   \                     ??SensorApp_rxCB_0:
+   \   00002B   02....       LJMP    ??Subroutine3_0 & 0xFFFF
+
+   \                                 In  segment BANK_RELAYS, align 1
+   \                     ??SensorApp_Init?relay:
+   \   000000   12....       LCALL   ?BDISPATCH
+   \   000003   ......       DC24    SensorApp_Init
+
+   \                                 In  segment BANK_RELAYS, align 1
+   \                     ??SensorApp_ProcessEvent?relay:
+   \   000000   12....       LCALL   ?BDISPATCH
+   \   000003   ......       DC24    SensorApp_ProcessEvent
+
+   \                                 In  segment BANK_RELAYS, align 1
+   \                     ??SensorApp_SendTheMessage?relay:
+   \   000000   12....       LCALL   ?BDISPATCH
+   \   000003   ......       DC24    SensorApp_SendTheMessage
+
+   \                                 In  segment BANK_RELAYS, align 1
+   \                     ??SerialApp_SendTemp?relay:
+   \   000000   12....       LCALL   ?BDISPATCH
+   \   000003   ......       DC24    SerialApp_SendTemp
+
+   \                                 In  segment BANK_RELAYS, align 1
+   \                     ??SensorApp_MessageMSGCB?relay:
+   \   000000   12....       LCALL   ?BDISPATCH
+   \   000003   ......       DC24    SensorApp_MessageMSGCB
+
+   \                                 In  segment BANK_RELAYS, align 1
+   \                     ??SensorApp_rxCB?relay:
+   \   000000   12....       LCALL   ?BDISPATCH
+   \   000003   ......       DC24    SensorApp_rxCB
+    258          
+
+   Maximum stack usage in bytes:
+
+     Function                      ISTACK PSTACK XSTACK
+     --------                      ------ ------ ------
+     SensorApp_Init                    0      0     38
+       -> afRegister                   0      0     76
+       -> HalUARTOpen                  0      0     76
+     SensorApp_MessageMSGCB            0      0     22
+       -> HalLedBlink                  0      0     20
+       -> HalUARTWrite                 0      0     20
+       -> HalUARTWrite                 0      0     20
+     SensorApp_ProcessEvent            0      0     12
+       -> osal_msg_receive             0      0     24
+       -> HalLedSet                    0      0     24
+       -> osal_msg_deallocate          0      0     24
+       -> osal_msg_receive             0      0     24
+       -> SensorApp_MessageMSGCB       0      0     24
+       -> osal_start_timerEx           0      0     24
+       -> HalUARTWrite                 0      0     24
+       -> SensorApp_SendTheMessage     0      0     24
+     SensorApp_SendTheMessage          0      0     37
+       -> AF_DataRequest               0      0     46
+       -> HalLedBlink                  0      0     28
+       -> osal_memset                  0      0     28
+     SensorApp_rxCB                    0      0      9
+       -> Hal_UART_RxBufLen            0      0     18
+       -> HalUARTRead                  0      0     18
+       -> osal_set_event               0      0     18
+     SerialApp_SendTemp                2      0     14
+       -> ReadTemp                     0      0     28
+       -> SensorApp_SendTheMessage     0      0     28
+
+
+   Segment part sizes:
+
+     Function/Label                   Bytes
+     --------------                   -----
+     SensorApp_ClusterList               2
+     SensorApp_SimpleDesc               12
+     SensorApp_epDesc                    6
+     SensorApp_TaskID                    1
+     SensorApp_NwkState                  1
+     SensorApp_TransID                   1
+     SensorApp_DstAddr                  12
+     RxLen                               2
+     UartDataBuf                       128
+     SensorApp_Init                    121
+     ?Subroutine0                        3
+     ??Subroutine3_0                     5
+     SensorApp_ProcessEvent            159
+     ?Subroutine1                        6
+     ?Subroutine2                       13
+     SensorApp_SendTheMessage          123
+     SerialApp_SendTemp                130
+     SensorApp_MessageMSGCB            112
+     SensorApp_rxCB                     46
+     ??SensorApp_Init?relay              6
+     ??SensorApp_ProcessEvent?relay      6
+     ??SensorApp_SendTheMessage?relay    6
+     ??SerialApp_SendTemp?relay          6
+     ??SensorApp_MessageMSGCB?relay      6
+     ??SensorApp_rxCB?relay              6
+
+ 
+ 718 bytes in segment BANKED_CODE
+  36 bytes in segment BANK_RELAYS
+  14 bytes in segment XDATA_ROM_C
+ 151 bytes in segment XDATA_Z
+ 
+ 754 bytes of CODE  memory
+  14 bytes of CONST memory
+ 151 bytes of XDATA memory
+
+Errors: none
+Warnings: none

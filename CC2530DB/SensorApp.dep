@@ -1,0 +1,137 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project>
+    <fileVersion>2</fileVersion>
+    <fileChecksum>945713505</fileChecksum>
+    <configuration>
+        <name>CoordinatorEB</name>
+        <outputs />
+        <forcedrebuild>
+            <name>[REBUILD_ALL]</name>
+        </forcedrebuild>
+    </configuration>
+    <configuration>
+        <name>EndDeviceEB</name>
+        <outputs>
+            <file>$PROJ_DIR$\..\Source\OSAL_SensorApp.c</file>
+            <file>$PROJ_DIR$\..\Source\SensorApp.h</file>
+            <file>$PROJ_DIR$\..\..\..\Tools\CC2530DB\f8w2530.xcl</file>
+            <file>$PROJ_DIR$\..\Source\SERSOR.c</file>
+            <file>$PROJ_DIR$\..\..\..\Tools\CC2530DB\f8wCoord.cfg</file>
+            <file>$PROJ_DIR$\..\..\..\Tools\CC2530DB\f8wEndev.cfg</file>
+            <file>$PROJ_DIR$\..\..\..\Tools\CC2530DB\f8wRouter.cfg</file>
+            <file>$PROJ_DIR$\..\..\..\Tools\CC2530DB\f8wConfig.cfg</file>
+            <file>$PROJ_DIR$\..\Source\SENSOR.h</file>
+            <file>$PROJ_DIR$\..\Source\SensorApp.c</file>
+            <file>$PROJ_DIR$\..\..\..\ZMain\TI2530DB\chipcon_cstartup.s51</file>
+            <file>$PROJ_DIR$\..\..\..\ZMain\TI2530DB\ZMain.c</file>
+            <file>$PROJ_DIR$\..\..\..\ZMain\TI2530DB\OnBoard.h</file>
+            <file>$PROJ_DIR$\..\..\..\ZMain\TI2530DB\OnBoard.c</file>
+            <file>$PROJ_DIR$\EndDeviceEB\Obj\OSAL_SensorApp.r51</file>
+            <file>$PROJ_DIR$\EndDeviceEB\Obj\SensorApp.r51</file>
+            <file>$PROJ_DIR$\EndDeviceEB\Obj\SERSOR.r51</file>
+            <file>$PROJ_DIR$\EndDeviceEB\Obj\OnBoard.r51</file>
+            <file>$PROJ_DIR$\EndDeviceEB\Obj\ZMain.r51</file>
+            <file>$PROJ_DIR$\EndDeviceEB\Obj\chipcon_cstartup.r51</file>
+            <file>$PROJ_DIR$\EndDeviceEB\Obj\OSAL_SensorApp.pbi</file>
+            <file>$PROJ_DIR$\EndDeviceEB\Obj\SensorApp.pbd</file>
+            <file>$PROJ_DIR$\EndDeviceEB\Obj\SensorApp.pbi</file>
+            <file>$PROJ_DIR$\EndDeviceEB\Obj\ZMain.pbi</file>
+            <file>$PROJ_DIR$\EndDeviceEB\Obj\SERSOR.pbi</file>
+            <file>$PROJ_DIR$\EndDeviceEB\Obj\OnBoard.pbi</file>
+            <file>$PROJ_DIR$\EndDeviceEB\Exe\SensorApp-ED.hex</file>
+        </outputs>
+        <file>
+            <name>[ROOT_NODE]</name>
+            <outputs>
+                <tool>
+                    <name>XLINK</name>
+                    <file> 26</file>
+                </tool>
+            </outputs>
+        </file>
+        <file>
+            <name>$PROJ_DIR$\..\Source\OSAL_SensorApp.c</name>
+            <outputs>
+                <tool>
+                    <name>ICC8051</name>
+                    <file> 14</file>
+                </tool>
+                <tool>
+                    <name>BICOMP</name>
+                    <file> 20</file>
+                </tool>
+            </outputs>
+        </file>
+        <file>
+            <name>$PROJ_DIR$\..\Source\SERSOR.c</name>
+            <outputs>
+                <tool>
+                    <name>ICC8051</name>
+                    <file> 16</file>
+                </tool>
+                <tool>
+                    <name>BICOMP</name>
+                    <file> 24</file>
+                </tool>
+            </outputs>
+        </file>
+        <file>
+            <name>$PROJ_DIR$\..\Source\SensorApp.c</name>
+            <outputs>
+                <tool>
+                    <name>ICC8051</name>
+                    <file> 15</file>
+                </tool>
+                <tool>
+                    <name>BICOMP</name>
+                    <file> 22</file>
+                </tool>
+            </outputs>
+        </file>
+        <file>
+            <name>$PROJ_DIR$\..\..\..\ZMain\TI2530DB\chipcon_cstartup.s51</name>
+            <outputs>
+                <tool>
+                    <name>A8051</name>
+                    <file> 19</file>
+                </tool>
+            </outputs>
+        </file>
+        <file>
+            <name>$PROJ_DIR$\..\..\..\ZMain\TI2530DB\ZMain.c</name>
+            <outputs>
+                <tool>
+                    <name>ICC8051</name>
+                    <file> 18</file>
+                </tool>
+                <tool>
+                    <name>BICOMP</name>
+                    <file> 23</file>
+                </tool>
+            </outputs>
+        </file>
+        <file>
+            <name>$PROJ_DIR$\..\..\..\ZMain\TI2530DB\OnBoard.c</name>
+            <outputs>
+                <tool>
+                    <name>ICC8051</name>
+                    <file> 17</file>
+                </tool>
+                <tool>
+                    <name>BICOMP</name>
+                    <file> 25</file>
+                </tool>
+            </outputs>
+        </file>
+        <forcedrebuild>
+            <name>[REBUILD_ALL]</name>
+        </forcedrebuild>
+    </configuration>
+    <configuration>
+        <name>RouterEB</name>
+        <outputs />
+        <forcedrebuild>
+            <name>[REBUILD_ALL]</name>
+        </forcedrebuild>
+    </configuration>
+</project>

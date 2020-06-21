@@ -1,0 +1,766 @@
+###############################################################################
+#                                                                             #
+# IAR C/C++ Compiler V8.10.1.10194/W32 for 8051         05/Nov/2019  17:00:39 #
+# Copyright 2004-2011 IAR Systems AB.                                         #
+#                                                                             #
+#    Core               =  plain                                              #
+#    Code model         =  banked                                             #
+#    Data model         =  large                                              #
+#    Calling convention =  xdata reentrant                                    #
+#    Constant location  =  data_rom                                           #
+#    Dptr setup         =  1,16                                               #
+#    Source file        =  D:\Îäºº´´Î¬ÌØÎïÁªÍøÊµÑéÏä×ÊÁÏ\CVT-IOT-VS¹âÅÌ\Zigbe #
+#                          e²¿·Ö£¨ÎïÁªÍø£©\ZStack-CC2530-eV1.3\Projects\zstac #
+#                          k\Samples\SensorApp\Source\SensorApp (2).c         #
+#    Command line       =  -f D:\Îäºº´´Î¬ÌØÎïÁªÍøÊµÑéÏä×ÊÁÏ\CVT-IOT-VS¹âÅÌ\Zi #
+#                          gbee²¿·Ö£¨ÎïÁªÍø£©\ZStack-CC2530-eV1.3\Projects\zs #
+#                          tack\Samples\SensorApp\CC2530DB\..\..\..\Tools\CC2 #
+#                          530DB\f8wEndev.cfg (-DCPU32MHZ -DROOT=__near_func  #
+#                          -DMAC_CFG_TX_DATA_MAX=3 -DMAC_CFG_TX_MAX=6         #
+#                          -DMAC_CFG_RX_MAX=3) -f D:\Îäºº´´Î¬ÌØÎïÁªÍøÊµÑéÏä×Ê #
+#                          ÁÏ\CVT-IOT-VS¹âÅÌ\Zigbee²¿·Ö£¨ÎïÁªÍø£©\ZStack-CC25 #
+#                          30-eV1.3\Projects\zstack\Samples\SensorApp\CC2530D #
+#                          B\..\..\..\Tools\CC2530DB\f8wConfig.cfg            #
+#                          (-DZIGBEEPRO -DSECURE=0 -DZG_SECURE_DYNAMIC=0      #
+#                          -DREFLECTOR -DDEFAULT_CHANLIST=0x00200000          #
+#                          -DZDAPP_CONFIG_PAN_ID=0x15 -DNWK_START_DELAY=100   #
+#                          -DEXTENDED_JOINING_RANDOM_MASK=0x007F              #
+#                          -DBEACON_REQUEST_DELAY=100                         #
+#                          -DBEACON_REQ_DELAY_MASK=0x00FF                     #
+#                          -DLINK_STATUS_JITTER_MASK=0x007F                   #
+#                          -DROUTE_EXPIRY_TIME=30 -DAPSC_ACK_WAIT_DURATION_PO #
+#                          LLED=3000 -DNWK_INDIRECT_MSG_TIMEOUT=7             #
+#                          -DMAX_RREQ_ENTRIES=8 -DAPSC_MAX_FRAME_RETRIES=3    #
+#                          -DNWK_MAX_DATA_RETRIES=2                           #
+#                          -DMAX_POLL_FAILURE_RETRIES=2 -DMAX_BCAST=9         #
+#                          -DAPS_MAX_GROUPS=16 -DMAX_RTG_ENTRIES=40           #
+#                          -DNWK_MAX_BINDING_ENTRIES=4                        #
+#                          -DMAX_BINDING_CLUSTER_IDS=4 "-DDEFAULT_KEY={0x01,  #
+#                          0x03, 0x05, 0x07, 0x09, 0x0B, 0x0D, 0x0F, 0x00,    #
+#                          0x02, 0x04, 0x06, 0x08, 0x0A, 0x0C, 0x0D}"         #
+#                          -DMAC_MAX_FRAME_SIZE=116                           #
+#                          -DZDNWKMGR_MIN_TRANSMISSIONS=20 "-DCONST=const     #
+#                          __code" -DGENERIC=__generic                        #
+#                          -DRFD_RCVC_ALWAYS_ON=FALSE -DPOLL_RATE=1000        #
+#                          -DQUEUED_POLL_RATE=100 -DRESPONSE_POLL_RATE=100)   #
+#                          -DREJOIN_POLL_RATE=440 "D:\Îäºº´´Î¬ÌØÎïÁªÍøÊµÑéÏä× #
+#                          ÊÁÏ\CVT-IOT-VS¹âÅÌ\Zigbee²¿·Ö£¨ÎïÁªÍø£©\ZStack-CC2 #
+#                          530-eV1.3\Projects\zstack\Samples\SensorApp\Source #
+#                          \SensorApp (2).c" -D NWK_AUTO_POLL -D ZTOOL_P1 -D  #
+#                          xMT_TASK -D MT_SYS_FUNC -D MT_ZDO_FUNC -D          #
+#                          xLCD_SUPPORTED=DEBUG -D xPOWER_SAVING -lC          #
+#                          D:\Îäºº´´Î¬ÌØÎïÁªÍøÊµÑéÏä×ÊÁÏ\CVT-IOT-VS¹âÅÌ\Zigbe #
+#                          e²¿·Ö£¨ÎïÁªÍø£©\ZStack-CC2530-eV1.3\Projects\zstac #
+#                          k\Samples\SensorApp\CC2530DB\EndDeviceEB\List\     #
+#                          -lA D:\Îäºº´´Î¬ÌØÎïÁªÍøÊµÑéÏä×ÊÁÏ\CVT-IOT-VS¹âÅÌ\Z #
+#                          igbee²¿·Ö£¨ÎïÁªÍø£©\ZStack-CC2530-eV1.3\Projects\z #
+#                          stack\Samples\SensorApp\CC2530DB\EndDeviceEB\List\ #
+#                           --diag_suppress Pe001,Pa010 -o                    #
+#                          D:\Îäºº´´Î¬ÌØÎïÁªÍøÊµÑéÏä×ÊÁÏ\CVT-IOT-VS¹âÅÌ\Zigbe #
+#                          e²¿·Ö£¨ÎïÁªÍø£©\ZStack-CC2530-eV1.3\Projects\zstac #
+#                          k\Samples\SensorApp\CC2530DB\EndDeviceEB\Obj\ -e   #
+#                          --no_code_motion --debug --core=plain --dptr=16,1  #
+#                          --data_model=large --code_model=banked             #
+#                          --calling_convention=xdata_reentrant               #
+#                          --place_constants=data_rom --nr_virtual_regs 16    #
+#                          -I D:\Îäºº´´Î¬ÌØÎïÁªÍøÊµÑéÏä×ÊÁÏ\CVT-IOT-VS¹âÅÌ\Zi #
+#                          gbee²¿·Ö£¨ÎïÁªÍø£©\ZStack-CC2530-eV1.3\Projects\zs #
+#                          tack\Samples\SensorApp\CC2530DB\ -I                #
+#                          D:\Îäºº´´Î¬ÌØÎïÁªÍøÊµÑéÏä×ÊÁÏ\CVT-IOT-VS¹âÅÌ\Zigbe #
+#                          e²¿·Ö£¨ÎïÁªÍø£©\ZStack-CC2530-eV1.3\Projects\zstac #
+#                          k\Samples\SensorApp\CC2530DB\..\Source\ -I         #
+#                          D:\Îäºº´´Î¬ÌØÎïÁªÍøÊµÑéÏä×ÊÁÏ\CVT-IOT-VS¹âÅÌ\Zigbe #
+#                          e²¿·Ö£¨ÎïÁªÍø£©\ZStack-CC2530-eV1.3\Projects\zstac #
+#                          k\Samples\SensorApp\CC2530DB\..\..\..\ZMain\TI2530 #
+#                          DB\ -I D:\Îäºº´´Î¬ÌØÎïÁªÍøÊµÑéÏä×ÊÁÏ\CVT-IOT-VS¹âÅ #
+#                          Ì\Zigbee²¿·Ö£¨ÎïÁªÍø£©\ZStack-CC2530-eV1.3\Project #
+#                          s\zstack\Samples\SensorApp\CC2530DB\..\..\..\..\.. #
+#                          \Components\hal\include\ -I                        #
+#                          D:\Îäºº´´Î¬ÌØÎïÁªÍøÊµÑéÏä×ÊÁÏ\CVT-IOT-VS¹âÅÌ\Zigbe #
+#                          e²¿·Ö£¨ÎïÁªÍø£©\ZStack-CC2530-eV1.3\Projects\zstac #
+#                          k\Samples\SensorApp\CC2530DB\..\..\..\..\..\Compon #
+#                          ents\hal\target\CC2530EB\ -I                       #
+#                          D:\Îäºº´´Î¬ÌØÎïÁªÍøÊµÑéÏä×ÊÁÏ\CVT-IOT-VS¹âÅÌ\Zigbe #
+#                          e²¿·Ö£¨ÎïÁªÍø£©\ZStack-CC2530-eV1.3\Projects\zstac #
+#                          k\Samples\SensorApp\CC2530DB\..\..\..\..\..\Compon #
+#                          ents\mac\include\ -I D:\Îäºº´´Î¬ÌØÎïÁªÍøÊµÑéÏä×ÊÁÏ #
+#                          \CVT-IOT-VS¹âÅÌ\Zigbee²¿·Ö£¨ÎïÁªÍø£©\ZStack-CC2530 #
+#                          -eV1.3\Projects\zstack\Samples\SensorApp\CC2530DB\ #
+#                          ..\..\..\..\..\Components\mac\high_level\ -I       #
+#                          D:\Îäºº´´Î¬ÌØÎïÁªÍøÊµÑéÏä×ÊÁÏ\CVT-IOT-VS¹âÅÌ\Zigbe #
+#                          e²¿·Ö£¨ÎïÁªÍø£©\ZStack-CC2530-eV1.3\Projects\zstac #
+#                          k\Samples\SensorApp\CC2530DB\..\..\..\..\..\Compon #
+#                          ents\mac\low_level\srf04\ -I                       #
+#                          D:\Îäºº´´Î¬ÌØÎïÁªÍøÊµÑéÏä×ÊÁÏ\CVT-IOT-VS¹âÅÌ\Zigbe #
+#                          e²¿·Ö£¨ÎïÁªÍø£©\ZStack-CC2530-eV1.3\Projects\zstac #
+#                          k\Samples\SensorApp\CC2530DB\..\..\..\..\..\Compon #
+#                          ents\mac\low_level\srf04\single_chip\ -I           #
+#                          D:\Îäºº´´Î¬ÌØÎïÁªÍøÊµÑéÏä×ÊÁÏ\CVT-IOT-VS¹âÅÌ\Zigbe #
+#                          e²¿·Ö£¨ÎïÁªÍø£©\ZStack-CC2530-eV1.3\Projects\zstac #
+#                          k\Samples\SensorApp\CC2530DB\..\..\..\..\..\Compon #
+#                          ents\mt\ -I D:\Îäºº´´Î¬ÌØÎïÁªÍøÊµÑéÏä×ÊÁÏ\CVT-IOT- #
+#                          VS¹âÅÌ\Zigbee²¿·Ö£¨ÎïÁªÍø£©\ZStack-CC2530-eV1.3\Pr #
+#                          ojects\zstack\Samples\SensorApp\CC2530DB\..\..\..\ #
+#                          ..\..\Components\osal\include\ -I                  #
+#                          D:\Îäºº´´Î¬ÌØÎïÁªÍøÊµÑéÏä×ÊÁÏ\CVT-IOT-VS¹âÅÌ\Zigbe #
+#                          e²¿·Ö£¨ÎïÁªÍø£©\ZStack-CC2530-eV1.3\Projects\zstac #
+#                          k\Samples\SensorApp\CC2530DB\..\..\..\..\..\Compon #
+#                          ents\services\saddr\ -I D:\Îäºº´´Î¬ÌØÎïÁªÍøÊµÑéÏä× #
+#                          ÊÁÏ\CVT-IOT-VS¹âÅÌ\Zigbee²¿·Ö£¨ÎïÁªÍø£©\ZStack-CC2 #
+#                          530-eV1.3\Projects\zstack\Samples\SensorApp\CC2530 #
+#                          DB\..\..\..\..\..\Components\services\sdata\ -I    #
+#                          D:\Îäºº´´Î¬ÌØÎïÁªÍøÊµÑéÏä×ÊÁÏ\CVT-IOT-VS¹âÅÌ\Zigbe #
+#                          e²¿·Ö£¨ÎïÁªÍø£©\ZStack-CC2530-eV1.3\Projects\zstac #
+#                          k\Samples\SensorApp\CC2530DB\..\..\..\..\..\Compon #
+#                          ents\stack\af\ -I D:\Îäºº´´Î¬ÌØÎïÁªÍøÊµÑéÏä×ÊÁÏ\CV #
+#                          T-IOT-VS¹âÅÌ\Zigbee²¿·Ö£¨ÎïÁªÍø£©\ZStack-CC2530-eV #
+#                          1.3\Projects\zstack\Samples\SensorApp\CC2530DB\..\ #
+#                          ..\..\..\..\Components\stack\nwk\ -I               #
+#                          D:\Îäºº´´Î¬ÌØÎïÁªÍøÊµÑéÏä×ÊÁÏ\CVT-IOT-VS¹âÅÌ\Zigbe #
+#                          e²¿·Ö£¨ÎïÁªÍø£©\ZStack-CC2530-eV1.3\Projects\zstac #
+#                          k\Samples\SensorApp\CC2530DB\..\..\..\..\..\Compon #
+#                          ents\stack\sapi\ -I D:\Îäºº´´Î¬ÌØÎïÁªÍøÊµÑéÏä×ÊÁÏ\ #
+#                          CVT-IOT-VS¹âÅÌ\Zigbee²¿·Ö£¨ÎïÁªÍø£©\ZStack-CC2530- #
+#                          eV1.3\Projects\zstack\Samples\SensorApp\CC2530DB\. #
+#                          .\..\..\..\..\Components\stack\sec\ -I             #
+#                          D:\Îäºº´´Î¬ÌØÎïÁªÍøÊµÑéÏä×ÊÁÏ\CVT-IOT-VS¹âÅÌ\Zigbe #
+#                          e²¿·Ö£¨ÎïÁªÍø£©\ZStack-CC2530-eV1.3\Projects\zstac #
+#                          k\Samples\SensorApp\CC2530DB\..\..\..\..\..\Compon #
+#                          ents\stack\sys\ -I D:\Îäºº´´Î¬ÌØÎïÁªÍøÊµÑéÏä×ÊÁÏ\C #
+#                          VT-IOT-VS¹âÅÌ\Zigbee²¿·Ö£¨ÎïÁªÍø£©\ZStack-CC2530-e #
+#                          V1.3\Projects\zstack\Samples\SensorApp\CC2530DB\.. #
+#                          \..\..\..\..\Components\stack\zdo\ -I              #
+#                          D:\Îäºº´´Î¬ÌØÎïÁªÍøÊµÑéÏä×ÊÁÏ\CVT-IOT-VS¹âÅÌ\Zigbe #
+#                          e²¿·Ö£¨ÎïÁªÍø£©\ZStack-CC2530-eV1.3\Projects\zstac #
+#                          k\Samples\SensorApp\CC2530DB\..\..\..\..\..\Compon #
+#                          ents\zmac\ -I D:\Îäºº´´Î¬ÌØÎïÁªÍøÊµÑéÏä×ÊÁÏ\CVT-IO #
+#                          T-VS¹âÅÌ\Zigbee²¿·Ö£¨ÎïÁªÍø£©\ZStack-CC2530-eV1.3\ #
+#                          Projects\zstack\Samples\SensorApp\CC2530DB\..\..\. #
+#                          .\..\..\Components\zmac\f8w\ -Ohz                  #
+#                          --require_prototypes                               #
+#    List file          =  D:\Îäºº´´Î¬ÌØÎïÁªÍøÊµÑéÏä×ÊÁÏ\CVT-IOT-VS¹âÅÌ\Zigbe #
+#                          e²¿·Ö£¨ÎïÁªÍø£©\ZStack-CC2530-eV1.3\Projects\zstac #
+#                          k\Samples\SensorApp\CC2530DB\EndDeviceEB\List\Sens #
+#                          orApp (2).lst                                      #
+#    Object file        =  D:\Îäºº´´Î¬ÌØÎïÁªÍøÊµÑéÏä×ÊÁÏ\CVT-IOT-VS¹âÅÌ\Zigbe #
+#                          e²¿·Ö£¨ÎïÁªÍø£©\ZStack-CC2530-eV1.3\Projects\zstac #
+#                          k\Samples\SensorApp\CC2530DB\EndDeviceEB\Obj\Senso #
+#                          rApp (2).r51                                       #
+#                                                                             #
+#                                                                             #
+###############################################################################
+
+D:\Îäºº´´Î¬ÌØÎïÁªÍøÊµÑéÏä×ÊÁÏ\CVT-IOT-VS¹âÅÌ\Zigbee²¿·Ö£¨ÎïÁªÍø£©\ZStack-CC2530-eV1.3\Projects\zstack\Samples\SensorApp\Source\SensorApp (2).c
+      1          /******************************************************************************
+      2            Filename:       SensorApp.c
+      3            Revised:        $Date: 2010-12-21 10:27:34 -0800 (Tue, 21 Dec 2010) $
+      4            Revision:       $Revision: 24670 $
+      5          
+      6            Description:    Generic Application (no Profile).
+      7          
+      8          
+      9            Copyright 2004-2010 Texas Instruments Incorporated. All rights reserved.
+     10          
+     11            IMPORTANT: Your use of this Software is limited to those specific rights
+     12            granted under the terms of a software license agreement between the user
+     13            who downloaded the software, his/her employer (which must be your employer)
+     14            and Texas Instruments Incorporated (the "License").  You may not use this
+     15            Software unless you agree to abide by the terms of the License. The License
+     16            limits your use, and you acknowledge, that the Software may not be modified,
+     17            copied or distributed unless embedded on a Texas Instruments microcontroller
+     18            or used solely and exclusively in conjunction with a Texas Instruments radio
+     19            frequency transceiver, which is integrated into your product. Other than for
+     20            the foregoing purpose, you may not use, reproduce, copy, prepare derivative
+     21            works of, modify, distribute, perform, display or sell this Software and/or
+     22            its documentation for any purpose.
+     23          
+     24            YOU FURTHER ACKNOWLEDGE AND AGREE THAT THE SOFTWARE AND DOCUMENTATION ARE
+     25            PROVIDED “AS IS?WITHOUT WARRANTY OF ANY KIND, EITHER EXPRESS OR IMPLIED,
+     26            INCLUDING WITHOUT LIMITATION, ANY WARRANTY OF MERCHANTABILITY, TITLE,
+     27            NON-INFRINGEMENT AND FITNESS FOR A PARTICULAR PURPOSE. IN NO EVENT SHALL
+     28            TEXAS INSTRUMENTS OR ITS LICENSORS BE LIABLE OR OBLIGATED UNDER CONTRACT,
+     29            NEGLIGENCE, STRICT LIABILITY, CONTRIBUTION, BREACH OF WARRANTY, OR OTHER
+     30            LEGAL EQUITABLE THEORY ANY DIRECT OR INDIRECT DAMAGES OR EXPENSES
+     31            INCLUDING BUT NOT LIMITED TO ANY INCIDENTAL, SPECIAL, INDIRECT, PUNITIVE
+     32            OR CONSEQUENTIAL DAMAGES, LOST PROFITS OR LOST DATA, COST OF PROCUREMENT
+     33            OF SUBSTITUTE GOODS, TECHNOLOGY, SERVICES, OR ANY CLAIMS BY THIRD PARTIES
+     34            (INCLUDING BUT NOT LIMITED TO ANY DEFENSE THEREOF), OR OTHER SIMILAR COSTS.
+     35          
+     36            Should you have any questions regarding your right to use this Software,
+     37            contact Texas Instruments Incorporated at www.TI.com.
+     38          ******************************************************************************/
+     39          
+     40          /*********************************************************************
+     41            This application isn't intended to do anything useful, it is
+     42            intended to be a simple example of an application's structure.
+     43          
+     44            This application sends "Hello World" to another "Generic"
+     45            application every 15 seconds.  The application will also
+     46            receive "Hello World" packets.
+     47          
+     48            The "Hello World" messages are sent/received as MSG type message.
+     49          
+     50            This applications doesn't have a profile, so it handles everything
+     51            directly - itself.
+     52          
+     53            Key control:
+     54              SW1:
+     55              SW2:  initiates end device binding
+     56              SW3:
+     57              SW4:  initiates a match description request
+     58          *********************************************************************/
+     59          
+     60          /*********************************************************************
+     61           * INCLUDES
+     62           */
+     63          #include "OSAL.h"
+     64          #include "AF.h"
+     65          #include "ZDApp.h"
+     66          #include "ZDObject.h"
+     67          #include "ZDProfile.h"
+     68          
+     69          #include "SensorApp.h"
+     70          #include "DebugTrace.h"
+     71          #include "Sensor.h"   //Ìí¼ÓÍ·ÎÄ¼þ
+     72          
+     73          #if !defined( WIN32 )
+     74            #include "OnBoard.h"
+     75          #endif
+     76          
+     77          /* HAL */
+     78          #include "hal_lcd.h"
+     79          #include "hal_led.h"
+     80          #include "hal_key.h"
+     81          #include "hal_uart.h"
+     82          
+     83          /*********************************************************************
+     84           * MACROS
+     85           */
+     86          
+     87          /*********************************************************************
+     88           * CONSTANTS
+     89           */
+     90          
+     91          /*********************************************************************
+     92           * TYPEDEFS
+     93           */
+     94          
+     95          /*********************************************************************
+     96           * GLOBAL VARIABLES
+     97           */
+     98          
+     99          // This list should be filled with Application specific Cluster IDs.
+    100          const cId_t SensorApp_ClusterList[SensorApp_MAX_CLUSTERS] =
+    101          {
+    102            SensorApp_CLUSTERID
+    103          };
+    104          
+    105          const SimpleDescriptionFormat_t SensorApp_SimpleDesc =
+    106          {
+    107            SensorApp_ENDPOINT,              //  int Endpoint;
+    108            SensorApp_PROFID,                //  uint16 AppProfId[2];
+    109            SensorApp_DEVICEID,              //  uint16 AppDeviceId[2];
+    110            SensorApp_DEVICE_VERSION,        //  int   AppDevVer:4;
+    111            SensorApp_FLAGS,                 //  int   AppFlags:4;
+    112            SensorApp_MAX_CLUSTERS,          //  byte  AppNumInClusters;
+    113            (cId_t *)SensorApp_ClusterList,  //  byte *pAppInClusterList;
+    114            SensorApp_MAX_CLUSTERS,          //  byte  AppNumInClusters;
+    115            (cId_t *)SensorApp_ClusterList   //  byte *pAppInClusterList;
+    116          };
+    117          
+    118          // This is the Endpoint/Interface description.  It is defined here, but
+    119          // filled-in in SensorApp_Init().  Another way to go would be to fill
+    120          // in the structure here and make it a "const" (in code space).  The
+    121          // way it's defined in this sample app it is define in RAM.
+    122          endPointDesc_t SensorApp_epDesc;
+    123          
+    124          /*********************************************************************
+    125           * EXTERNAL VARIABLES
+    126           */
+    127          
+    128          /*********************************************************************
+    129           * EXTERNAL FUNCTIONS
+    130           */
+    131          
+    132          /*********************************************************************
+    133           * LOCAL VARIABLES
+    134           */
+    135          byte SensorApp_TaskID;   // Task ID for internal task/event processing
+    136                                    // This variable will be received when
+    137                                    // SensorApp_Init() is called.
+    138          devStates_t SensorApp_NwkState;
+    139          
+    140          byte SensorApp_TransID;  // This is the unique message ID (counter)
+    141          
+    142          afAddrType_t SensorApp_DstAddr;
+    143          
+    144          uint16 RxLen;        //´®¿Ú½ÓÊÕÊý¾Ý³¤¶È
+    145          uint8 UartDataBuf[128]; //´®¿ÚÊý¾Ý»º´æÇøÖ¸Õë
+    146          /*********************************************************************
+    147           * LOCAL FUNCTIONS
+    148           */
+    149          
+    150          void SensorApp_MessageMSGCB( afIncomingMSGPacket_t *pckt );
+    151          void SensorApp_SendTheMessage( uint8 *buf, uint16 len );
+    152          void SerialApp_SendTemp(void);
+    153          static void SensorApp_rxCB(uint8 port,uint8 event);
+    154          void ChangeAddrFormat(uint8 *dest,uint8 *src, uint8 length);
+    155          /*********************************************************************
+    156           * NETWORK LAYER CALLBACKS
+    157           */
+    158          
+    159          /*********************************************************************
+    160           * PUBLIC FUNCTIONS
+    161           */
+    162          
+    163          /*********************************************************************
+    164           * @fn      SensorApp_Init
+    165           *
+    166           * @brief   Initialization function for the Generic App Task.
+    167           *          This is called during initialization and should contain
+    168           *          any application specific initialization (ie. hardware
+    169           *          initialization/setup, table initialization, power up
+    170           *          notificaiton ... ).
+    171           *
+    172           * @param   task_id - the ID assigned by OSAL.  This ID should be
+    173           *                    used to send messages and set timers.
+    174           *
+    175           * @return  none
+    176           */
+    177          void SensorApp_Init( byte task_id )
+    178          {
+    179            halUARTCfg_t uartConfig;
+    180            
+    181            SensorApp_TaskID = task_id;
+    182            SensorApp_NwkState = DEV_INIT;
+    183            SensorApp_TransID = 0;
+    184          
+    185            // Device hardware initialization can be added here or in main() (Zmain.c).
+    186            // If the hardware is application specific - add it here.
+    187            // If the hardware is other parts of the device add it in main().
+    188          
+    189            SensorApp_DstAddr.addrMode = (afAddrMode_t)AddrNotPresent;
+    190            SensorApp_DstAddr.endPoint = 0;
+    191            SensorApp_DstAddr.addr.shortAddr = 0;
+    192          
+    193            // Fill out the endpoint description.
+    194            SensorApp_epDesc.endPoint = SensorApp_ENDPOINT;
+    195            SensorApp_epDesc.task_id = &SensorApp_TaskID;
+    196            SensorApp_epDesc.simpleDesc
+    197                      = (SimpleDescriptionFormat_t *)&SensorApp_SimpleDesc;
+    198            SensorApp_epDesc.latencyReq = noLatencyReqs;
+    199          
+    200            // Register the endpoint description with the AF
+    201            afRegister( &SensorApp_epDesc );
+    202          
+    203            
+    204             UartTX_Send_String("Testing...\r\n",12);
+                    ^
+Error[Pe223]: function "UartTX_Send_String" declared implicitly
+    205              while(1){ 
+    206          	lTemp = ReadSHT1(3);//14bitÎÂ¶È
+                 	^
+Error[Pe020]: identifier "lTemp" is undefined
+
+  	lTemp = ReadSHT1(3);//14bitÎÂ¶È
+  	        ^
+"D:\Îäºº´´Î¬ÌØÎïÁªÍøÊµÑéÏä×ÊÁÏ\CVT-IOT-VS¹âÅÌ\Zigbee²¿·Ö£¨ÎïÁªÍø£©\ZStack-CC2530-eV1.3\Projects\zstack\Samples\SensorApp\Source\SensorApp (2).c",206  Error[Pe223]: 
+          function "ReadSHT1" declared implicitly
+    207                  lTemp = lTemp >> 8;
+    208                  RHTValue = lTemp;
+                         ^
+Error[Pe020]: identifier "RHTValue" is undefined
+    209                  RHTValue = 0.01 * RHTValue - 39.64;
+    210                  buf[0] = (uint8)RHTValue;//ÎÂÊª¶È´«¸ÐÆ÷ÎÂ¶È 
+                         ^
+Error[Pe020]: identifier "buf" is undefined
+    211          	buf[0] = ( ((buf[0]/10)<<4) + (buf[0]%10) );
+    212                  buf[1] = (buf[0]>>4)&0xf;
+    213          	if(buf[1] > 0x9)
+    214                      buf[1] = buf[1] - 0XA + 'A';
+    215          	else
+    216          	    buf[1] = buf[1] + '0';
+    217          	buf[2] = (buf[0])&0xf;
+    218          	if(buf[2] > 0x9)
+    219          	    buf[2] = buf[2] -0XA + 'A';
+    220          	else
+    221          	    buf[2] = buf[2] + '0';
+    222          	
+    223                  lTemp = ReadSHT1(5);//12bitÊª¶È
+                                 ^
+Error[Pa045]: function "ReadSHT1" has no prototype
+    224                  lTemp = lTemp >> 8;
+    225                  RHTValue = lTemp;
+    226                  RHTValue = 0.0405 * RHTValue -4 - 2.8*RHTValue*RHTValue/1000000;
+    227                  buf[3] = (uint8)RHTValue;//ÎÂÊª¶È´«¸ÐÆ÷Êª¶È 
+    228          	buf[3] = ( ((buf[3]/10)<<4) + (buf[3]%10) );
+    229          	
+    230          	buf[4] = (buf[3]>>4)&0xf;
+    231          	if(buf[4] > 0x9)
+    232                      buf[4] = buf[4] - 0XA + 'A';
+    233          	else
+    234          	    buf[4] = buf[4] + '0';
+    235          	buf[5] = (buf[3])&0xf;
+    236          	if(buf[5] > 0x9)
+    237                      buf[5] = buf[5] -0XA + 'A';
+    238          	else
+    239          	    buf[5] = buf[5] + '0';
+    240                  
+    241                	UartTX_Send_String("Temperature = ",14);
+                       	^
+Error[Pa045]: function "UartTX_Send_String" has no prototype
+    242                	UartTX_Send_String(&buf[1],1);
+    243          	UartTX_Send_String(&buf[2],1);
+    244          	UartTX_Send_String("    ",4);
+    245          	
+    246          	UartTX_Send_String("humidity = ",11);
+    247          	UartTX_Send_String(&buf[4],1);
+    248          	UartTX_Send_String(&buf[5],1);
+    249          	UartTX_Send_String("\r\n",2);
+    250            //ÅäÖÃ´®¿Ú²¢´ò¿ª
+    251            uartConfig.configured = TRUE;               //Ê¹ÄÜ´®¿Ú
+    252            uartConfig.baudRate   = HAL_UART_BR_115200; //²¨ÌØÂÊ115200
+    253            uartConfig.flowControl = FALSE;             //¹Ø±ÕÁ÷¿Ø
+    254            uartConfig.callBackFunc = SensorApp_rxCB;     //»Øµ÷º¯Êý
+    255            HalUARTOpen(HAL_UART_PORT_0, &uartConfig);  //´ò¿ª´®¿Ú
+    256            // Register for all key events - This app will handle all key events
+    257            //RegisterForKeys( SensorApp_TaskID );
+    258          
+    259            // Update the display
+    260          #if defined ( LCD_SUPPORTED )
+    261              HalLcdWriteString( "SensorApp", HAL_LCD_LINE_1 );
+    262          #endif
+    263          }
+    264          
+    265          void UartTX_Send_String(unsigned char *Data,int len)   //´®¿Ú·¢ËÍº¯Êý
+                      ^
+Error[Pe147]: declaration is incompatible with
+          "__banked_func __xdata_reentrant int UartTX_Send_String()" (declared
+          at line 204)
+    266          {
+                 ^
+Error[Pe065]: expected a ";"
+    267              int j;
+    268              for(j=0;j<len;j++)
+    269              {
+    270              	U0DBUF = *Data++;   
+    271              	while(UTX0IF == 0);
+    272              	UTX0IF = 0;
+    273              }
+    274          }
+    275          
+    276          void UartTX_Send_Data(unsigned char Data,int len)   //´®¿Ú·¢ËÍº¯Êý
+    277          {
+    278              int j;
+    279              for(j=0;j<len;j++)
+    280              {
+    281              	U0DBUF = Data;   
+    282              	while(UTX0IF == 0);
+    283              	UTX0IF = 0;
+    284              }
+    285          }
+    286          /*********************************************************************
+    287           * @fn      SensorApp_ProcessEvent
+    288           *
+    289           * @brief   Generic Application Task event processor.  This function
+    290           *          is called to process all events for the task.  Events
+    291           *          include timers, messages and any other user defined events.
+    292           *
+    293           * @param   task_id  - The OSAL assigned task ID.
+    294           * @param   events - events to process.  This is a bit map and can
+    295           *                   contain more than one event.
+    296           *
+    297           * @return  none
+    298           */
+    299          UINT16 SensorApp_ProcessEvent( byte task_id, UINT16 events )
+    300          {
+    301            afIncomingMSGPacket_t *MSGpkt;
+    302            afDataConfirm_t *afDataConfirm;
+    303          
+    304            // Data Confirmation message fields
+    305            byte sentEP;
+    306            ZStatus_t sentStatus;
+    307            byte sentTransID;       // This should match the value sent
+    308            (void)task_id;        // Intentionally unreferenced parameter
+    309          
+    310            if ( events & SYS_EVENT_MSG )
+    311            {
+    312              MSGpkt = (afIncomingMSGPacket_t *)osal_msg_receive( SensorApp_TaskID );
+    313              while ( MSGpkt )
+    314              {
+    315                switch ( MSGpkt->hdr.event )
+    316                {
+    317                  case ZDO_CB_MSG:
+    318                    //do nothing
+    319                    
+    320                    break;
+    321          
+    322                  case KEY_CHANGE:
+    323                    // do nothing
+    324                    
+    325                    break;
+                                ^
+Warning[Pe012]: parsing restarts here after previous syntax error
+    326          
+    327                  case AF_DATA_CONFIRM_CMD:
+                         ^
+Error[Pe121]: a case label may only be used within a switch
+    328                    // This message is received as a confirmation of a data packet sent.
+    329                    // The status is of ZStatus_t type [defined in ZComDef.h]
+    330                    // The message fields are defined in AF.h
+    331                    afDataConfirm = (afDataConfirm_t *)MSGpkt;
+                                                              ^
+Error[Pe020]: identifier "MSGpkt" is undefined
+
+            afDataConfirm = (afDataConfirm_t *)MSGpkt;
+            ^
+"D:\Îäºº´´Î¬ÌØÎïÁªÍøÊµÑéÏä×ÊÁÏ\CVT-IOT-VS¹âÅÌ\Zigbee²¿·Ö£¨ÎïÁªÍø£©\ZStack-CC2530-eV1.3\Projects\zstack\Samples\SensorApp\Source\SensorApp (2).c",331  Error[Pe137]: 
+          expression must be a modifiable lvalue
+    332                    sentEP = afDataConfirm->endpoint;
+                           ^
+Error[Pe020]: identifier "sentEP" is undefined
+
+            sentEP = afDataConfirm->endpoint;
+                     ^
+"D:\Îäºº´´Î¬ÌØÎïÁªÍøÊµÑéÏä×ÊÁÏ\CVT-IOT-VS¹âÅÌ\Zigbee²¿·Ö£¨ÎïÁªÍø£©\ZStack-CC2530-eV1.3\Projects\zstack\Samples\SensorApp\Source\SensorApp (2).c",332  Error[Pe132]: 
+          expression must have pointer-to-struct-or-union type
+    333                    sentStatus = afDataConfirm->hdr.status;
+                           ^
+Error[Pe020]: identifier "sentStatus" is undefined
+
+            sentStatus = afDataConfirm->hdr.status;
+                         ^
+"D:\Îäºº´´Î¬ÌØÎïÁªÍøÊµÑéÏä×ÊÁÏ\CVT-IOT-VS¹âÅÌ\Zigbee²¿·Ö£¨ÎïÁªÍø£©\ZStack-CC2530-eV1.3\Projects\zstack\Samples\SensorApp\Source\SensorApp (2).c",333  Error[Pe132]: 
+          expression must have pointer-to-struct-or-union type
+    334                    sentTransID = afDataConfirm->transID;
+                           ^
+Error[Pe020]: identifier "sentTransID" is undefined
+
+            sentTransID = afDataConfirm->transID;
+                          ^
+"D:\Îäºº´´Î¬ÌØÎïÁªÍøÊµÑéÏä×ÊÁÏ\CVT-IOT-VS¹âÅÌ\Zigbee²¿·Ö£¨ÎïÁªÍø£©\ZStack-CC2530-eV1.3\Projects\zstack\Samples\SensorApp\Source\SensorApp (2).c",334  Error[Pe132]: 
+          expression must have pointer-to-struct-or-union type
+    335                    (void)sentEP;
+    336                    (void)sentTransID;
+    337          
+    338                    // Action taken when confirmation is received.
+    339                    if ( sentStatus != ZSuccess )
+    340                    {
+    341                      // The data wasn't delivered -- Do something
+    342                    }
+    343                    break;
+                           ^
+Error[Pe116]: a break statement may only be used within a loop or switch
+    344          
+    345                  case AF_INCOMING_MSG_CMD:
+                         ^
+Error[Pe121]: a case label may only be used within a switch
+    346                    //Íø¹Ø½ÓÊÕµ½ÏûÏ¢Ê±´¦Àí
+    347                    SensorApp_MessageMSGCB(MSGpkt);
+    348          
+    349                    break;
+                           ^
+Error[Pe116]: a break statement may only be used within a loop or switch
+    350          
+    351                  case ZDO_STATE_CHANGE:
+                         ^
+Error[Pe121]: a case label may only be used within a switch
+    352                    SensorApp_NwkState = (devStates_t)(MSGpkt->hdr.status);
+    353                    
+    354                    if ( (SensorApp_NwkState == DEV_ZB_COORD)
+    355                        || (SensorApp_NwkState == DEV_ROUTER)
+    356                        || (SensorApp_NwkState == DEV_END_DEVICE) )
+    357                    {
+    358                      // ¼ÓÈëÍøÂç³É¹¦£¬µãÁÁLED2
+    359                      HalLedSet( HAL_LED_2, HAL_LED_MODE_ON );
+    360          #if !defined(ZDO_COORDINATOR)
+    361                      if (SensorApp_NwkState == DEV_END_DEVICE)
+    362                      { 
+    363                        // Èç¹ûÊÇÖÕ¶Ë½Úµã£¬Æô¶¯¶¨Ê±Æ÷·¢ËÍÏûÏ¢¡°Hello¡±
+    364                        osal_start_timerEx( SensorApp_TaskID,
+    365                                          SensorApp_SEND_MSG_EVT,
+    366                                          SensorApp_SEND_MSG_TIMEOUT );
+    367                      }
+    368          #endif
+    369                    }
+    370                    break;
+                           ^
+Error[Pe116]: a break statement may only be used within a loop or switch
+    371          
+    372                  default:
+                         ^
+Error[Pe122]: a default label may only be used within a switch
+    373                    break;
+                           ^
+Error[Pe116]: a break statement may only be used within a loop or switch
+    374                }
+    375          
+    376                // Release the memory
+    377                osal_msg_deallocate( (uint8 *)MSGpkt );
+                                            ^
+Error[Pe079]: expected a type specifier
+
+        osal_msg_deallocate( (uint8 *)MSGpkt );
+        ^
+"D:\Îäºº´´Î¬ÌØÎïÁªÍøÊµÑéÏä×ÊÁÏ\CVT-IOT-VS¹âÅÌ\Zigbee²¿·Ö£¨ÎïÁªÍø£©\ZStack-CC2530-eV1.3\Projects\zstack\Samples\SensorApp\Source\SensorApp (2).c",377  Error[Pe260]: 
+          explicit type is missing ("int" assumed)
+
+        osal_msg_deallocate( (uint8 *)MSGpkt );
+        ^
+"D:\Îäºº´´Î¬ÌØÎïÁªÍøÊµÑéÏä×ÊÁÏ\CVT-IOT-VS¹âÅÌ\Zigbee²¿·Ö£¨ÎïÁªÍø£©\ZStack-CC2530-eV1.3\Projects\zstack\Samples\SensorApp\Source\SensorApp (2).c",377  Error[Pe147]: 
+          declaration is incompatible with "__banked_func __xdata_reentrant
+          uint8 osal_msg_deallocate(unsigned char *)" (declared at line 122 of
+          "D:\Îäºº´´Î¬ÌØÎïÁªÍøÊµÑéÏä×ÊÁÏ\CVT-IOT-VS¹âÅÌ\Zigbee²¿·Ö£¨ÎïÁªÍø£©\ZS
+          tack-CC2530-eV1.3\Projects\zstack\Samples\SensorApp\CC2530DB\..\..\..
+          \..\..\Components\osal\include\OSAL.h")
+    378          
+    379                // Next
+    380                MSGpkt = (afIncomingMSGPacket_t *)osal_msg_receive( SensorApp_TaskID );
+                       ^
+Error[Pe077]: this declaration has no storage class or type specifier
+
+        MSGpkt = (afIncomingMSGPacket_t *)osal_msg_receive( SensorApp_TaskID );
+                                          ^
+"D:\Îäºº´´Î¬ÌØÎïÁªÍøÊµÑéÏä×ÊÁÏ\CVT-IOT-VS¹âÅÌ\Zigbee²¿·Ö£¨ÎïÁªÍø£©\ZStack-CC2530-eV1.3\Projects\zstack\Samples\SensorApp\Source\SensorApp (2).c",380  Error[Pe059]: 
+          function call is not allowed in a constant expression
+
+        MSGpkt = (afIncomingMSGPacket_t *)osal_msg_receive( SensorApp_TaskID );
+                                                            ^
+"D:\Îäºº´´Î¬ÌØÎïÁªÍøÊµÑéÏä×ÊÁÏ\CVT-IOT-VS¹âÅÌ\Zigbee²¿·Ö£¨ÎïÁªÍø£©\ZStack-CC2530-eV1.3\Projects\zstack\Samples\SensorApp\Source\SensorApp (2).c",380  Error[Pe028]: 
+          expression must have a constant value
+
+        MSGpkt = (afIncomingMSGPacket_t *)osal_msg_receive( SensorApp_TaskID );
+                                          ^
+"D:\Îäºº´´Î¬ÌØÎïÁªÍøÊµÑéÏä×ÊÁÏ\CVT-IOT-VS¹âÅÌ\Zigbee²¿·Ö£¨ÎïÁªÍø£©\ZStack-CC2530-eV1.3\Projects\zstack\Samples\SensorApp\Source\SensorApp (2).c",380  Error[Pe044]: 
+          expression must have pointer type
+    381              }
+                     ^
+Error[Pe169]: expected a declaration
+    382          
+    383              // return unprocessed events
+    384              return (events ^ SYS_EVENT_MSG);
+                                                    ^
+Warning[Pe012]: parsing restarts here after previous syntax error
+    385            }
+                   ^
+Error[Pe169]: expected a declaration
+    386            
+    387            // Send a message out - This event is generated by a timer
+    388            //  (setup in SerialApp_Init()).
+    389            if ( events & SensorApp_SEND_MSG_EVT )
+    390            {
+    391          #if !defined(ZDO_COORDINATOR)
+    392              // ¶¨Ê±Æ÷µ½Ê±£¬µ÷ÓÃÏûÏ¢·¢ËÍº¯Êý
+    393              SerialApp_SendTemp();
+    394          #endif
+    395              // ÖØÖÃ¶¨Ê±Æ÷
+    396              osal_start_timerEx( SensorApp_TaskID,
+    397                                  SensorApp_SEND_MSG_EVT,
+    398                                  SensorApp_SEND_MSG_TIMEOUT );
+    399          
+    400              // return unprocessed events
+    401              return (events ^ SensorApp_SEND_MSG_EVT);
+    402            }
+    403            // action UART_RX_CB_EVENT events
+    404            if ( events & SensorApp_UART_RX_CB_EVT )
+    405            {
+    406              HalUARTWrite(HAL_UART_PORT_0, &UartDataBuf[0], RxLen); //´®¿ÚÏÔÊ¾·¢ËÍÄÚÈÝ
+    407              SensorApp_SendTheMessage(&UartDataBuf[0], RxLen);       //ÎÞÏß·¢ËÍÏûÏ¢
+    408              return (events ^ SensorApp_UART_RX_CB_EVT);
+    409            }
+    410            return 0;
+                           ^
+Warning[Pe012]: parsing restarts here after previous syntax error
+    411          }
+                 ^
+Error[Pe169]: expected a declaration
+    412          
+    413          /*********************************************************************
+    414           * @fn      SensorApp_SendTheMessage
+    415           *
+    416           * @brief   Send "the" message.
+    417           *
+    418           * @param   none
+    419           *
+    420           * @return  none
+    421           */
+    422          void SensorApp_SendTheMessage( uint8 *buf, uint16 len )
+    423          {
+    424            //char theMessageData[] = "Hello";
+    425          
+    426            SensorApp_DstAddr.addrMode = (afAddrMode_t)AddrBroadcast;  //ÏûÏ¢·¢ËÍ·½Ê½£¬¹ã²¥
+    427            SensorApp_DstAddr.endPoint = SensorApp_ENDPOINT;            //Ä¿±êÖÕ¶Ë±àºÅ£¬ÓÉÄÄ¸öÖÕ¶Ë´¦ÀíÏûÏ¢
+    428            SensorApp_DstAddr.addr.shortAddr = NWK_BROADCAST_SHORTADDR;//Ä¬ÈÏµÄ¹ã²¥µØÖ·£¬0XFFFF
+    429            
+    430            if( AF_DataRequest( &SensorApp_DstAddr, &SensorApp_epDesc,
+    431                                 SensorApp_CLUSTERID,
+    432                                 len,
+    433                                 buf,
+    434                                 &SensorApp_TransID,
+    435                                 AF_DISCV_ROUTE, AF_DEFAULT_RADIUS ) == afStatus_SUCCESS )
+    436            {
+    437              // ·¢ËÍ³É¹¦ºóÉÁË¸ LED1
+    438               HalLedBlink( HAL_LED_1, 1, 50, 250 );
+    439               osal_memset(buf, 0, len);  //Çå»º³åÇø
+    440            }
+    441            else
+    442            {
+    443              // Error occurred in request to send.
+    444            }
+    445          }
+    446          
+    447          void SerialApp_SendTemp(void)
+    448          {
+    449            uint8 tvalue;
+    450            TEMPERATURE temperature;
+    451            
+    452            temperature.BUF.Head = '&';
+    453            tvalue = ReadTemp();
+    454            temperature.BUF.value[0] = tvalue / 10 + '0';
+    455            temperature.BUF.value[1] = tvalue % 10 + '0';
+    456            temperature.BUF.Tail = 'C';
+    457            
+    458            SensorApp_SendTheMessage((uint8 *)&temperature, sizeof(temperature));
+    459          }
+    460          
+    461          
+    462          
+    463          
+    464          
+    465          void SensorApp_MessageMSGCB(afIncomingMSGPacket_t *pkt)
+    466          {
+    467            uint8 vt = ' ';
+    468            
+    469            switch(pkt->clusterId)
+    470            {
+    471              case SensorApp_CLUSTERID:
+    472                // ½ÓÊÕ³É¹¦ºóÉÁË¸ LED1
+    473                HalLedBlink( HAL_LED_1, 1, 50, 250 );
+    474                
+    475                HalUARTWrite(HAL_UART_PORT_0, &(pkt->cmd.Data[0]), pkt->cmd.DataLength ); //½«ÊÕµ½µÄÊý¾ÝÍ¨¹ý´®¿Ú´òÓ¡³öÀ´
+    476                HalUARTWrite(HAL_UART_PORT_0, &vt, 1);  //¿Õ¸ñ
+    477                
+    478              break;
+    479            }
+    480          }
+    481          
+    482          
+    483          static void SensorApp_rxCB(uint8 port, uint8 event)
+    484          {
+    485            if ((event & (HAL_UART_RX_FULL | HAL_UART_RX_ABOUT_FULL | HAL_UART_RX_TIMEOUT)))
+    486            {
+    487              RxLen = Hal_UART_RxBufLen(HAL_UART_PORT_0);  //½ÓÊÕ»º³åÇøÊý¾Ý³¤¶È,×Ö½ÚÎªµ¥Î»
+    488              HalUARTRead( HAL_UART_PORT_0, &UartDataBuf[0], RxLen); //¶Á½ÓÊÕ»º³åÇøÊý¾Ýµ½ÄÚ´ædatabuf[3]~[len+3]
+    489            
+    490              osal_set_event(SensorApp_TaskID,SensorApp_UART_RX_CB_EVT);  //ÓÐ´®¿ÚÊý¾ÝÊ±²úÉúÏàÓ¦ÊÂ¼þ
+    491            }
+    492          }
+Warning[Pe012]: parsing restarts here after previous syntax error
+
+  static void SensorApp_rxCB(uint8 port,uint8 event);
+              ^
+"D:\Îäºº´´Î¬ÌØÎïÁªÍøÊµÑéÏä×ÊÁÏ\CVT-IOT-VS¹âÅÌ\Zigbee²¿·Ö£¨ÎïÁªÍø£©\ZStack-CC2530-eV1.3\Projects\zstack\Samples\SensorApp\Source\SensorApp (2).c",153  Error[Pe114]: 
+          function "SensorApp_rxCB" was referenced but not defined
+
+Errors: 36
+Warnings: 4
